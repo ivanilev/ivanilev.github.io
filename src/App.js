@@ -6,7 +6,6 @@ function App() {
       <header className="App-header">
         <p>
           A new website is coming soon...
-          {/* test */}
         </p>
       </header>
       {/* <header className="App-header">
