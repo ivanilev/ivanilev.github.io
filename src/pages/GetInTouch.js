@@ -12,13 +12,16 @@ import {
   instaIcon,
 } from "../assets/icons";
 import Contacts from "../components/Contacts";
+import emailjs from "@emailjs/browser";
+
 const GetInTouch = () => {
+  const form = useRef();
   const nameRef = useRef();
   const emailRef = useRef();
   const subjectRef = useRef();
   const messageRef = useRef();
   const [error, setError] = useState("");
-
+  const [submited, setSubmited] = useState(false);
   const formSubmitHandler = (e) => {
     e.preventDefault();
     if (
@@ -28,12 +31,22 @@ const GetInTouch = () => {
       messageRef.current.value
     ) {
       if (emailRef.current.value.includes("@")) {
-        console.log([
-          nameRef.current.value,
-          emailRef.current.value,
-          subjectRef.current.value,
-          messageRef.current.value,
-        ]);
+        emailjs
+          .sendForm(
+            process.env.REACT_APP_EMAILJS_SERVICE_ID,
+            process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+            form.current,
+            process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+          )
+          .then(
+            (result) => {
+              console.log(result.text);
+            },
+            (error) => {
+              console.log(error.text);
+            }
+          );
+        setSubmited(true);
       } else {
         setError("Email is not valid.");
       }
@@ -88,24 +101,24 @@ const GetInTouch = () => {
           ) : (
             ""
           )}
-          <form onSubmit={formSubmitHandler}>
+          <form ref={form} onSubmit={formSubmitHandler}>
             <div className={styles.inputGroup}>
-              <label htmlFor="name">Name:</label>
+              <label htmlFor="user_name">Name:</label>
               <input
                 onChange={() => setError("")}
                 ref={nameRef}
                 placeholder="Enter your name here"
-                name="name"
+                name="user_name"
                 type="text"
               />
             </div>
             <div className={styles.inputGroup}>
-              <label htmlFor="email">Email:</label>
+              <label htmlFor="user_email">Email:</label>
               <input
                 onChange={() => setError("")}
                 ref={emailRef}
                 placeholder="Enter your email adress here"
-                name="email"
+                name="user_email"
                 type="text"
               />
             </div>
@@ -129,7 +142,14 @@ const GetInTouch = () => {
                 type="text"
               />
             </div>
-            <button className={styles.button} type="submit">
+            {submited ? (
+              <p style={{ color: "rgb(38, 127, 193)" }}>
+                Thank you for contacting us!
+              </p>
+            ) : (
+              ""
+            )}
+            <button disabled={submited} className={styles.button} type="submit">
               SUBMIT
             </button>
           </form>

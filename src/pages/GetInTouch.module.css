@@ -93,6 +93,10 @@
   padding-block: 0.5rem;
   border-radius: 10px;
 }
+.button:disabled {
+  cursor: default;
+  background-color: grey;
+}
 
 .errorMessage {
   position: absolute;
