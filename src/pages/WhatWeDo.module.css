@@ -1,0 +1,40 @@
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(185, 216, 237);
+}
+.frame {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90%;
+  width: 90%;
+  border: 3px solid white;
+}
+
+.frame h1 {
+  color: rgb(46, 47, 51);
+  font-size: 4rem;
+  text-align: center;
+}
+
+.image {
+  background-color: rgb(125, 125, 125, 0.5);
+  height: 70%;
+  width: 80%;
+  border: 1px solid black;
+}
+
+@media (max-width: 650px) {
+  .frame h1 {
+    font-size: 1.5rem;
+    margin-block: 0px;
+    padding: 10px;
+  }
+  .container {
+    height: 60vh;
+  }
+}

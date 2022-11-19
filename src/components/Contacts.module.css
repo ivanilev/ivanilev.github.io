@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  gap: 2rem;
+  padding-left: 30px;
+  padding-right: auto;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin-right: 0px;
+}
+.icon {
+  color: blue;
+}
+.details p {
+  margin: 0px;
+}
+.details span {
+  color: gray;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 650px) {
+  .container {
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .details span {
+    color: gray;
+    font-size: 0.5rem;
+  }
+}
+
+/* if variant 2 */
