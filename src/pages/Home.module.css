@@ -2,7 +2,7 @@
   height: 100vh;
   background-color: rgb(185, 216, 237);
   position: relative;
-  overflow: hidden;
+  min-height: 600px;
 }
 .contentBox {
   height: 100%;
@@ -58,6 +58,7 @@
   .container {
     height: 100vh;
     background-color: rgb(185, 216, 237);
+    min-height: none;
   }
   .text {
     border: 1px solid black;

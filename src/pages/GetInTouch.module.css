@@ -2,6 +2,7 @@
   height: 100vh;
   background-color: rgb(185, 216, 237);
   overflow: hidden;
+  min-height: 600px;
 }
 
 .heading {
@@ -20,6 +21,9 @@
   margin-block: auto;
   height: 70%;
   border-radius: 15px;
+  max-width: 700px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .directly {
@@ -28,6 +32,7 @@
   width: 50%;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .contactForm {
   display: flex;
@@ -40,6 +45,7 @@
 }
 .directly p {
   align-self: center;
+  padding-bottom: 10px;
 }
 .contactForm p {
   align-self: center;
@@ -48,7 +54,8 @@
   width: 70%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 20px;
   align-self: center;
   margin-top: auto;
   margin-bottom: 0px;
@@ -73,9 +80,13 @@
   outline: none;
 }
 .inputGroup {
-  width: 50%;
+  width: 80%;
   display: flex;
   flex-direction: column;
+}
+textarea {
+  background-color: transparent;
+  max-height: 200px;
 }
 
 .inputGroup input {

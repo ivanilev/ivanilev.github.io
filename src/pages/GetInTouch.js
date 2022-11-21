@@ -134,12 +134,11 @@ const GetInTouch = () => {
             </div>
             <div className={styles.inputGroup}>
               <label htmlFor="message">Message:</label>
-              <input
+              <textarea
                 onChange={() => setError("")}
                 ref={messageRef}
                 placeholder="Type your message here"
                 name="message"
-                type="text"
               />
             </div>
             {submited ? (

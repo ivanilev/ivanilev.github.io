@@ -5,6 +5,7 @@
 .icon {
   color: rgb(38, 127, 193);
   cursor: pointer;
+  margin: 10px;
 }
 
 .navAndLogo {
