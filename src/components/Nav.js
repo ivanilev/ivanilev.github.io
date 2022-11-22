@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Nav.module.css";
 import { useState, useEffect, useRef } from "react";
-import logo from "../assets/logo192.png";
+import logo from "../assets/logo151.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faNavicon, faClose } from "@fortawesome/free-solid-svg-icons";
 const Nav = () => {
@@ -56,9 +56,6 @@ const Nav = () => {
           </a>
           <a onClick={iconClickHandler} href="#languages">
             Languages
-          </a>
-          <a onClick={iconClickHandler} href="#">
-            Language
           </a>
           {!isDesktop && closeIcon}
         </nav>
