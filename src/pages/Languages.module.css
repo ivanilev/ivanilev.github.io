@@ -1,0 +1,122 @@
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  background-color: rgb(185, 216, 237);
+  min-height: 600px;
+}
+.heading {
+  color: rgb(46, 47, 51);
+  font-size: 4rem;
+  text-align: center;
+}
+.languages {
+  display: flex;
+  justify-content: space-between;
+}
+
+.english {
+  background-image: url(../assets/britishFlag.jpg);
+  background-size: cover;
+  border-radius: 100%;
+  width: 5rem;
+  height: 5rem;
+}
+
+.deutch {
+  background-image: url(../assets/germanFlag.jpg);
+  background-position: center;
+  background-size: 7.5rem;
+  border-radius: 100%;
+  width: 5rem;
+  height: 5rem;
+}
+.spanish {
+  background-image: url(../assets/spainFlag.png);
+  background-position: center;
+  background-size: 5.8rem;
+  border-radius: 100%;
+  width: 5rem;
+  height: 5rem;
+}
+
+.french {
+  background-image: url(../assets/franceFlag.png);
+  background-size: cover;
+  border-radius: 100%;
+  width: 5rem;
+  height: 5rem;
+}
+.greek {
+  background-image: url(../assets/greeceFlag.png);
+  background-size: cover;
+  border-radius: 100%;
+  width: 5rem;
+  height: 5rem;
+}
+
+@media (max-width: 1000px) {
+  .content {
+    margin-inline: 1rem;
+  }
+  .english {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .deutch {
+    width: 4rem;
+    height: 4rem;
+  }
+  .spanish {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .french {
+    width: 4rem;
+    height: 4rem;
+  }
+  .greek {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+@media (max-width: 650px) {
+  .container {
+    min-height: 0px;
+  }
+  .content {
+    width: 90%;
+  }
+  .languages {
+    justify-content: space-between;
+  }
+
+  .heading {
+    font-size: 1rem;
+  }
+  .english {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .deutch {
+    width: 3rem;
+    height: 3rem;
+  }
+  .spanish {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .french {
+    width: 3rem;
+    height: 3rem;
+  }
+  .greek {
+    width: 3rem;
+    height: 3rem;
+  }
+}

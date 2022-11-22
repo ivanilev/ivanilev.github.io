@@ -1,14 +1,43 @@
-.App {
-  text-align: center;
+.toTheTop {
+  color: rgb(38, 127, 193);
+
+  cursor: pointer;
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  right: 10px;
+  bottom: 10px;
+  z-index: 2;
+  animation: bounce 1s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@keyframes bounce {
+  0% {
+    scale: 100%;
+  }
+  50% {
+    scale: 200%;
+  }
+  100% {
+    scale: 100%;
+  }
+}
+
+.contact-icon {
+  color: rgb(38, 127, 193);
+
+  height: 2rem;
+}
+.social-icon {
+  color: rgb(38, 127, 193);
+  height: 2rem;
+  cursor: pointer;
+}
+@media (max-width: 650px) {
+  .contact-icon {
+    height: 1rem;
+  }
+  .social-icon {
+    height: 1rem;
+  }
 }
