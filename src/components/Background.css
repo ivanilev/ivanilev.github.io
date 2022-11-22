@@ -4,55 +4,180 @@
   overflow: hidden;
 }
 .first {
-  border-radius: 100%;
-  border: 3px dashed white;
+  --d: 1deg; /* distance between dashes */
+  --n: 125; /* number of dashes */
+  --c: white; /* color of dashes */
+  --b: 4px; /* control the thickness of border*/
+
+  width: 1100px;
+  display: inline-block;
+  border-radius: 50%;
+  background: repeating-conic-gradient(
+    var(--c) 0 calc(360deg / var(--n) - var(--d)),
+    transparent 0 calc(360deg / var(--n))
+  );
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - var(--b)),
+    #fff calc(100% - var(--b) + 1px)
+  );
+  mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - var(--b)),
+    #fff calc(100% - var(--b) + 1px)
+  );
+
   position: absolute;
   top: 40%;
   left: -40%;
-  width: 1100px;
-  height: 1100px;
-  overflow: hidden;
+}
+.first:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
 }
 
 .second {
-  border-radius: 100%;
-  border: 3px dashed white;
+  --d: 1deg; /* distance between dashes */
+  --n: 135; /* number of dashes */
+  --c: white; /* color of dashes */
+  --b: 4px; /* control the thickness of border*/
+
+  width: 1300px;
+  display: inline-block;
+  border-radius: 50%;
+  background: repeating-conic-gradient(
+    var(--c) 0 calc(360deg / var(--n) - var(--d)),
+    transparent 0 calc(360deg / var(--n))
+  );
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - var(--b)),
+    #fff calc(100% - var(--b) + 1px)
+  );
+  mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - var(--b)),
+    #fff calc(100% - var(--b) + 1px)
+  );
+
   position: absolute;
   top: -16%;
-  right: -37%;
-  width: 1700px;
-  height: 1700px;
+  right: -8%;
+
   overflow: hidden;
+}
+.second:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
 }
 
 .third {
-  border-radius: 100%;
-  border: 3px dashed white;
+  --d: 1deg; /* distance between dashes */
+  --n: 155; /* number of dashes */
+  --c: white; /* color of dashes */
+  --b: 4px; /* control the thickness of border*/
+
+  width: 1700px;
+  display: inline-block;
+  border-radius: 50%;
+  background: repeating-conic-gradient(
+    var(--c) 0 calc(360deg / var(--n) - var(--d)),
+    transparent 0 calc(360deg / var(--n))
+  );
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - var(--b)),
+    #fff calc(100% - var(--b) + 1px)
+  );
+  mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - var(--b)),
+    #fff calc(100% - var(--b) + 1px)
+  );
+
   position: absolute;
   bottom: 50%;
   right: -37%;
-  width: 1700px;
-  height: 1700px;
-  overflow: hidden;
-}
-.forth {
-  border-radius: 100%;
-  border: 3px dashed white;
-  position: absolute;
-  bottom: -50%;
-  right: -40%;
-  width: 1000px;
-  height: 1000px;
+
   overflow: hidden;
 }
 
+.third:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.forth {
+  --d: 1deg; /* distance between dashes */
+  --n: 115; /* number of dashes */
+  --c: white; /* color of dashes */
+  --b: 4px; /* control the thickness of border*/
+
+  width: 1000px;
+  display: inline-block;
+  border-radius: 50%;
+  background: repeating-conic-gradient(
+    var(--c) 0 calc(360deg / var(--n) - var(--d)),
+    transparent 0 calc(360deg / var(--n))
+  );
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - var(--b)),
+    #fff calc(100% - var(--b) + 1px)
+  );
+  mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - var(--b)),
+    #fff calc(100% - var(--b) + 1px)
+  );
+
+  position: absolute;
+  bottom: -50%;
+  right: -40%;
+  overflow: hidden;
+}
+
+.forth:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
 .fifth {
-  border-radius: 100%;
-  border: 3px dashed white;
+  --d: 1deg; /* distance between dashes */
+  --n: 115; /* number of dashes */
+  --c: white; /* color of dashes */
+  --b: 4px; /* control the thickness of border*/
+
+  width: 1000px;
+  display: inline-block;
+  border-radius: 50%;
+  background: repeating-conic-gradient(
+    var(--c) 0 calc(360deg / var(--n) - var(--d)),
+    transparent 0 calc(360deg / var(--n))
+  );
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - var(--b)),
+    #fff calc(100% - var(--b) + 1px)
+  );
+  mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - var(--b)),
+    #fff calc(100% - var(--b) + 1px)
+  );
+
   position: absolute;
   bottom: -130%;
   right: -40%;
-  width: 1000px;
-  height: 1000px;
   overflow: hidden;
+}
+
+.fifth:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
 }
