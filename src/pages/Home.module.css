@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 .container {
   height: 100vh;
   background-image: url(../assets/homeBG.png);
@@ -23,7 +27,8 @@
 }
 
 .text {
-  width: 50%;
+  padding: 0px;
+  width: 45%;
 }
 
 .image {
@@ -35,10 +40,16 @@
 }
 
 .text h1 {
+  color: #303030;
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 0px;
+  line-height: 165px;
+  margin-top: 0px;
   text-align: center;
-  font-size: 70px;
+  font-size: 138px;
   text-transform: uppercase;
   position: relative;
+  margin-bottom: 40px;
 }
 
 .text h1::after {
@@ -54,7 +65,12 @@
 }
 
 .text p {
+  font-family: "Roboto", sans-serif;
+  margin-top: 0px;
+  font-size: 28px;
   text-align: center;
+  color: #303030;
+  line-height: 34px;
 }
 
 @media (max-width: 850px) {

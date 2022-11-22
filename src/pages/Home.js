@@ -11,9 +11,10 @@ const Home = () => {
           <div className={styles.text}>
             <h1>No language barriers</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              nulla laboriosam veritatis vitae assumenda nemo optio inventore
-              dolore tenetur sunt.
+              No language barriers is here to help your business expand by
+              translating your content into several different languages! We will
+              help you dive right into a new market with hundreds of millions of
+              new customers.
             </p>
           </div>
           <div className={styles.image}></div>
