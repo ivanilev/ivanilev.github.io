@@ -1,0 +1,58 @@
+.container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.first {
+  border-radius: 100%;
+  border: 3px dashed white;
+  position: absolute;
+  top: 40%;
+  left: -40%;
+  width: 1100px;
+  height: 1100px;
+  overflow: hidden;
+}
+
+.second {
+  border-radius: 100%;
+  border: 3px dashed white;
+  position: absolute;
+  top: -16%;
+  right: -37%;
+  width: 1700px;
+  height: 1700px;
+  overflow: hidden;
+}
+
+.third {
+  border-radius: 100%;
+  border: 3px dashed white;
+  position: absolute;
+  bottom: 50%;
+  right: -37%;
+  width: 1700px;
+  height: 1700px;
+  overflow: hidden;
+}
+.forth {
+  border-radius: 100%;
+  border: 3px dashed white;
+  position: absolute;
+  bottom: -50%;
+  right: -40%;
+  width: 1000px;
+  height: 1000px;
+  overflow: hidden;
+}
+
+.fifth {
+  border-radius: 100%;
+  border: 3px dashed white;
+  position: absolute;
+  bottom: -130%;
+  right: -40%;
+  width: 1000px;
+  height: 1000px;
+  overflow: hidden;
+}

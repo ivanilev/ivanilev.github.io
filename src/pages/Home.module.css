@@ -1,9 +1,14 @@
 .container {
   height: 100vh;
-  background-color: rgb(185, 216, 237);
+  background-image: url(../assets/homeBG.png);
+  background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
   min-height: 600px;
+  border-bottom: 3px solid purple;
+  overflow: hidden;
 }
+
 .contentBox {
   height: 100%;
   display: "flex";
@@ -12,7 +17,6 @@
 }
 
 .content {
-  border: 1px solid black;
   margin: 5%;
   display: flex;
   padding: 1rem;
@@ -20,15 +24,15 @@
 }
 
 .text {
-  border: 1px solid black;
   width: 50%;
 }
 
 .image {
-  background-color: rgb(125, 125, 125, 0.5);
-  height: 250px;
-  width: 250px;
-  border: 1px solid black;
+  background-image: url(../assets/Group_230.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 777.1px;
+  height: 478.661px;
 }
 
 .text h1 {
@@ -61,8 +65,8 @@
     min-height: none;
   }
   .text {
-    border: 1px solid black;
     width: 100%;
+    z-index: 1;
   }
   .text h1 {
     text-align: center;
@@ -71,15 +75,18 @@
     position: relative;
   }
   .image {
-    margin-inline: auto;
+    height: 300px;
+    width: 70%;
     position: absolute;
-    left: 50%;
-    margin-left: -125px;
+    top: 14rem;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .content {
     max-width: 100%;
-    border: 1px solid black;
     margin: 1rem;
     display: flex;
     padding: 1rem;
@@ -98,6 +105,6 @@
     height: 70%;
   }
   .content {
-    margin-top: 0rem;
+    margin-top: -2rem;
   }
 }
