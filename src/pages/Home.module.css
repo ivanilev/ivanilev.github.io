@@ -23,22 +23,27 @@
 }
 
 .text {
-  width: 50%;
+  width: 100%;
 }
 
 .image {
   background-image: url(../assets/Group_230.png);
   background-size: contain;
   background-repeat: no-repeat;
-  width: 777.1px;
-  height: 478.661px;
+  width: -webkit-fill-available;
+  height: auto;
 }
 
 .text h1 {
   text-align: center;
-  font-size: 70px;
   text-transform: uppercase;
+  
+  font-family: 'Bebas Neue';
+  font-size: 128px;
+  font-weight: 100;
+  
   position: relative;
+  margin-top: 0px;
 }
 
 .text h1::after {
@@ -55,6 +60,8 @@
 
 .text p {
   text-align: center;
+  font-size: 28px;
+  padding-inline: 4rem;
 }
 
 @media (max-width: 850px) {
