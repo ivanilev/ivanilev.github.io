@@ -16,7 +16,7 @@
 }
 .details span {
   color: gray;
-  font-size: 0.8rem;
+  font-size: 2rem;
 }
 
 @media (max-width: 650px) {
