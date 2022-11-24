@@ -80,12 +80,12 @@ const GetInTouch = () => {
               type="Viber:"
               contact="+359 887 320 313"
             />
-          </div>
-          <div className={styles.social}>
-            <div className={styles.socialIcon}>{facebookIcon}</div>
-            <div className={styles.socialIcon}>{linkedInIcon}</div>
-            <div className={styles.socialIcon}>{youtubeIcon}</div>
-            <div className={styles.socialIcon}>{instaIcon}</div>
+            <div className={styles.social}>
+              <div className={styles.socialIcon}>{facebookIcon}</div>
+              <div className={styles.socialIcon}>{linkedInIcon}</div>
+              <div className={styles.socialIcon}>{youtubeIcon}</div>
+              <div className={styles.socialIcon}>{instaIcon}</div>
+            </div>
           </div>
         </div>
         <div className={styles.separator}></div>
