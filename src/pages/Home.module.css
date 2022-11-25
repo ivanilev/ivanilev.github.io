@@ -72,7 +72,9 @@
   padding-inline: 4rem;
   color: #303030;
 }
+
 /*
+Smartphone devices (576px and down) 
 @media (max-width: 576px) {
   .container {
     height: 60vh;
@@ -93,71 +95,42 @@
     font-size: 20px;
   }
 }
-
-@media (max-width: 850px) {
-  .container {
-    background-color: rgb(185, 216, 237);
-    min-height: none;
-  }
-  .text {
-    width: 100%;
-    z-index: 1;
-  }
-  .text h1 {
-    text-align: center;
-    font-size: 30px;
-    text-transform: uppercase;
-    position: relative;
-  }
-  .image {
-    height: 300px;
-    width: 70%;
-    position: absolute;
-    top: 14rem;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .content {
-    max-width: 100%;
-    margin: 1rem;
-    display: flex;
-    padding: 1rem;
-    max-height: 100%;
-  }
-}
 */
+
+/* Small devices (tablets 576px-768px) */
 @media (min-width: 576px) and (max-width: 768px) {
   .text h1 {
     font-size: var(--font-size-header-xs);
   }
   .text p {
     font-size: var(--font-size-xs);
+    padding-inline: 1em;
   } 
 }
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 768px) and (max-width: 992px) {
+/* Medium devices (desktops, 768px-1080px) */
+@media (min-width: 768px) and (max-width: 1080px) {
   .text h1 {
     font-size: var(--font-size-header-s);
   }
   .text p {
     font-size: var(--font-size-s);
+    padding-inline: 2em;
   } 
 }
 
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1200px) {
+/* Large devices (desktops, 1080px-1336px) */
+@media (min-width: 1080px) and (max-width: 1366px) {
   .text h1 {
     font-size: var(--font-size-header-m);
   }
   .text p {
     font-size: var(--font-size-paragraph-s);
-  } 
+    padding-inline: 2em;
+  }
 }
 
-@media (min-width: 1200px) and (max-width: 1600px) {
+/* Extra extra large devices (desktops, 1680px and up) */
+@media (min-width: 1366px) and (max-width: 1680px) {
   .text h1 {
     font-size: var(--font-size-header-l);
   }
@@ -166,7 +139,7 @@
   }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1680px) {
   .text h1 {
     font-size: var(--font-size-header-xl);
   }
