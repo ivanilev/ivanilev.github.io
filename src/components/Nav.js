@@ -45,17 +45,14 @@ const Nav = () => {
           <a onClick={iconClickHandler} href="#home">
             Home
           </a>
-          <a onClick={iconClickHandler} href="#getInTouch">
-            Who we are
+          <a onClick={iconClickHandler} href="#AboutUs">
+            About us
           </a>
-          <a onClick={iconClickHandler} href="#whatWeDo">
-            What we do
-          </a>
-          <a onClick={iconClickHandler} href="#">
-            Our services
-          </a>
-          <a onClick={iconClickHandler} href="#languages">
+          <a onClick={iconClickHandler} href="#Languages">
             Languages
+          </a>
+          <a onClick={iconClickHandler} href="#GetInTouch">
+            Contact us
           </a>
           {!isDesktop && closeIcon}
         </nav>

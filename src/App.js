@@ -34,8 +34,8 @@ function App() {
       {showArrow && upIcon}
       <Home />
       <WhatWeDo />
-      <GetInTouch />
       <Languages />
+      <GetInTouch />
     </div>
   );
 }

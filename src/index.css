@@ -17,3 +17,28 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+:root {
+  --font-size-header-xxxl: 150px;
+  --font-size-header-xxl: 128px;
+  --font-size-header-xl: 108px;
+  --font-size-header-l: 96px;
+  --font-size-header-m: 84px;
+  --font-size-header-s: 60px;
+  --font-size-header-xs: 48px;
+
+  --font-size-paragraph-xxl: 28px;
+  --font-size-paragraph-xl: 24px;
+  --font-size-paragraph-l: 22px;
+  --font-size-paragraph-m: 20px;
+  --font-size-paragraph-s: 18px;
+  
+  --font-size-s: 14px;
+  --font-size-xs: 10px;
+
+  --logo-size-xl: 151px;
+  --logo-size-l: 108px;
+  --logo-size-m: 96px;
+  --logo-size-s: 72px;
+  --logo-size-xs: 64px;
+}

@@ -42,13 +42,11 @@
   color: #303030;
   font-family: "Bebas Neue", cursive;
   letter-spacing: 0px;
-  line-height: 165px;
   margin-top: 0px;
   text-align: center;
   text-transform: uppercase;
   
   font-family: 'Bebas Neue';
-  font-size: 128px;
   font-weight: 100;
   
   position: relative;
@@ -70,16 +68,34 @@
 .text p {
   font-family: "Roboto", sans-serif;
   margin-top: 0px;
-  font-size: 28px;
   text-align: center;
-  font-size: 28px;
   padding-inline: 4rem;
   color: #303030;
+}
+/*
+@media (max-width: 576px) {
+  .container {
+    height: 60vh;
+    min-height: 350px;
+  }
+  .contentBox {
+    margin-top: 1rem;
+    padding-top: 0px;
+    height: 70%;
+  }
+  .content {
+    margin-top: -2rem;
+  }
+  .text h1 {
+    font-size: 96px;
+  }
+  .text p {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 850px) {
   .container {
-    height: 100vh;
     background-color: rgb(185, 216, 237);
     min-height: none;
   }
@@ -112,18 +128,64 @@
     max-height: 100%;
   }
 }
+*/
+@media (min-width: 576px) and (max-width: 768px) {
+  .text h1 {
+    font-size: var(--font-size-header-xs);
+  }
+  .text p {
+    font-size: var(--font-size-xs);
+  } 
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 768px) and (max-width: 992px) {
+  .text h1 {
+    font-size: var(--font-size-header-s);
+  }
+  .text p {
+    font-size: var(--font-size-s);
+  } 
+}
 
-@media (max-width: 650px) {
-  .container {
-    height: 60vh;
-    min-height: 350px;
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .text h1 {
+    font-size: var(--font-size-header-m);
   }
-  .contentBox {
-    margin-top: 1rem;
-    padding-top: 0px;
-    height: 70%;
+  .text p {
+    font-size: var(--font-size-paragraph-s);
+  } 
+}
+
+@media (min-width: 1200px) and (max-width: 1600px) {
+  .text h1 {
+    font-size: var(--font-size-header-l);
   }
-  .content {
-    margin-top: -2rem;
+  .text p {
+    font-size: var(--font-size-paragraph-m);
+  }
+}
+
+@media (min-width: 1600px) {
+  .text h1 {
+    font-size: var(--font-size-header-xl);
+  }
+  .text p {
+    font-size: var(--font-size-paragraph-xl);
+  }
+  .image {
+    margin-inline-start: 5%;
+  }
+}
+
+@media (min-width: 1920px) {
+  .text h1 {
+    font-size: var(--font-size-header-xxl);
+  }
+  .text p {
+    font-size: var(--font-size-paragraph-xxl);
+  }
+  .image {
+    margin-inline-start: 15%;
   }
 }
