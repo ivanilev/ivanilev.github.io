@@ -47,6 +47,7 @@ const GetInTouch = () => {
             }
           );
         setSubmited(true);
+        e.target.reset();
       } else {
         setError("Email is not valid.");
       }
@@ -54,7 +55,7 @@ const GetInTouch = () => {
   };
 
   return (
-    <div id="getInTouch" className={styles.container}>
+    <div id="GetInTouch" className={styles.container}>
       <h1 className={styles.heading}>Get in touch!</h1>
       <div className={styles.content}>
         <div className={styles.directly}>
@@ -80,12 +81,12 @@ const GetInTouch = () => {
               type="Viber:"
               contact="+359 887 320 313"
             />
-            <div className={styles.social}>
-              <div className={styles.socialIcon}>{facebookIcon}</div>
-              <div className={styles.socialIcon}>{linkedInIcon}</div>
-              <div className={styles.socialIcon}>{youtubeIcon}</div>
-              <div className={styles.socialIcon}>{instaIcon}</div>
-            </div>
+          </div>
+          <div className={styles.social}>
+            {facebookIcon}
+            {linkedInIcon}
+            {youtubeIcon}
+            {instaIcon}
           </div>
         </div>
         <div className={styles.separator}></div>
@@ -102,52 +103,54 @@ const GetInTouch = () => {
             ""
           )}
           <form ref={form} onSubmit={formSubmitHandler}>
-            <div className={styles.inputGroup}>
-              <label htmlFor="user_name">Name:</label>
-              <input
-                onChange={() => setError("")}
-                ref={nameRef}
-                placeholder="Enter your name here"
-                name="user_name"
-                type="text"
-              />
+            <div className={styles.formContainer}>
+              <div className={styles.inputGroup}>
+                <label htmlFor="user_name">Name:</label>
+                <input
+                  onChange={() => setError("")}
+                  ref={nameRef}
+                  placeholder="Enter your name here"
+                  name="user_name"
+                  type="text"
+                />
+              </div>
+              <div className={styles.inputGroup}>
+                <label htmlFor="user_email">Email:</label>
+                <input
+                  onChange={() => setError("")}
+                  ref={emailRef}
+                  placeholder="Enter your email adress here"
+                  name="user_email"
+                  type="text"
+                />
+              </div>
+              <div className={styles.inputGroup}>
+                <label htmlFor="subject">Subject:</label>
+                <input
+                  onChange={() => setError("")}
+                  ref={subjectRef}
+                  placeholder="Type your subject here"
+                  name="subject"
+                  type="text"
+                />
+              </div>
+              <div className={styles.inputGroup}>
+                <label htmlFor="message">Message:</label>
+                <textarea
+                  onChange={() => setError("")}
+                  ref={messageRef}
+                  placeholder="Type your message here"
+                  name="message"
+                />
+              </div>
+              {submited ? (
+                <p style={{ color: "rgb(38, 127, 193)" }}>
+                  Thank you for contacting us!
+                </p>
+              ) : (
+                ""
+              )}
             </div>
-            <div className={styles.inputGroup}>
-              <label htmlFor="user_email">Email:</label>
-              <input
-                onChange={() => setError("")}
-                ref={emailRef}
-                placeholder="Enter your email adress here"
-                name="user_email"
-                type="text"
-              />
-            </div>
-            <div className={styles.inputGroup}>
-              <label htmlFor="subject">Subject:</label>
-              <input
-                onChange={() => setError("")}
-                ref={subjectRef}
-                placeholder="Type your subject here"
-                name="subject"
-                type="text"
-              />
-            </div>
-            <div className={styles.inputGroup}>
-              <label htmlFor="message">Message:</label>
-              <textarea
-                onChange={() => setError("")}
-                ref={messageRef}
-                placeholder="Type your message here"
-                name="message"
-              />
-            </div>
-            {submited ? (
-              <p style={{ color: "rgb(38, 127, 193)" }}>
-                Thank you for contacting us!
-              </p>
-            ) : (
-              ""
-            )}
             <button disabled={submited} className={styles.button} type="submit">
               SUBMIT
             </button>

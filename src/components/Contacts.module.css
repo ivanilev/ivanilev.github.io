@@ -7,6 +7,7 @@
   align-items: center;
   margin-bottom: 1rem;
   margin-right: 0px;
+  height: min-content;
 }
 .icon {
   color: blue;
@@ -19,15 +20,36 @@
   font-size: 1.5rem;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 768px) {
   .container {
     gap: 1rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0rem;
   }
   .details span {
     color: gray;
-    font-size: 0.5rem;
+    font-size: var(--font-size-s);
   }
 }
 
+@media (min-width: 768px) and (max-width: 1080px) {
+  .container {
+    gap: 1rem;
+    margin-bottom: 0rem;
+  }
+  .details span {
+    color: gray;
+    font-size: var(--font-size-s);
+  }
+}
+
+@media (min-width: 1080px) and (max-width: 1366px) {
+  .container {
+    gap: 1rem;
+    margin-bottom: 0rem;
+  }
+  .details span {
+    color: gray;
+    font-size: var(--font-size-l);
+  }
+}
 /* if variant 2 */

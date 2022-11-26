@@ -83,6 +83,14 @@
   flex-direction: column;
   justify-content: space-between;
 }
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 90%;
+  width: 100%;
+}
 .contactForm form {
   display: flex;
   flex-direction: column;
@@ -247,7 +255,112 @@ textarea {
 }
  */
 
-@media (max-width: 650px) {
+/* Devices below 576px width */
+
+@media (max-width: 576px) {
+  .contact-icon {
+    height: 1rem;
+  }
+  .errorMessage {
+    left: 50%;
+    width: 200px;
+    transform: translateX(-50%);
+    animation: none;
+    animation: shakeMobile 1s forwards;
+  }
+  .heading {
+    font-size: var(--font-size-header-xs);
+    margin-block: 0px;
+    padding: 10px;
+  }
+  .container {
+    height: 120vh;
+    min-height: 1000px;
+  }
+  .content {
+    border: 3px solid white;
+    height: 85%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .separator {
+    border-right: none;
+    border-bottom: 3px solid white;
+    margin-inline: 1rem;
+    width: 90%;
+    height: 0px;
+  }
+  .directly {
+    height: 50%;
+    margin-inline: 0px;
+    margin-bottom: 1rem;
+    margin-top: 0rem;
+    width: 100%;
+  }
+  .gridContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 0rem;
+    column-gap: 0rem;
+  }
+  .social {
+    margin-inline: auto;
+    width: 90%;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .directly p {
+    margin-top: 0px;
+    font-size: var(--font-size-paragraph-s);
+  }
+  .inputGroup {
+    width: 90%;
+  }
+  .inputGroup label {
+    font-size: var(--font-size-paragraph-s);
+  }
+  .contactForm {
+    margin-top: 0px;
+    padding-top: 0px;
+    height: 55%;
+    width: 80%;
+  }
+  .contactForm input {
+    width: 100%;
+    margin: 0px;
+  }
+  .contactForm input[type="text"] {
+    font-size: var(--font-size-paragraph-s);
+  }
+  textarea {
+    width: 100%;
+  }
+  .contactForm p {
+    text-align: center;
+    margin-top: 0px;
+    font-size: var(--font-size-paragraph-s);
+  }
+  .contactForm input::placeholder {
+    font-size: var(--font-size-paragraph-s);
+  }
+  .formContainer {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .button {
+    justify-content: center;
+    font-size: 0.7rem;
+    padding-inline: 0.7rem;
+    padding-block: 0.4rem;
+    border-radius: 10px;
+    width: 4rem;
+  }
+}
+
+/* Small devices (tablets 576px-768px) */
+@media (min-width: 576px) and (max-width: 768px) {
   .contact-icon {
     height: 1rem;
   }
@@ -268,6 +381,7 @@ textarea {
     min-height: 500px;
   }
   .content {
+    border: 3px solid white;
     height: 85%;
     flex-direction: column;
     align-items: center;
@@ -292,13 +406,15 @@ textarea {
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 0rem;
-    column-gap: 0rem;
+    column-gap: 4rem;
   }
   .social {
     margin-inline: auto;
     width: 90%;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
-    gap: 3rem;
+    gap: 2rem;
   }
   .directly p {
     margin-top: 0px;
@@ -321,6 +437,10 @@ textarea {
   .contactForm input[type="text"] {
     font-size: 0.8rem;
   }
+
+  .contactForm textarea {
+    font-size: 0.8rem;
+  }
   .directly {
     margin-right: 0px;
   }
@@ -332,12 +452,14 @@ textarea {
   .contactForm input::placeholder {
     font-size: 0.5rem;
   }
-  .contactForm form {
+
+  .formContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 0rem;
     column-gap: 0rem;
   }
+
   .button {
     justify-content: center;
     font-size: 0.7rem;
@@ -346,4 +468,149 @@ textarea {
     border-radius: 10px;
     width: 4rem;
   }
+}
+/* Medium devices (desktops, 768px-1080px) */
+@media (min-width: 768px) and (max-width: 1080px) {
+  .heading {
+    margin: 2rem;
+    padding: 0px;
+    text-transform: uppercase;
+    font-size: var(--font-size-header-s);
+  }
+  .directly p {
+    font-weight: bold;
+    font-size: var(--font-size-paragraph-m);
+    align-self: center;
+    padding-bottom: 0px;
+  }
+  .content {
+    border: 5px solid white;
+    border-radius: 30px;
+    padding-bottom: 1rem;
+  }
+
+  .gridContainer {
+    display: flex;
+    height: 90%;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-block: 2rem;
+  }
+  .formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 90%;
+    width: 100%;
+    margin-block: 2rem;
+  }
+
+  .contactForm p {
+    font-size: var(--font-size-paragraph-m);
+    font-weight: bold;
+    align-self: center;
+  }
+
+  textarea {
+    background-color: transparent;
+    max-height: 200px;
+    font-size: var(--font-size-s);
+    font-style: italic;
+  }
+
+  .inputGroup input {
+    font-size: var(--font-size-s);
+    font-style: italic;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid grey;
+    margin-top: 10px;
+  }
+  .inputGroup label {
+    font-weight: bold;
+    font-size: var(--font-size-paragraph-m);
+  }
+
+  .button {
+    font-size: var(--font-size-m);
+  }
+}
+
+/* Large devices (desktops, 1080px-1336px) */
+@media (min-width: 1080px) and (max-width: 1366px) {
+  .heading {
+    margin: 2rem;
+    padding: 0px;
+    text-transform: uppercase;
+    font-size: var(--font-size-header-m);
+  }
+  .directly p {
+    font-weight: bold;
+    font-size: var(--font-size-paragraph-l);
+    align-self: center;
+    padding-bottom: 0px;
+  }
+  .content {
+    border: 5px solid white;
+    border-radius: 30px;
+    padding-bottom: 1rem;
+  }
+
+  .gridContainer {
+    display: flex;
+    height: 90%;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-block: 2rem;
+  }
+  .formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 90%;
+    width: 100%;
+    margin-block: 2rem;
+  }
+
+  .contactForm p {
+    font-size: var(--font-size-paragraph-m);
+    font-weight: bold;
+    align-self: center;
+  }
+
+  textarea {
+    background-color: transparent;
+    max-height: 200px;
+    font-size: var(--font-size-l);
+    font-style: italic;
+  }
+
+  .inputGroup input {
+    font-size: var(--font-size-l);
+    font-style: italic;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid grey;
+    margin-top: 10px;
+  }
+  .inputGroup label {
+    font-weight: bold;
+    font-size: var(--font-size-paragraph-m);
+  }
+
+  .button {
+    font-size: var(--font-size-l);
+  }
+}
+
+/* Extra extra large devices (desktops, 1680px and up) */
+@media (min-width: 1366px) and (max-width: 1680px) {
+}
+
+@media (min-width: 1680px) {
+}
+
+@media (min-width: 1920px) {
 }

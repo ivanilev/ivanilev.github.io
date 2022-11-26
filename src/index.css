@@ -1,15 +1,18 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900);
 @import url(https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap);
 
-html, code, body, html * {
-  font-family: 'Roboto', sans-serif;
+html,
+code,
+body,
+html * {
+  font-family: "Roboto", sans-serif;
 }
 
 body {
   background-color: rgb(185, 216, 237);
 
   margin: 0;
-  font-family: 'Roboto', medium;
+  font-family: "Roboto", medium;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -32,7 +35,8 @@ html {
   --font-size-paragraph-l: 22px;
   --font-size-paragraph-m: 20px;
   --font-size-paragraph-s: 18px;
-  
+
+  --font-size-l: 20px;
   --font-size-s: 14px;
   --font-size-xs: 10px;
 
