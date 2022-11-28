@@ -1,10 +1,10 @@
 .container {
-  height: 100vh;
+  height: 37.5rem;
   display: flex;
   justify-content: center;
   align-items: top;
   background-color: rgb(185, 216, 237);
-  min-height: 600px;
+  min-height: 300px;
 }
 .heading {
   color: rgb(46, 47, 51);
@@ -22,6 +22,7 @@
   border-radius: 100%;
   width: 5rem;
   height: 5rem;
+  position: relative;
 }
 
 .deutch {
@@ -31,6 +32,7 @@
   border-radius: 100%;
   width: 5rem;
   height: 5rem;
+  position: relative;
 }
 .spanish {
   background-image: url(../assets/spainFlag.png);
@@ -39,6 +41,7 @@
   border-radius: 100%;
   width: 5rem;
   height: 5rem;
+  position: relative;
 }
 
 .french {
@@ -47,6 +50,7 @@
   border-radius: 100%;
   width: 5rem;
   height: 5rem;
+  position: relative;
 }
 .greek {
   background-image: url(../assets/greeceFlag.png);
@@ -54,69 +58,90 @@
   border-radius: 100%;
   width: 5rem;
   height: 5rem;
+  position: relative;
 }
-
-@media (max-width: 1000px) {
-  .content {
-    margin-inline: 1rem;
-  }
-  .english {
-    width: 4rem;
-    height: 4rem;
-  }
-
-  .deutch {
-    width: 4rem;
-    height: 4rem;
-  }
-  .spanish {
-    width: 4rem;
-    height: 4rem;
-  }
-
-  .french {
-    width: 4rem;
-    height: 4rem;
-  }
-  .greek {
-    width: 4rem;
-    height: 4rem;
-  }
+.bulgarian {
+  background-image: url(../assets/bulgarianFlag.jpg);
+  background-position: center;
+  border-radius: 100%;
+  background-size: 8rem;
+  width: 5rem;
+  height: 5rem;
+  position: relative;
 }
-@media (max-width: 650px) {
-  .container {
-    min-height: 0px;
-  }
-  .content {
-    width: 90%;
+@media (max-width: 576px) {
+  .heading {
+    font-size: 20px;
   }
   .languages {
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 3rem;
+  }
+  .english::after {
+    content: "English";
+    position: absolute;
+    bottom: -1.5rem;
+    left: 50%;
+    transform: translatex(-50%);
+  }
+  .deutch::after {
+    content: "German";
+    position: absolute;
+    bottom: -1.5rem;
+    left: 50%;
+    transform: translatex(-50%);
   }
 
-  .heading {
-    font-size: 1rem;
+  .spanish::after {
+    content: "Spanish";
+    position: absolute;
+    bottom: -1.5rem;
+    left: 50%;
+    transform: translatex(-50%);
   }
-  .english {
-    width: 3rem;
-    height: 3rem;
+  .greek::after {
+    content: "Greek";
+    position: absolute;
+    bottom: -1.5rem;
+    left: 50%;
+    transform: translatex(-50%);
   }
+  .french::after {
+    content: "French";
+    position: absolute;
+    bottom: -1.5rem;
+    left: 50%;
+    transform: translatex(-50%);
+  }
+  .bulgarian::after {
+    content: "Bulgarian";
+    position: absolute;
+    bottom: -1.5rem;
+    left: 50%;
+    transform: translatex(-50%);
+  }
+}
 
-  .deutch {
-    width: 3rem;
-    height: 3rem;
-  }
-  .spanish {
-    width: 3rem;
-    height: 3rem;
-  }
+@media (min-width: 768px) and (max-width: 1080px) {
+}
 
-  .french {
-    width: 3rem;
-    height: 3rem;
+/* Large devices (desktops, 1080px-1336px) */
+@media (min-width: 1080px) and (max-width: 1366px) {
+}
+
+/* Extra extra large devices (desktops, 1680px and up) */
+@media (min-width: 1366px) and (max-width: 1680px) {
+}
+
+@media (min-width: 1680px) {
+  .text h1 {
+    font-size: var(--font-size-header-xl);
   }
-  .greek {
-    width: 3rem;
-    height: 3rem;
+  .text p {
+    font-size: var(--font-size-paragraph-xl);
   }
+}
+
+@media (min-width: 1920px) {
 }

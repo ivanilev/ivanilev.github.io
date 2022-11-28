@@ -30,7 +30,7 @@ const Nav = () => {
     navRef.current?.classList.toggle(styles.active);
   }
   const updateMedia = () => {
-    setDesktop(window.innerWidth > 650);
+    setDesktop(window.innerWidth > 576);
   };
   useEffect(() => {
     window.addEventListener("resize", updateMedia);

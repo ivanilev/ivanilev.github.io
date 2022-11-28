@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 .container {
-  height: 150vh;
+  height: 56rem;
   background-color: rgb(185, 216, 237);
   overflow: hidden;
   min-height: 1000px;

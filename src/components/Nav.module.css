@@ -26,7 +26,7 @@ nav a {
   text-transform: uppercase;
 
   font-weight: 450;
-  font-family: 'Roboto' medium;
+  font-family: "Roboto" medium;
 
   letter-spacing: 0px;
   color: #303030;
@@ -34,7 +34,7 @@ nav a {
   margin: auto 2em auto 1em;
 }
 /*
-/* Smartphone devices (576px and down) 
+/* Smartphone devices (576px and down) */
 @media (max-width: 576px) {
   .active {
     transform: translateY(+110vh);
@@ -45,6 +45,7 @@ nav a {
     flex-direction: column;
     position: fixed;
     top: -110vh;
+    max-height: none;
     height: 100vh;
     background-color: azure;
     padding-inline: auto;
@@ -60,7 +61,6 @@ nav a {
   .navAndLogoMobile {
     display: flex;
     width: 100%;
-    justify-content: space-between;
   }
   .icon {
     position: fixed;
@@ -74,12 +74,18 @@ nav a {
   .navAndLogo {
     padding: 0px;
   }
-} */
+  .logo {
+    margin-inline: auto;
+
+    width: var(--logo-size-xs);
+    height: var(--logo-size-xs);
+  }
+}
 
 /* Small devices (tablets 576px-768px) */
 @media (min-width: 576px) and (max-width: 768px) {
-  .logo {  
-    width: var(--logo-size-xs); 
+  .logo {
+    width: var(--logo-size-xs);
     height: var(--logo-size-xs);
   }
   nav {
@@ -92,8 +98,8 @@ nav a {
 
 /* Medium devices (desktops, 768px-1080px) */
 @media (min-width: 768px) and (max-width: 1080px) {
-  .logo {  
-    width: var(--logo-size-s); 
+  .logo {
+    width: var(--logo-size-s);
     height: var(--logo-size-s);
   }
   nav {
@@ -106,8 +112,8 @@ nav a {
 
 /* Large devices (desktops, 1080px-1366px) */
 @media (min-width: 1080px) and (max-width: 1366px) {
-  .logo {  
-    width: var(--logo-size-m); 
+  .logo {
+    width: var(--logo-size-m);
     height: var(--logo-size-m);
   }
   nav {
@@ -119,9 +125,9 @@ nav a {
 }
 
 /* Extra large devices (desktops, 1366px-1680px) */
- @media (min-width: 1366px) and (max-width: 1680px) {
-  .logo {  
-    width: var(--logo-size-l); 
+@media (min-width: 1366px) and (max-width: 1680px) {
+  .logo {
+    width: var(--logo-size-l);
     height: var(--logo-size-l);
   }
   nav {
@@ -134,8 +140,8 @@ nav a {
 
 /* Extra extra large devices (desktops, 1680px and up) */
 @media (min-width: 1680px) {
-  .logo{  
-    width: var(--logo-size-xl); 
+  .logo {
+    width: var(--logo-size-xl);
     height: var(--logo-size-xl);
   }
   nav {

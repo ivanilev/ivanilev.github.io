@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 .container {
-  height: 100vh;
+  height: 37.5rem;
   background-image: url(../assets/homeBG.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -45,10 +45,10 @@
   margin-top: 0px;
   text-align: center;
   text-transform: uppercase;
-  
-  font-family: 'Bebas Neue';
+
+  font-family: "Bebas Neue";
   font-weight: 100;
-  
+
   position: relative;
   margin-top: 0px;
 }
@@ -73,29 +73,46 @@
   color: #303030;
 }
 
-/*
-Smartphone devices (576px and down) 
+/* Smartphone devices (576px and down)  */
 @media (max-width: 576px) {
   .container {
-    height: 60vh;
-    min-height: 350px;
+    height: fit-content;
+    min-height: 300px;
   }
-  .contentBox {
-    margin-top: 1rem;
-    padding-top: 0px;
-    height: 70%;
-  }
+
   .content {
-    margin-top: -2rem;
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    max-height: none;
   }
+  .image {
+    background-position: center;
+    height: 20vh;
+  }
+  .text h1::after {
+    display: block;
+    content: "";
+    width: 44%;
+    height: 1px;
+    background: transparent;
+    position: absolute;
+    bottom: -10px;
+    left: 28%;
+    right: 28%;
+  }
+
   .text h1 {
-    font-size: 96px;
+    font-size: var(--font-size-header-xs);
   }
   .text p {
-    font-size: 20px;
+    font-size: var(--font-size-s);
+    padding-inline: 1em;
   }
 }
-*/
 
 /* Small devices (tablets 576px-768px) */
 @media (min-width: 576px) and (max-width: 768px) {
@@ -105,7 +122,7 @@ Smartphone devices (576px and down)
   .text p {
     font-size: var(--font-size-xs);
     padding-inline: 1em;
-  } 
+  }
 }
 /* Medium devices (desktops, 768px-1080px) */
 @media (min-width: 768px) and (max-width: 1080px) {
@@ -115,7 +132,7 @@ Smartphone devices (576px and down)
   .text p {
     font-size: var(--font-size-s);
     padding-inline: 2em;
-  } 
+  }
 }
 
 /* Large devices (desktops, 1080px-1336px) */
