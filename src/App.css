@@ -10,6 +10,18 @@
   z-index: 2;
   animation: bounce 1s;
 }
+.downArrow {
+  color: rgb(38, 127, 193);
+
+  cursor: pointer;
+  position: fixed;
+  width: 32px;
+  height: 32px;
+  bottom: 5%;
+  z-index: 2;
+  padding-inline: calc(50% - 16px);
+  display: none;
+}
 
 @keyframes bounce {
   0% {
@@ -34,11 +46,17 @@
 }
 
 @media (max-width: 576px) {
+  .downArrow {
+    display: block;
+  }
   .contact-icon {
     height: 2rem;
   }
   .social-icon {
     height: 2rem;
+  }
+  .toTheTop {
+    display: none;
   }
 }
 @media (min-width: 576px) and (max-width: 768px) {

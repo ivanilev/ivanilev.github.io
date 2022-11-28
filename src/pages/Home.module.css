@@ -2,8 +2,12 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
+.downArrow {
+  display: none;
+}
+
 .container {
-  height: 37.5rem;
+  height: 100vh;
   background-image: url(../assets/homeBG.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -75,8 +79,20 @@
 
 /* Smartphone devices (576px and down)  */
 @media (max-width: 576px) {
+  .downArrow {
+    display: block;
+    width: 64px;
+    height: 64px;
+
+    margin: auto;
+    position: fixed;
+    bottom: 10%;
+
+    cursor: pointer;
+    color: rgb(38, 127, 193);
+  }
+
   .container {
-    height: fit-content;
     min-height: 300px;
   }
 
@@ -91,7 +107,7 @@
   }
   .image {
     background-position: center;
-    height: 20vh;
+    height: 25vh;
   }
   .text h1::after {
     display: block;
@@ -109,8 +125,8 @@
     font-size: var(--font-size-header-xs);
   }
   .text p {
-    font-size: var(--font-size-s);
-    padding-inline: 1em;
+    font-size: var(--font-size-m);
+    padding-inline: 0em;
   }
 }
 

@@ -33,29 +33,22 @@
   width: 80%;
 }
 
-@media (max-width: 650px) {
-  .frame h1 {
-    font-size: 1.5rem;
-    margin-block: 0px;
-    padding: 10px;
-  }
+@media (max-width: 576px) {
   .container {
     height: 60vh;
     min-height: 0px;
-    margin-top: 150px;
-  }
-}
-
-@media (max-width: 576px) {
-  .container {
-    height: 50vh;
-    margin: 0px;
   }
   .frame {
     height: 300px;
   }
   .frame h1 {
+    margin-block: 0px;
+    padding: 10px;
     font-size: var(--font-size-header-xs);
+  }
+  .image {
+    height: 98%;
+    width: 98%;  
   }
 }
 
