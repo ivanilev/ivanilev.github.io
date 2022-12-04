@@ -9,6 +9,62 @@ import Languages from "./pages/Languages";
 
 function App() {
   const [showArrow, setShowArrow] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
+
+  //start of code
+
+  document.addEventListener("touchstart", handleTouchStart, false);
+  document.addEventListener("touchmove", handleTouchMove, false);
+
+  var xDown = null;
+  var yDown = null;
+
+  function getTouches(evt) {
+    return (
+      evt.touches || // browser API
+      evt.originalEvent.touches
+    ); // jQuery
+  }
+
+  function handleTouchStart(evt) {
+    const firstTouch = getTouches(evt)[0];
+    xDown = firstTouch.clientX;
+    yDown = firstTouch.clientY;
+  }
+
+  function handleTouchMove(evt) {
+    if (!xDown || !yDown) {
+      return;
+    }
+
+    var xUp = evt.touches[0].clientX;
+    var yUp = evt.touches[0].clientY;
+
+    var xDiff = xDown - xUp;
+    var yDiff = yDown - yUp;
+
+    if (Math.abs(xDiff) > Math.abs(yDiff)) {
+      /*most significant*/
+      if (xDiff > 0) {
+        setShowMenu(false);
+        /* right swipe */
+      } else {
+        setShowMenu(true);
+        /* left swipe */
+      }
+    } else {
+      if (yDiff > 0) {
+        /* down swipe */
+      } else {
+        /* up swipe */
+      }
+    }
+    /* reset values */
+    xDown = null;
+    yDown = null;
+  }
+
+  //end of code
   useEffect(() => {
     const scrollHandler = (ev) => {
       let homeDiv = document.getElementById("home");
@@ -29,14 +85,18 @@ function App() {
   );
   const downIcon = (
     <a href="#AboutUs">
-      <FontAwesomeIcon className="downArrow" icon={faCaretDown} size={"6x"}></FontAwesomeIcon>
-    </a> 
-  )
+      <FontAwesomeIcon
+        className="downArrow"
+        icon={faCaretDown}
+        size={"6x"}
+      ></FontAwesomeIcon>
+    </a>
+  );
 
   return (
     <div className="App">
       {showArrow && upIcon}
-      <Home />
+      <Home showMenu={showMenu} />
       {!showArrow && downIcon}
       <WhatWeDo />
       <Languages />

@@ -37,14 +37,14 @@ nav a {
 /* Smartphone devices (576px and down) */
 @media (max-width: 576px) {
   .active {
-    transform: translateY(+110vh);
+    transform: translateX(+50vw);
   }
 
   .nav {
-    width: 110vw;
+    width: 50vw;
     flex-direction: column;
     position: fixed;
-    top: -110vh;
+    left: -50vw;
     max-height: none;
     height: 100vh;
     background-color: azure;

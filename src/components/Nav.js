@@ -4,31 +4,24 @@ import { useState, useEffect, useRef } from "react";
 import logo from "../assets/logo151.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faNavicon, faClose } from "@fortawesome/free-solid-svg-icons";
-const Nav = () => {
+const Nav = (props) => {
   const navRef = useRef();
   const [isDesktop, setDesktop] = useState(window.innerWidth > 650);
 
   const closeIcon = (
-    <FontAwesomeIcon
-      className={styles.closeIcon}
-      onClick={iconClickHandler}
-      icon={faClose}
-    />
+    <FontAwesomeIcon className={styles.closeIcon} icon={faClose} />
   );
   const navIcon = (
     <div className={styles.navAndLogoMobile}>
       <img src={logo} alt="logo" className={styles.logo} />
-      <FontAwesomeIcon
-        onClick={iconClickHandler}
-        className={styles.icon}
-        icon={faNavicon}
-      />
+      <FontAwesomeIcon className={styles.icon} icon={faNavicon} />
     </div>
   );
-
+  /* 
   function iconClickHandler() {
     navRef.current?.classList.toggle(styles.active);
-  }
+  } */
+
   const updateMedia = () => {
     setDesktop(window.innerWidth > 576);
   };
@@ -41,20 +34,16 @@ const Nav = () => {
     <div className={styles.container}>
       <div className={styles.navAndLogo}>
         {isDesktop && <img className={styles.logo} src={logo} alt="logo" />}
-        <nav ref={navRef} className={styles.nav}>
-          <a onClick={iconClickHandler} href="#home">
-            Home
-          </a>
-          <a onClick={iconClickHandler} href="#AboutUs">
-            About us
-          </a>
-          <a onClick={iconClickHandler} href="#Languages">
-            Languages
-          </a>
-          <a onClick={iconClickHandler} href="#GetInTouch">
-            Contact us
-          </a>
-          {!isDesktop && closeIcon}
+        <nav
+          ref={navRef}
+          className={
+            props.showMenu ? `${styles.nav} ${styles.active}` : styles.nav
+          }
+        >
+          <a href="#home">Home</a>
+          <a ohref="#AboutUs">About us</a>
+          <a href="#Languages">Languages</a>
+          <a href="#GetInTouch">Contact us</a>
         </nav>
         {!isDesktop && navIcon}
       </div>

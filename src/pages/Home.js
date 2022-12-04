@@ -2,10 +2,10 @@ import React from "react";
 import styles from "./Home.module.css";
 import Nav from "../components/Nav";
 
-const Home = () => {
+const Home = (props) => {
   return (
     <div id="home" className={styles.container}>
-      <Nav />
+      <Nav showMenu={props.showMenu} />
       <div className={styles.contentBox}>
         <div className={styles.content}>
           <div className={styles.text}>

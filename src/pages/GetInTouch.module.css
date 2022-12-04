@@ -15,6 +15,7 @@
   padding-block: 0px;
   text-transform: uppercase;
   text-align: center;
+  font-weight: 100;
 }
 
 .content {
@@ -315,6 +316,7 @@ textarea {
     width: 90%;
   }
   .inputGroup label {
+    margin-bottom: 1rem;
     font-size: var(--font-size-paragraph-s);
   }
   .contactForm {
@@ -331,6 +333,7 @@ textarea {
     font-size: var(--font-size-paragraph-s);
   }
   textarea {
+    height: 5rem;
     width: 100%;
   }
   .contactForm p {
@@ -347,12 +350,13 @@ textarea {
   }
 
   .button {
-    justify-content: center;
-    font-size: 0.7rem;
+    text-align: center;
+    font-size: var(--font-size-paragraph-s);
     padding-inline: 0.7rem;
     padding-block: 0.4rem;
     border-radius: 10px;
-    width: 4rem;
+    margin-top: 1rem;
+    width: 6rem;
   }
 }
 
@@ -375,7 +379,7 @@ textarea {
   }
   .container {
     height: 100vh;
-    min-height: 500px;
+    min-height: 550px;
   }
   .content {
     border: 3px solid white;
@@ -458,12 +462,14 @@ textarea {
   }
 
   .button {
+    margin-top: 1rem;
+
     justify-content: center;
-    font-size: 0.7rem;
+    font-size: var(--font-size-paragraph-s);
     padding-inline: 0.7rem;
     padding-block: 0.4rem;
     border-radius: 10px;
-    width: 4rem;
+    width: 6rem;
   }
 }
 /* Medium devices (desktops, 768px-1080px) */
@@ -510,7 +516,6 @@ textarea {
 
   textarea {
     background-color: transparent;
-    max-height: 200px;
     font-size: var(--font-size-s);
     font-style: italic;
   }

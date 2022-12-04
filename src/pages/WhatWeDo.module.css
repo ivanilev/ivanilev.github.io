@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 .container {
   height: 37.5rem;
   display: flex;
@@ -17,8 +21,10 @@
 }
 
 .frame h1 {
+  font-family: "Bebas Neue", cursive;
+  font-weight: 100;
   color: rgb(46, 47, 51);
-  font-size: 4rem;
+  font-size: var(--font-size-header-l);
   text-align: center;
 }
 
@@ -29,7 +35,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
-  height: 80%;
+  height: 70%;
   width: 80%;
 }
 
@@ -47,8 +53,8 @@
     font-size: var(--font-size-header-xs);
   }
   .image {
-    height: 98%;
-    width: 98%;  
+    height: 70%;
+    width: 98%;
   }
 }
 
