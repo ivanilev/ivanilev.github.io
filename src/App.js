@@ -77,14 +77,14 @@ function App() {
     return () => {
       window.removeEventListener("scroll", scrollHandler);
     };
-  }, [showArrow]);
+  }, [showArrow, showMenu]);
   const upIcon = (
     <a href="#home">
       <FontAwesomeIcon className="toTheTop" icon={faUpLong}></FontAwesomeIcon>
     </a>
   );
   const downIcon = (
-    <a href="#AboutUs">
+    <a href="#WhatWeDo">
       <FontAwesomeIcon
         className="downArrow"
         icon={faCaretDown}

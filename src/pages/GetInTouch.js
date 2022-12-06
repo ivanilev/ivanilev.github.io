@@ -12,7 +12,7 @@ import {
   instaIcon,
 } from "../assets/icons";
 import Contacts from "../components/Contacts";
-import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser"; 
 
 const GetInTouch = () => {
   const form = useRef();
@@ -69,7 +69,7 @@ const GetInTouch = () => {
             <Contacts
               icon={emailIcon}
               type="Email:"
-              contact="ivanilev@nolanguagebarriers.com"
+              contact="ivan.ilev@nolangbarriers.com"
             />
             <Contacts
               icon={whatsAppIcon}

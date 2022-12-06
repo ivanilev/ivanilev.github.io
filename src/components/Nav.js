@@ -41,7 +41,7 @@ const Nav = (props) => {
           }
         >
           <a href="#home">Home</a>
-          <a ohref="#AboutUs">About us</a>
+          <a href="#whatWeDo">About us</a>
           <a href="#Languages">Languages</a>
           <a href="#GetInTouch">Contact us</a>
         </nav>
