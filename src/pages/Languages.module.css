@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
 .container {
-  height: 37.5rem;
+  height: 30.5rem;
   display: flex;
   justify-content: center;
   align-items: top;
@@ -31,6 +31,7 @@
   height: 128px;
   position: relative;
   font-weight: 700;
+  background-position: center;
 }
 
 .languages > div::after {
@@ -51,8 +52,8 @@
 .greek::after {
   content: "Greek";
 }
-.french::after {
-  content: "French";
+.portuguese::after {
+  content: "Portuguese";
 }
 .bulgarian::after {
   content: "Bulgarian";

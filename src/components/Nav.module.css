@@ -132,10 +132,10 @@ nav a {
     height: var(--logo-size-l);
   }
   nav {
-    font-size: var(--font-size-paragraph-xl);
+    font-size: var(--font-size-paragraph-l);
   }
   nav a {
-    font-size: var(--font-size-paragraph-xl);
+    font-size: var(--font-size-paragraph-l);
   }
 }
 

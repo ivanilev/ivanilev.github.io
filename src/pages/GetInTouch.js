@@ -73,7 +73,7 @@ const GetInTouch = () => {
             />
             <Contacts
               icon={whatsAppIcon}
-              type="Whatsapp:"
+              type="WhatsApp:"
               contact="+359 887 320 313"
             />
             <Contacts
@@ -91,7 +91,7 @@ const GetInTouch = () => {
         </div>
         <div className={styles.separator}></div>
         <div className={styles.contactForm}>
-          <p>Or fill in our contact form</p>
+          <p>Or fill in our contact form:</p>
           {error === "Email is not valid." ? (
             <p className={styles.errorMessage}>{error}</p>
           ) : (
