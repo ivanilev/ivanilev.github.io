@@ -29,7 +29,7 @@
   text-transform: uppercase;
   margin-top: 1rem;
   font-weight: 100;
-  font-family: 'Bebas Neue';
+  font-family: "Bebas Neue";
 }
 
 .image {
@@ -45,10 +45,10 @@
 
 @media (max-width: 576px) {
   .container {
-    height: 60vh;
+    height: 40vh;
     margin-inline: 5%;
     padding-inline: 8px;
-    min-height: 0px;
+    min-height: 300px;
   }
   .frame {
     height: 300px;
@@ -60,7 +60,6 @@
     font-size: var(--font-size-header-xs);
   }
 }
-
 
 /* Small devices (tablets 576px-768px) */
 @media (min-width: 576px) and (max-width: 768px) {

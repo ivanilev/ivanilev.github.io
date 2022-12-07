@@ -96,7 +96,7 @@ function App() {
   return (
     <div className="App">
       {showArrow && upIcon}
-      <Home showMenu={showMenu} />
+      <Home showMenu={showMenu} setShowMenu={setShowMenu} />
       {!showArrow && downIcon}
       <WhatWeDo />
       <Languages />

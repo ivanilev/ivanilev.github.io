@@ -38,8 +38,8 @@
   background-image: url(../assets/Group_230.png);
   background-size: contain;
   background-repeat: no-repeat;
-  width: -moz-available;          /* WebKit-based browsers will ignore this. */
-  width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+  width: -moz-available; /* WebKit-based browsers will ignore this. */
+  width: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
   width: stretch;
   height: auto;
 }
@@ -63,7 +63,7 @@
   display: block;
   content: "";
   width: 44%;
-  height: 1px;
+  height: 3px;
   background: black;
   position: absolute;
   bottom: -10px;

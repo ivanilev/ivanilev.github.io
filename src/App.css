@@ -41,8 +41,12 @@
 }
 .social-icon {
   color: rgb(38, 127, 193);
-  height: 2rem;
+  height: 2.5rem;
   cursor: pointer;
+}
+
+.menu-icon {
+  width: 1.5rem;
 }
 
 @media (max-width: 576px) {
@@ -54,9 +58,6 @@
   }
   .social-icon {
     height: 2rem;
-  }
-  .toTheTop {
-    display: none;
   }
 }
 @media (min-width: 576px) and (max-width: 768px) {

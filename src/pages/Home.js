@@ -5,7 +5,7 @@ import Nav from "../components/Nav";
 const Home = (props) => {
   return (
     <div id="home" className={styles.container}>
-      <Nav showMenu={props.showMenu} />
+      <Nav showMenu={props.showMenu} setShowMenu={props.setShowMenu} />
       <div className={styles.contentBox}>
         <div className={styles.content}>
           <div className={styles.text}>

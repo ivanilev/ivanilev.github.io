@@ -3,15 +3,32 @@ import styles from "./Nav.module.css";
 import { useState, useEffect, useRef } from "react";
 import logo from "../assets/logo151.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faNavicon } from "@fortawesome/free-solid-svg-icons";
+import { faNavicon, faClose } from "@fortawesome/free-solid-svg-icons";
+import {
+  homeIcon,
+  aboutUsIcon,
+  languageIcon,
+  contactUsIcon,
+} from "../assets/icons";
 const Nav = (props) => {
   const navRef = useRef();
   const [isDesktop, setDesktop] = useState(window.innerWidth > 650);
 
+  const closeIcon = (
+    <FontAwesomeIcon
+      className={styles.closeIcon}
+      icon={faClose}
+      onClick={iconClickHandler}
+    />
+  );
   const navIcon = (
     <div className={styles.navAndLogoMobile}>
       <img src={logo} alt="logo" className={styles.logo} />
-      <FontAwesomeIcon className={styles.icon} icon={faNavicon} />
+      <FontAwesomeIcon
+        onClick={iconClickHandler}
+        className={styles.icon}
+        icon={faNavicon}
+      />
     </div>
   );
 
@@ -19,6 +36,9 @@ const Nav = (props) => {
     setDesktop(window.innerWidth > 576);
   };
 
+  function iconClickHandler() {
+    props.setShowMenu((prevState) => !prevState);
+  }
   useEffect(() => {
     window.addEventListener("resize", updateMedia);
     return () => window.removeEventListener("resize", updateMedia);
@@ -34,10 +54,23 @@ const Nav = (props) => {
             props.showMenu ? `${styles.nav} ${styles.active}` : styles.nav
           }
         >
-          <a href="#home">Home</a>
-          <a href="#whatWeDo">About us</a>
-          <a href="#Languages">Languages</a>
-          <a href="#GetInTouch">Contact us</a>
+          <div>
+            {!isDesktop && homeIcon}
+            <a href="#home">Home</a>
+          </div>
+          <div>
+            {!isDesktop && aboutUsIcon}
+            <a href="#whatWeDo">About us</a>
+          </div>
+          <div>
+            {!isDesktop && languageIcon}
+            <a href="#Languages">Languages</a>
+          </div>
+          <div>
+            {!isDesktop && contactUsIcon}
+            <a href="#GetInTouch">Contact us</a>
+          </div>
+          {!isDesktop && closeIcon}
         </nav>
         {!isDesktop && navIcon}
       </div>

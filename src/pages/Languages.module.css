@@ -36,7 +36,7 @@
 
 .languages > div::after {
   position: absolute;
-  bottom: -3.0rem;
+  bottom: -3rem;
   left: 50%;
   transform: translatex(-50%);
 }
@@ -69,13 +69,13 @@
   .languages {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-row-gap: 3rem;
-    grid-column-gap: 1rem;
+    grid-row-gap: 4rem;
+    grid-column-gap: 2rem;
   }
   .languages > div {
     width: 5rem;
     height: 5rem;
-    font-family: 'Roboto' medium; 
+    font-family: "Roboto" medium;
     font-weight: 700;
   }
   .languages > div::after {
@@ -85,6 +85,9 @@
 
 /* Small devices (tablets 576px-768px) */
 @media (min-width: 576px) and (max-width: 768px) {
+  .container {
+    height: fit-content;
+  }
   .languages > div {
     font-size: var(--font-size-s);
     width: var(--logo-size-xs);
@@ -96,6 +99,9 @@
 }
 
 @media (min-width: 768px) and (max-width: 1080px) {
+  .container {
+    height: fit-content;
+  }
   .languages > div {
     font-size: var(--font-size-paragraph-s);
     width: var(--logo-size-s);

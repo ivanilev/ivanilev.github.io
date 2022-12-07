@@ -16,7 +16,7 @@
   margin: 0px;
 }
 .details span {
-  color: gray;
+  color: #303030;
   font-size: 1.5rem;
 }
 
@@ -26,7 +26,6 @@
     margin-bottom: 0rem;
   }
   .details span {
-    color: gray;
     font-size: var(--font-size-s);
   }
 }
@@ -37,7 +36,6 @@
     margin-bottom: 0rem;
   }
   .details span {
-    color: gray;
     font-size: var(--font-size-s);
   }
 }
@@ -48,7 +46,6 @@
     margin-bottom: 0rem;
   }
   .details span {
-    color: gray;
     font-size: var(--font-size-l);
   }
 }
