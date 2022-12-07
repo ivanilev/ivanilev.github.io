@@ -3,28 +3,22 @@ import styles from "./Nav.module.css";
 import { useState, useEffect, useRef } from "react";
 import logo from "../assets/logo151.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faNavicon, faClose } from "@fortawesome/free-solid-svg-icons";
+import { faNavicon } from "@fortawesome/free-solid-svg-icons";
 const Nav = (props) => {
   const navRef = useRef();
   const [isDesktop, setDesktop] = useState(window.innerWidth > 650);
 
-  const closeIcon = (
-    <FontAwesomeIcon className={styles.closeIcon} icon={faClose} />
-  );
   const navIcon = (
     <div className={styles.navAndLogoMobile}>
       <img src={logo} alt="logo" className={styles.logo} />
       <FontAwesomeIcon className={styles.icon} icon={faNavicon} />
     </div>
   );
-  /* 
-  function iconClickHandler() {
-    navRef.current?.classList.toggle(styles.active);
-  } */
 
   const updateMedia = () => {
     setDesktop(window.innerWidth > 576);
   };
+
   useEffect(() => {
     window.addEventListener("resize", updateMedia);
     return () => window.removeEventListener("resize", updateMedia);

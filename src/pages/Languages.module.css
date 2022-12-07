@@ -77,48 +77,8 @@
     font-family: 'Roboto' medium; 
     font-weight: 700;
   }
-
-  .english::after {
-    content: "English";
-    position: absolute;
-    bottom: -1.5rem;
-    left: 50%;
-    transform: translatex(-50%);
-  }
-  .deutch::after {
-    content: "German";
-    position: absolute;
-    bottom: -1.5rem;
-    left: 50%;
-    transform: translatex(-50%);
-  }
-  .spanish::after {
-    position: absolute;
-    content: "Spanish";
-    bottom: -1.5rem;
-    left: 50%;
-    transform: translatex(-50%);
-  }
-  .greek::after {
-    content: "Greek";
-    position: absolute;
-    bottom: -1.5rem;
-    left: 50%;
-    transform: translatex(-50%);
-  }
-  .french::after {
-    content: "French";
-    position: absolute;
-    bottom: -1.5rem;
-    left: 50%;
-    transform: translatex(-50%);
-  }
-  .bulgarian::after {
-    content: "Bulgarian";
-    position: absolute;
-    bottom: -1.5rem;
-    left: 50%;
-    transform: translatex(-50%);
+  .languages > div::after {
+    bottom: -2rem;
   }
 }
 

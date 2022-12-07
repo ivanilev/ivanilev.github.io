@@ -111,6 +111,7 @@ textarea {
   max-height: 200px;
   font-size: 1rem;
   font-style: italic;
+  border-radius: 10px;
 }
 
 .inputGroup input {
@@ -125,6 +126,7 @@ textarea {
   font-weight: bold;
   font-size: 1.5rem;
 }
+
 .button {
   font-size: 1.5rem;
   cursor: pointer;
@@ -193,68 +195,7 @@ textarea {
   }
 }
 
-/* @media (max-width: 650px) {
-  .contact-icon {
-    height: 1rem;
-  }
-  .heading {
-    font-size: 1.5rem;
-    margin-block: 0px;
-    padding: 10px;
-  }
-  .container {
-    height: 55vh;
-    min-height: 350px;
-  }
-  .directly p {
-    margin-top: 0px;
-    font-size: 0.8rem;
-  }
-  .inputGroup {
-    width: 80%;
-  }
-  .inputGroup label {
-    font-size: 0.8rem;
-  }
-  .contactForm {
-    width: 50%;
-  }
-  .contactForm input {
-    width: 100%;
-    margin: 0px;
-  }
-  .contactForm input[type="text"] {
-    font-size: 0.8rem;
-  }
-  .directly {
-    margin-right: 0px;
-  }
-  .contactForm p {
-    margin-top: 0px;
-    font-size: 0.8rem;
-  }
-  .contactForm input::placeholder {
-    font-size: 0.5rem;
-  }
-  .contactForm form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
-    width: auto;
-  }
-  .button {
-    font-size: 0.7rem;
-    padding-inline: 0.7rem;
-    padding-block: 0.4rem;
-    border-radius: 10px;
-  }
-}
- */
-
 /* Devices below 576px width */
-
 @media (max-width: 576px) {
   .contact-icon {
     height: 1rem;
@@ -604,7 +545,7 @@ textarea {
   }
 }
 
-/* Extra extra large devices (desktops, 1680px and up) */
+/* Extra extra large devices (desktops, 1080px-1336px) */
 @media (min-width: 1366px) and (max-width: 1680px) {
   .heading {
     margin: 2rem;
@@ -649,6 +590,7 @@ textarea {
   }
 }
 
+/* Extra extra large devices (desktops, 1680px and up) */
 @media (min-width: 1680px) {
   .heading {
     margin: 2rem;
@@ -693,6 +635,7 @@ textarea {
   }
 }
 
+/* Extra extra large devices (desktops, 1920px and up) */
 @media (min-width: 1920px) {
   .heading {
     margin: 2rem;
