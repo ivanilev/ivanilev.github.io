@@ -8,7 +8,6 @@
 
 .container {
   height: 100vh;
-  background-image: url(../assets/homeBG.png);
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;

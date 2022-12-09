@@ -12,31 +12,29 @@ import {
   instaIcon,
 } from "../assets/icons";
 import Contacts from "../components/Contacts";
-import emailjs from "@emailjs/browser"; 
+import emailjs from "@emailjs/browser";
 
 const GetInTouch = () => {
   const form = useRef();
-  const nameRef = useRef();
-  const emailRef = useRef();
-  const subjectRef = useRef();
-  const messageRef = useRef();
+
   const [error, setError] = useState("");
   const [submited, setSubmited] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [emailIsValid, setemailIsValid] = useState(true);
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
   const formSubmitHandler = (e) => {
     e.preventDefault();
-    if (
-      nameRef.current.value &&
-      emailRef.current.value &&
-      subjectRef.current.value &&
-      messageRef.current.value
-    ) {
-      if (emailRef.current.value.includes("@")) {
+    if (name && email && subject && message) {
+      if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
         emailjs
           .sendForm(
-            process.env.REACT_APP_EMAILJS_SERVICE_ID,
-            process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+            "service_zlgf46j",
+            "template_u96mfhp",
             form.current,
-            process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+            "utwgE-B1odSR_eFg3"
           )
           .then(
             (result) => {
@@ -47,11 +45,32 @@ const GetInTouch = () => {
             }
           );
         setSubmited(true);
-        e.target.reset();
+        setName("");
+        setEmail("");
+        setSubject("");
+        setMessage("");
       } else {
-        setError("Email is not valid.");
+        setemailIsValid(false);
       }
     } else setError("Please fill all fields.");
+  };
+
+  const nameChangeHandler = (e) => {
+    setName(e.target.value);
+    setError("");
+  };
+  const emailChangeHandler = (e) => {
+    setEmail(e.target.value);
+    setemailIsValid(true);
+  };
+  const subjectChangeHandler = (e) => {
+    setSubject(e.target.value);
+    setError("");
+  };
+
+  const messageChangeHandler = (e) => {
+    setMessage(e.target.value);
+    setError("");
   };
 
   return (
@@ -92,61 +111,77 @@ const GetInTouch = () => {
         <div className={styles.separator}></div>
         <div className={styles.contactForm}>
           <p>Or fill in our contact form:</p>
-          {error === "Email is not valid." ? (
-            <p className={styles.errorMessage}>{error}</p>
-          ) : (
-            ""
-          )}
-          {error === "Please fill all fields." ? (
-            <p className={styles.errorMessage}>{error}</p>
-          ) : (
-            ""
-          )}
           <form ref={form} onSubmit={formSubmitHandler}>
             <div className={styles.formContainer}>
               <div className={styles.inputGroup}>
-                <label htmlFor="user_name">Name:</label>
+                <label
+                  style={!name && error ? { color: "#d9534f" } : {}}
+                  htmlFor="user_name"
+                >
+                  {!name && error ? "Please fill the name field:" : "Name:"}
+                </label>
                 <input
-                  onChange={() => setError("")}
-                  ref={nameRef}
+                  className={!name && error ? styles.invalidInput : ""}
+                  onChange={nameChangeHandler}
                   placeholder="Enter your name here"
                   name="user_name"
                   type="text"
+                  value={name}
                 />
               </div>
               <div className={styles.inputGroup}>
-                <label htmlFor="user_email">Email:</label>
+                <label
+                  style={!emailIsValid ? { color: "#d9534f" } : {}}
+                  htmlFor="user_email"
+                >
+                  {!emailIsValid ? "Please enter a valid email:" : "Email"}
+                </label>
                 <input
-                  onChange={() => setError("")}
-                  ref={emailRef}
+                  className={!emailIsValid ? styles.invalidInput : ""}
+                  onChange={emailChangeHandler}
                   placeholder="Enter your email adress here"
                   name="user_email"
                   type="text"
+                  value={email}
                 />
               </div>
               <div className={styles.inputGroup}>
-                <label htmlFor="subject">Subject:</label>
+                <label
+                  style={!subject && error ? { color: "#d9534f" } : {}}
+                  htmlFor="subject"
+                >
+                  {!subject && error
+                    ? "Please fill the subject field:"
+                    : "Subject"}
+                </label>
                 <input
-                  onChange={() => setError("")}
-                  ref={subjectRef}
+                  className={!subject && error ? styles.invalidInput : ""}
+                  onChange={subjectChangeHandler}
                   placeholder="Type your subject here"
                   name="subject"
                   type="text"
+                  value={subject}
                 />
               </div>
               <div className={styles.inputGroup}>
-                <label htmlFor="message">Message:</label>
+                <label
+                  style={!message && error ? { color: "#d9534f" } : {}}
+                  htmlFor="message"
+                >
+                  {!subject && error
+                    ? "Please fill the message field:"
+                    : "Message"}
+                </label>
                 <textarea
-                  onChange={() => setError("")}
-                  ref={messageRef}
+                  className={!message && error ? styles.invalidInput : ""}
+                  onChange={messageChangeHandler}
                   placeholder="Type your message here"
                   name="message"
+                  value={message}
                 />
               </div>
               {submited ? (
-                <p style={{ color: "rgb(38, 127, 193)" }}>
-                  Thank you for contacting us!
-                </p>
+                <p className={styles.success}>Thank you for contacting us!</p>
               ) : (
                 ""
               )}

@@ -4,10 +4,10 @@
   overflow: hidden;
 }
 .first {
-  --d: 1deg; /* distance between dashes */
-  --n: 125; /* number of dashes */
+  --d: 0.5deg; /* distance between dashes */
+  --n: 220; /* number of dashes */
   --c: white; /* color of dashes */
-  --b: 4px; /* control the thickness of border*/
+  --b: 2px; /* control the thickness of border*/
 
   width: 1100px;
   display: inline-block;
@@ -38,10 +38,10 @@
 }
 
 .second {
-  --d: 1deg; /* distance between dashes */
-  --n: 135; /* number of dashes */
+  --d: 0.5deg; /* distance between dashes */
+  --n: 250; /* number of dashes */
   --c: white; /* color of dashes */
-  --b: 4px; /* control the thickness of border*/
+  --b: 2px; /* control the thickness of border*/
 
   width: 1300px;
   display: inline-block;
@@ -74,10 +74,10 @@
 }
 
 .third {
-  --d: 1deg; /* distance between dashes */
-  --n: 155; /* number of dashes */
+  --d: 0.5deg; /* distance between dashes */
+  --n: 300; /* number of dashes */
   --c: white; /* color of dashes */
-  --b: 4px; /* control the thickness of border*/
+  --b: 2px; /* control the thickness of border*/
 
   width: 1700px;
   display: inline-block;
@@ -111,10 +111,10 @@
 }
 
 .forth {
-  --d: 1deg; /* distance between dashes */
-  --n: 115; /* number of dashes */
+  --d: 0.5deg; /* distance between dashes */
+  --n: 230; /* number of dashes */
   --c: white; /* color of dashes */
-  --b: 4px; /* control the thickness of border*/
+  --b: 2px; /* control the thickness of border*/
 
   width: 1000px;
   display: inline-block;
@@ -147,10 +147,10 @@
 }
 
 .fifth {
-  --d: 1deg; /* distance between dashes */
-  --n: 115; /* number of dashes */
+  --d: 0.5deg; /* distance between dashes */
+  --n: 230; /* number of dashes */
   --c: white; /* color of dashes */
-  --b: 4px; /* control the thickness of border*/
+  --b: 2px; /* control the thickness of border*/
 
   width: 1000px;
   display: inline-block;

@@ -4,7 +4,6 @@
 
 .container {
   height: 35rem;
-  background-color: rgb(185, 216, 237);
   overflow: hidden;
   min-height: 900px;
 }
@@ -110,7 +109,9 @@
   flex-direction: column;
 }
 textarea {
+  height: 5rem;
   background-color: transparent;
+  margin-top: 1rem;
   max-height: 200px;
   font-size: 1rem;
   font-style: italic;
@@ -151,6 +152,17 @@ textarea {
   right: 40%;
   color: #d9534f;
   animation: shake 1s forwards;
+}
+.inputGroup .invalidInput {
+  border: 1.5px solid #d9534f;
+  border-radius: 5px;
+  animation: shake 1s;
+}
+
+.contactForm .success {
+  position: absolute;
+  bottom: -3.5rem;
+  color: rgb(38, 127, 193);
 }
 
 @keyframes shake {
@@ -200,6 +212,11 @@ textarea {
 
 /* Devices below 576px width */
 @media (max-width: 576px) {
+  .contactForm .success {
+    font-size: var(--font-size-header-xxs);
+    font-weight: 500;
+    bottom: -2.7rem;
+  }
   .contact-icon {
     height: 1rem;
   }
@@ -216,7 +233,7 @@ textarea {
     padding: 10px;
   }
   .container {
-    height: 120vh;
+    height: 150vh;
     min-height: 1000px;
   }
   .content {
@@ -282,7 +299,7 @@ textarea {
   }
   .contactForm p {
     text-align: center;
-    margin-top: 0px;
+    margin-top: rem;
     font-size: var(--font-size-paragraph-s);
   }
   .contactForm input::placeholder {

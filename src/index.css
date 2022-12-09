@@ -9,8 +9,8 @@ html * {
 }
 
 body {
-  background-color: rgb(185, 216, 237);
-
+  background-image: url(./assets/newHomeBg.png);
+  background-size: cover;
   margin: 0;
   font-family: "Roboto", medium;
   -webkit-font-smoothing: antialiased;

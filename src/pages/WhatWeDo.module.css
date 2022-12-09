@@ -7,7 +7,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(185, 216, 237);
   min-height: 550px;
 }
 .frame {
@@ -35,7 +34,7 @@
 .image {
   position: absolute;
   bottom: 0;
-  background-image: url(../assets/Group_209_2.png);
+  background-image: url(../assets/Group_209_2.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;

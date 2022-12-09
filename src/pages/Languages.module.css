@@ -5,7 +5,6 @@
   display: flex;
   justify-content: center;
   align-items: top;
-  background-color: rgb(185, 216, 237);
   min-height: 300px;
   padding-bottom: 5rem;
 }
