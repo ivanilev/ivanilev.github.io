@@ -6,7 +6,6 @@ import { faUpLong, faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import WhatWeDo from "./pages/WhatWeDo";
 import Languages from "./pages/Languages";
-import Background from "./components/Background";
 
 function App() {
   const [showArrow, setShowArrow] = useState(false);

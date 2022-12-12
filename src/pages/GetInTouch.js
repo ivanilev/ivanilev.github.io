@@ -28,7 +28,7 @@ const GetInTouch = () => {
   const formSubmitHandler = (e) => {
     e.preventDefault();
     if (name && email && subject && message) {
-      if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+      if (/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
         emailjs
           .sendForm(
             "service_zlgf46j",
@@ -78,7 +78,7 @@ const GetInTouch = () => {
       <h1 className={styles.heading}>Get in touch!</h1>
       <div className={styles.content}>
         <div className={styles.directly}>
-          <p>Reach us directly by:</p>
+          <h1>Reach us directly by:</h1>
           <div className={styles.gridContainer}>
             <Contacts
               icon={phoneIcon}
@@ -88,7 +88,7 @@ const GetInTouch = () => {
             <Contacts
               icon={emailIcon}
               type="Email:"
-              contact="ivan.ilev@nolangbarriers.com"
+              contact="management@nolangbarriers.com"
             />
             <Contacts
               icon={whatsAppIcon}
@@ -110,7 +110,7 @@ const GetInTouch = () => {
         </div>
         <div className={styles.separator}></div>
         <div className={styles.contactForm}>
-          <p>Or fill in our contact form:</p>
+          <h1>Or fill in our contact form:</h1>
           <form ref={form} onSubmit={formSubmitHandler}>
             <div className={styles.formContainer}>
               <div className={styles.inputGroup}>
