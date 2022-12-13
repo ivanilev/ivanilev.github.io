@@ -26,7 +26,6 @@
   width: clamp(90%, 90%, 1726px);
   margin-right: auto;
   margin-left: auto;
-  padding-bottom: 1rem;
 }
 
 .directly {
@@ -48,17 +47,20 @@
   margin: 1rem;
   position: relative;
 }
-.directly p {
+.directly h1 {
   color: #303030;
   font-weight: bold;
-  font-size: 1.5rem;
   align-self: center;
   padding-bottom: 0px;
 }
-.contactForm p {
+.directly p {
+  font-weight: bold;
+  align-self: center;
+  padding-bottom: 0px;
+}
+.contactForm h1 {
   color: #303030;
 
-  font-size: 1.5rem;
   font-weight: bold;
   align-self: center;
 }
@@ -103,12 +105,18 @@
   background-color: transparent;
   outline: none;
 }
+
+.contactForm input::placeholder {
+  color: #303030;
+}
 .inputGroup {
   width: 80%;
   display: flex;
   flex-direction: column;
 }
 textarea {
+  padding-top: 5px;
+  padding-inline: 10px;
   height: 5rem;
   background-color: transparent;
   margin-top: 1rem;
@@ -119,14 +127,18 @@ textarea {
 }
 
 .inputGroup input {
+  color: #303030;
+
   font-size: 1rem;
   font-style: italic;
   background-color: transparent;
   border: none;
+  padding-bottom: 0.5rem;
   border-bottom: 1px solid grey;
   margin-top: 10px;
 }
 .inputGroup label {
+  color: #303030;
   font-weight: bold;
   font-size: 1.5rem;
 }
@@ -161,7 +173,7 @@ textarea {
 
 .contactForm .success {
   position: absolute;
-  bottom: -3.5rem;
+  bottom: -0.5rem;
   color: rgb(38, 127, 193);
 }
 
@@ -215,7 +227,7 @@ textarea {
   .contactForm .success {
     font-size: var(--font-size-header-xxs);
     font-weight: 500;
-    bottom: -2.7rem;
+    bottom: -0.7rem;
   }
   .contact-icon {
     height: 1rem;
@@ -269,15 +281,19 @@ textarea {
     justify-content: center;
     gap: 2rem;
   }
-  .directly p {
+  .directly h1 {
+    margin-bottom: 2rem;
     margin-top: 0px;
-    font-size: var(--font-size-paragraph-s);
+    font-size: var(--font-size-paragraph-l);
+  }
+  .contactForm h1 {
+    font-size: var(--font-size-paragraph-l);
   }
   .inputGroup {
     width: 90%;
   }
   .inputGroup label {
-    margin-bottom: 1rem;
+    margin-bottom: 0.3rem;
     font-size: var(--font-size-paragraph-s);
   }
   .contactForm {
@@ -297,12 +313,9 @@ textarea {
     height: 5rem;
     width: 100%;
   }
-  .contactForm p {
-    text-align: center;
-    margin-top: rem;
-    font-size: var(--font-size-paragraph-s);
-  }
+
   .contactForm input::placeholder {
+    color: #303030;
     font-size: var(--font-size-paragraph-s);
   }
   .formContainer {
@@ -357,10 +370,10 @@ textarea {
     height: 0px;
   }
   .directly {
+    margin-top: 0px;
     height: 50%;
     margin-inline: 0px;
     margin-bottom: 1rem;
-    margin-top: 1rem;
     width: 100%;
   }
   .gridContainer {
@@ -378,9 +391,13 @@ textarea {
     justify-content: center;
     gap: 2rem;
   }
-  .directly p {
+  .directly h1 {
+    padding-top: 0px;
     margin-top: 0px;
-    font-size: 0.8rem;
+    font-size: var(--font-size-paragraph-m);
+  }
+  .contactForm h1 {
+    font-size: var(--font-size-paragraph-m);
   }
   .inputGroup {
     width: 80%;
@@ -389,6 +406,8 @@ textarea {
     font-size: 0.8rem;
   }
   .contactForm {
+    margin-top: 0px;
+    padding-top: 0px;
     height: 55%;
     width: 80%;
   }
@@ -400,18 +419,13 @@ textarea {
     font-size: 0.8rem;
   }
 
-  .contactForm textarea {
+  textarea {
+    height: 3rem;
     font-size: 0.8rem;
   }
-  .directly {
-    margin-right: 0px;
-  }
-  .contactForm p {
-    text-align: center;
-    margin-top: 0px;
-    font-size: 0.8rem;
-  }
+
   .contactForm input::placeholder {
+    color: #303030;
     font-size: 0.5rem;
   }
 
@@ -443,12 +457,13 @@ textarea {
     padding: 0px;
     font-size: var(--font-size-header-s);
   }
-  .directly p {
-    font-weight: bold;
-    font-size: var(--font-size-paragraph-m);
-    align-self: center;
-    padding-bottom: 0px;
+  .directly h1 {
+    font-size: var(--font-size-paragraph-xl);
   }
+  .contactForm h1 {
+    font-size: var(--font-size-paragraph-xl);
+  }
+
   .content {
     border: 5px solid white;
     border-radius: 30px;
@@ -470,12 +485,6 @@ textarea {
     height: 90%;
     width: 100%;
     margin-block: 2rem;
-  }
-
-  .contactForm p {
-    font-size: var(--font-size-paragraph-m);
-    font-weight: bold;
-    align-self: center;
   }
 
   textarea {
@@ -509,15 +518,13 @@ textarea {
     padding: 0px;
     font-size: var(--font-size-header-m);
   }
-  .directly p {
-    font-size: var(--font-size-paragraph-l);
+  .directly h1 {
     align-self: center;
     padding-bottom: 0px;
   }
   .content {
     border: 5px solid white;
     border-radius: 30px;
-    padding-bottom: 1rem;
   }
 
   .gridContainer {
@@ -525,7 +532,7 @@ textarea {
     height: 90%;
     flex-direction: column;
     justify-content: space-between;
-    margin-block: 2rem;
+    margin-bottom: 2rem;
   }
   .formContainer {
     display: flex;
@@ -534,13 +541,7 @@ textarea {
     justify-content: space-between;
     height: 90%;
     width: 100%;
-    margin-block: 2rem;
-  }
-
-  .contactForm p {
-    font-size: var(--font-size-paragraph-l);
-    font-weight: bold;
-    align-self: center;
+    margin-bottom: 2rem;
   }
 
   textarea {
@@ -560,7 +561,7 @@ textarea {
   }
   .inputGroup label {
     font-weight: bold;
-    font-size: var(--font-size-paragraph-m);
+    font-size: var(--font-size-paragraph-xl);
   }
 
   .button {
@@ -576,9 +577,7 @@ textarea {
     text-transform: uppercase;
     font-size: var(--font-size-header-l);
   }
-  .directly p {
-    font-size: var(--font-size-paragraph-l);
-  }
+
   .content {
     border: 5px solid white;
     border-radius: 30px;
@@ -593,7 +592,7 @@ textarea {
     margin-block: 2rem;
   }
 
-  .contactForm p {
+  h1 {
     font-size: var(--font-size-paragraph-l);
   }
 
@@ -621,7 +620,7 @@ textarea {
     text-transform: uppercase;
     font-size: var(--font-size-header-l);
   }
-  .directly p {
+  .directly h1 {
     font-size: var(--font-size-paragraph-l);
   }
   .content {
@@ -638,7 +637,7 @@ textarea {
     margin-block: 2rem;
   }
 
-  .contactForm p {
+  .h1 {
     font-size: var(--font-size-paragraph-l);
   }
 
@@ -666,7 +665,7 @@ textarea {
     text-transform: uppercase;
     font-size: var(--font-size-header-xxl);
   }
-  .directly p {
+  .directly h1 {
     font-size: var(--font-size-paragraph-xxl);
   }
   .content {
@@ -684,7 +683,7 @@ textarea {
     margin-block: 2rem;
   }
 
-  .contactForm p {
+  .h1 {
     font-size: var(--font-size-paragraph-xxl);
   }
 

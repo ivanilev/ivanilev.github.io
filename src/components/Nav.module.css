@@ -68,7 +68,7 @@ nav a {
     width: 100%;
   }
   .icon {
-    position: fixed;
+    position: absolute;
     top: 20px;
     left: 10px;
     height: 30px;

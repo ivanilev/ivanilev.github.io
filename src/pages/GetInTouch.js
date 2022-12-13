@@ -134,7 +134,7 @@ const GetInTouch = () => {
                   style={!emailIsValid ? { color: "#d9534f" } : {}}
                   htmlFor="user_email"
                 >
-                  {!emailIsValid ? "Please enter a valid email:" : "Email"}
+                  {!emailIsValid ? "Please enter a valid email:" : "Email:"}
                 </label>
                 <input
                   className={!emailIsValid ? styles.invalidInput : ""}
@@ -152,7 +152,7 @@ const GetInTouch = () => {
                 >
                   {!subject && error
                     ? "Please fill the subject field:"
-                    : "Subject"}
+                    : "Subject:"}
                 </label>
                 <input
                   className={!subject && error ? styles.invalidInput : ""}
@@ -170,7 +170,7 @@ const GetInTouch = () => {
                 >
                   {!subject && error
                     ? "Please fill the message field:"
-                    : "Message"}
+                    : "Message:"}
                 </label>
                 <textarea
                   className={!message && error ? styles.invalidInput : ""}
@@ -181,12 +181,16 @@ const GetInTouch = () => {
                 />
               </div>
               {submited ? (
-                <p className={styles.success}>Thank you for contacting us!</p>
+                <h1 className={styles.success}>Thank you for contacting us!</h1>
               ) : (
                 ""
               )}
             </div>
-            <button disabled={submited} className={styles.button} type="submit">
+            <button
+              style={submited ? { opacity: "0" } : {}}
+              className={styles.button}
+              type="submit"
+            >
               SUBMIT
             </button>
           </form>

@@ -41,7 +41,7 @@
 }
 .social-icon {
   color: rgb(38, 127, 193);
-  height: 2.5rem;
+  height: 3rem;
   cursor: pointer;
 }
 
@@ -50,6 +50,9 @@
 }
 
 @media (max-width: 576px) {
+  .toTheTop {
+    display: none;
+  }
   .downArrow {
     display: block;
   }
