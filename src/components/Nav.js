@@ -54,6 +54,8 @@ const Nav = (props) => {
             props.showMenu ? `${styles.nav} ${styles.active}` : styles.nav
           }
         >
+          {!isDesktop && closeIcon}
+
           <div>
             {!isDesktop && homeIcon}
             <a href="#home">Home</a>
@@ -70,7 +72,6 @@ const Nav = (props) => {
             {!isDesktop && contactUsIcon}
             <a href="#GetInTouch">Contact us</a>
           </div>
-          {!isDesktop && closeIcon}
         </nav>
         {!isDesktop && navIcon}
       </div>

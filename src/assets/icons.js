@@ -5,7 +5,7 @@ import {
   faHouse,
   faInfo,
   faLanguage,
-  faPhoneVolume,
+  faGlobe,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faViber,
@@ -48,9 +48,9 @@ export const aboutUsIcon = (
 );
 
 export const languageIcon = (
-  <FontAwesomeIcon className="menu-icon" icon={faLanguage} />
+  <FontAwesomeIcon className="menu-icon" icon={faGlobe} />
 );
 
 export const contactUsIcon = (
-  <FontAwesomeIcon className="menu-icon" icon={faPhoneVolume} />
+  <FontAwesomeIcon className="menu-icon" icon={faEnvelope} />
 );

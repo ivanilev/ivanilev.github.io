@@ -134,6 +134,10 @@
 
 /* Small devices (tablets 576px-768px) */
 @media (min-width: 576px) and (max-width: 768px) {
+  .container {
+    height: 10rem;
+  }
+
   .text h1 {
     font-size: var(--font-size-header-xs);
   }

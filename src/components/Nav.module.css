@@ -41,13 +41,15 @@ nav a {
   }
 
   .nav {
+    padding-top: 20px;
     width: 50vw;
     flex-direction: column;
+    justify-content: start;
     position: fixed;
     left: -50vw;
     max-height: none;
     height: 100vh;
-    background-color: rgb(35, 129, 195);
+    background-color: rgb(154, 200, 230);
     padding-inline: auto;
     z-index: 999;
     transition: 1s;
@@ -55,6 +57,7 @@ nav a {
   }
 
   .nav a {
+    text-transform: none;
     margin: 1em;
   }
   .nav div {
@@ -74,8 +77,10 @@ nav a {
     height: 30px;
   }
   .closeIcon {
+    align-self: flex-end;
     cursor: pointer;
-    height: 30px;
+    height: 20px;
+    margin-right: 20px;
   }
   .navAndLogo {
     padding: 0px;
