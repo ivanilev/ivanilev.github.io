@@ -58,19 +58,27 @@ const Nav = (props) => {
 
           <div>
             {!isDesktop && homeIcon}
-            <a href="#home">Home</a>
+            <a onClick={iconClickHandler} href="#home">
+              Home
+            </a>
           </div>
           <div>
             {!isDesktop && aboutUsIcon}
-            <a href="#whatWeDo">About us</a>
+            <a onClick={iconClickHandler} href="#WhatWeDo">
+              About us
+            </a>
           </div>
           <div>
             {!isDesktop && languageIcon}
-            <a href="#Languages">Languages</a>
+            <a onClick={iconClickHandler} href="#Languages">
+              Languages
+            </a>
           </div>
           <div>
             {!isDesktop && contactUsIcon}
-            <a href="#GetInTouch">Contact us</a>
+            <a onClick={iconClickHandler} href="#GetInTouch">
+              Contact us
+            </a>
           </div>
         </nav>
         {!isDesktop && navIcon}

@@ -190,13 +190,18 @@ const GetInTouch = () => {
                 ""
               )}
             </div>
-            <button
-              style={submited ? { opacity: "0" } : {}}
-              className={styles.button}
-              type="submit"
-            >
-              SUBMIT
-            </button>
+            {!submited ? (
+              <button className={styles.button} type="submit">
+                SUBMIT
+              </button>
+            ) : (
+              <div
+                style={{ opacity: "0", cursor: "default" }}
+                className={styles.button}
+              >
+                SUBMIT
+              </div>
+            )}
           </form>
         </div>
       </div>

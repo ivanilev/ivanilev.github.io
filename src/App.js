@@ -6,6 +6,7 @@ import { faUpLong, faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import WhatWeDo from "./pages/WhatWeDo";
 import Languages from "./pages/Languages";
+import Backdrop from "./components/Backdrop";
 
 function App() {
   const [showArrow, setShowArrow] = useState(false);
@@ -93,8 +94,13 @@ function App() {
     </a>
   );
 
+  const backDropClickHandler = () => {
+    setShowMenu((prevState) => !prevState);
+  };
+
   return (
     <div className="App">
+      {showMenu ? <Backdrop onClick={backDropClickHandler} /> : ""}
       {showArrow && upIcon}
       <Home showMenu={showMenu} setShowMenu={setShowMenu} />
       {!showArrow && downIcon}

@@ -173,6 +173,7 @@ textarea::placeholder {
 }
 
 .contactForm .success {
+  font-size: 26px;
   position: absolute;
   bottom: -0.5rem;
   color: rgb(38, 127, 193);
@@ -449,6 +450,9 @@ textarea::placeholder {
 }
 /* Medium devices (desktops, 768px-1080px) */
 @media (min-width: 768px) and (max-width: 1080px) {
+  .contactForm .success {
+    font-size: 22px;
+  }
   .container {
     height: 35.5rem;
   }
@@ -571,6 +575,9 @@ textarea::placeholder {
 
 /* Extra extra large devices (desktops, 1080px-1336px) */
 @media (min-width: 1366px) and (max-width: 1680px) {
+  .contactForm .success {
+    font-size: 24px;
+  }
   .heading {
     margin: 2rem;
     padding: 0px;
@@ -629,6 +636,9 @@ textarea::placeholder {
 
 /* Extra extra large devices (desktops, 1080px-1336px) */
 @media (min-width: 1366px) and (max-width: 1680px) {
+  .contactForm .success {
+    font-size: 26px;
+  }
   .heading {
     margin: 2rem;
     padding: 0px;
@@ -712,6 +722,9 @@ textarea::placeholder {
 
   .button {
     font-size: var(--font-size-l);
+  }
+  .contactForm .success {
+    font-size: 28px;
   }
 }
 

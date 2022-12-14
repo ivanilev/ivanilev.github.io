@@ -35,7 +35,7 @@
   font-family: "Roboto", sans-serif;
   color: #303030;
   font-size: var(--font-size-paragraph-xs);
-  width: clamp(250px, 80%, 600px);
+  width: clamp(250px, 80%, 700px);
   text-align: center;
 }
 

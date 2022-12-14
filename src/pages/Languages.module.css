@@ -6,10 +6,9 @@
   justify-content: center;
   align-items: top;
   min-height: 300px;
-  padding-bottom: 5rem;
+  padding-block: 4rem;
 }
 .content {
-  margin-block: auto;
   width: 75%;
 }
 .heading {
@@ -34,6 +33,7 @@
   position: relative;
   font-weight: 700;
   background-position: center;
+  margin-block: 2rem;
 }
 
 .languages > div::after {
