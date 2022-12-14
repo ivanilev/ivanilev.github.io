@@ -127,7 +127,7 @@ const GetInTouch = () => {
                 <input
                   className={!name && error ? styles.invalidInput : ""}
                   onChange={nameChangeHandler}
-                  placeholder="Enter your name here..."
+                  placeholder="Type your name here..."
                   name="user_name"
                   type="text"
                   value={name}
@@ -143,7 +143,7 @@ const GetInTouch = () => {
                 <input
                   className={!emailIsValid ? styles.invalidInput : ""}
                   onChange={emailChangeHandler}
-                  placeholder="Enter your email address here..."
+                  placeholder="Type your email address here..."
                   name="user_email"
                   type="text"
                   value={email}

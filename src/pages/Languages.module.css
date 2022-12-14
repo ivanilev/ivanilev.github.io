@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
 .container {
-  height: 30.5rem;
+  height: fit-content;
   display: flex;
   justify-content: center;
   align-items: top;
@@ -9,10 +9,12 @@
   padding-bottom: 5rem;
 }
 .content {
+  margin-block: auto;
   width: 75%;
 }
 .heading {
-  margin-block: 0px;
+  margin-top: 0px;
+  margin-bottom: 30px;
   font-family: "Bebas Neue", cursive;
   font-weight: 100;
   color: rgb(46, 47, 51);
