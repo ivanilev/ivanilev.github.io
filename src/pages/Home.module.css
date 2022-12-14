@@ -110,6 +110,7 @@
   }
   .image {
     background-position: center;
+    min-height: 250px;
     height: 25vh;
   }
   .text h1::after {
