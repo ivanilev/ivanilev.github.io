@@ -64,7 +64,7 @@
     width: 100%;
   }
   .frame h1 {
-    margin-block: 20px;
+    margin-block: 5px;
     font-size: var(--font-size-header-xs);
   }
   .paragraph {
@@ -88,7 +88,7 @@
     width: 100%;
   }
   .frame h1 {
-    margin-block: 20px;
+    margin-block: 5px;
     font-size: var(--font-size-header-xs);
   }
   .paragraph {
