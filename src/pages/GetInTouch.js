@@ -84,21 +84,25 @@ const GetInTouch = () => {
               icon={phoneIcon}
               type="Phone:"
               contact="+359 887 320 313"
+              href="tel:+359887320313"
             />
             <Contacts
               icon={emailIcon}
               type="Email:"
               contact="management@nolangbarriers.com"
+              href="mailto:management@nolangbarriers.com?Subject=No%20Language%20Barriers"
             />
             <Contacts
               icon={whatsAppIcon}
               type="WhatsApp:"
               contact="+359 887 320 313"
+              href="https://api.whatsapp.com/send?phone=+359887320313"
             />
             <Contacts
               icon={viberIcon}
               type="Viber:"
               contact="+359 887 320 313"
+              href="viber://chat?number=359887320313"
             />
           </div>
           <div className={styles.social}>
@@ -123,7 +127,7 @@ const GetInTouch = () => {
                 <input
                   className={!name && error ? styles.invalidInput : ""}
                   onChange={nameChangeHandler}
-                  placeholder="Enter your name here"
+                  placeholder="Enter your name here..."
                   name="user_name"
                   type="text"
                   value={name}
@@ -139,7 +143,7 @@ const GetInTouch = () => {
                 <input
                   className={!emailIsValid ? styles.invalidInput : ""}
                   onChange={emailChangeHandler}
-                  placeholder="Enter your email adress here"
+                  placeholder="Enter your email address here..."
                   name="user_email"
                   type="text"
                   value={email}
@@ -157,7 +161,7 @@ const GetInTouch = () => {
                 <input
                   className={!subject && error ? styles.invalidInput : ""}
                   onChange={subjectChangeHandler}
-                  placeholder="Type your subject here"
+                  placeholder="Type your subject here..."
                   name="subject"
                   type="text"
                   value={subject}
@@ -175,7 +179,7 @@ const GetInTouch = () => {
                 <textarea
                   className={!message && error ? styles.invalidInput : ""}
                   onChange={messageChangeHandler}
-                  placeholder="Type your message here"
+                  placeholder="Type your message here..."
                   name="message"
                   value={message}
                 />

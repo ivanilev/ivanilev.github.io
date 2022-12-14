@@ -31,17 +31,18 @@
   margin-bottom: 0px;
 }
 .paragraph {
+  margin: 0px;
   font-family: "Roboto", sans-serif;
   color: #303030;
   font-size: var(--font-size-paragraph-xs);
-  width: clamp(300px, 70%, 600px);
+  width: clamp(250px, 80%, 600px);
   text-align: center;
 }
 
 .image {
   position: absolute;
   bottom: 0;
-  background-image: url(../assets/Group\ 249.svg);
+  background-image: url(../assets/Group\ 249.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -49,9 +50,9 @@
   width: 95%;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 456px) {
   .container {
-    height: 40vh;
+    height: 100%;
     margin-inline: 5%;
     padding-inline: 8px;
     min-height: 300px;
@@ -63,7 +64,7 @@
     width: 100%;
   }
   .frame h1 {
-    margin-block: 0px;
+    margin-block: 20px;
     font-size: var(--font-size-header-xs);
   }
   .paragraph {
@@ -71,6 +72,30 @@
   }
   .image {
     max-height: 60%;
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    height: 100%;
+    margin-inline: 5%;
+    padding-inline: 8px;
+    min-height: 300px;
+    margin-bottom: 20px;
+  }
+  .frame {
+    height: 385px;
+    border: 3px solid white;
+    width: 100%;
+  }
+  .frame h1 {
+    margin-block: 20px;
+    font-size: var(--font-size-header-xs);
+  }
+  .paragraph {
+    font-size: 10px;
+  }
+  .image {
+    max-height: 50%;
   }
 }
 

@@ -4,9 +4,11 @@ import styles from "./Contacts.module.css";
 const Contacts = (props) => {
   return (
     <div className={styles.container}>
-      <div className={styles.icon}>{props.icon}</div>
+      <a href={props.href} className={styles.icon}>
+        {props.icon}
+      </a>
       <div className={styles.details}>
-        <p>{props.type}</p>
+        <h5>{props.type}</h5>
         <span>{props.contact}</span>
       </div>
     </div>

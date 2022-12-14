@@ -12,6 +12,7 @@
   width: 75%;
 }
 .heading {
+  margin-block: 0px;
   font-family: "Bebas Neue", cursive;
   font-weight: 100;
   color: rgb(46, 47, 51);
@@ -62,6 +63,8 @@
     height: fit-content;
   }
   .heading {
+    margin-block: 3rem;
+
     font-size: var(--font-size-header-xs);
   }
   .languages {
@@ -86,6 +89,7 @@
     height: fit-content;
   }
   .heading {
+    margin-top: 5rem;
     font-size: var(--font-size-header-xs);
   }
   .languages {

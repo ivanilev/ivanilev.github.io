@@ -46,6 +46,7 @@
 .text h1 {
   color: #303030;
   font-family: "Bebas Neue", cursive;
+  line-height: 100px;
   font-weight: 100;
   letter-spacing: 0px;
   margin-top: 0px;
@@ -124,6 +125,7 @@
   }
 
   .text h1 {
+    line-height: 50px;
     font-size: var(--font-size-header-xs);
   }
   .text p {
@@ -134,11 +136,8 @@
 
 /* Small devices (tablets 576px-768px) */
 @media (min-width: 576px) and (max-width: 768px) {
-  .container {
-    height: 10rem;
-  }
-
   .text h1 {
+    line-height: 60px;
     font-size: var(--font-size-header-xs);
   }
   .text p {
@@ -149,6 +148,7 @@
 /* Medium devices (desktops, 768px-1080px) */
 @media (min-width: 768px) and (max-width: 1080px) {
   .text h1 {
+    line-height: 80px;
     font-size: var(--font-size-header-s);
   }
   .text p {

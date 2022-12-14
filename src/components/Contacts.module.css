@@ -12,13 +12,14 @@
 .icon {
   color: blue;
 }
-.details p {
+.details h5 {
   color: #303030;
 
-  margin-bottom: 1rem;
+  margin-bottom: 0.34rem;
   margin-top: 0px;
 }
 .details span {
+  font-weight: light;
   margin: 0px;
   color: #303030;
   font-size: 1.5rem;
@@ -32,7 +33,7 @@
   .details span {
     font-size: var(--font-size-s);
   }
-  .details p {
+  .details h5 {
     font-weight: bold;
     font-size: var(--font-size-paragraph-s);
     align-self: center;
@@ -49,7 +50,11 @@
   .details span {
     font-size: var(--font-size-s);
   }
-  .details p {
+  .details h5 {
+    font-size: var(--font-size-paragraph-m);
+
+    align-self: center;
+    padding-bottom: 0px;
     margin-bottom: 0rem;
   }
 }
@@ -59,7 +64,20 @@
     gap: 1rem;
     margin-bottom: 0rem;
   }
-  .details p {
+  .details h5 {
+    font-size: var(--font-size-paragraph-xl);
+  }
+  .details span {
+    font-size: var(--font-size-l);
+  }
+}
+
+@media (min-width: 1366px) {
+  .container {
+    gap: 1rem;
+    margin-bottom: 0rem;
+  }
+  .details h5 {
     font-size: var(--font-size-paragraph-xl);
   }
   .details span {
