@@ -1,14 +1,73 @@
-.App {
-  text-align: center;
+.toTheTop {
+  color: rgb(38, 127, 193);
+
+  cursor: pointer;
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  right: 25px;
+  bottom: 25px;
+  z-index: 2;
+  animation: bounce 1s;
+}
+.downArrow {
+  color: rgb(38, 127, 193);
+
+  cursor: pointer;
+  position: fixed;
+  width: 32px;
+  height: 32px;
+  bottom: 5%;
+  z-index: 2;
+  padding-inline: calc(50% - 16px);
+  display: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@keyframes bounce {
+  0% {
+    scale: 100%;
+  }
+  50% {
+    scale: 200%;
+  }
+  100% {
+    scale: 100%;
+  }
+}
+
+.contact-icon {
+  color: rgb(38, 127, 193);
+  height: 3rem;
+}
+.social-icon {
+  color: rgb(38, 127, 193);
+  height: 3rem;
+  cursor: pointer;
+}
+
+.menu-icon {
+  width: 1.5rem;
+}
+
+@media (max-width: 576px) {
+  .toTheTop {
+    display: none;
+  }
+  .downArrow {
+    display: block;
+  }
+  .contact-icon {
+    height: 2rem;
+  }
+  .social-icon {
+    height: 2rem;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .contact-icon {
+    height: 2rem;
+  }
+  .social-icon {
+    height: 2rem;
+  }
 }

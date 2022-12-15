@@ -1,0 +1,775 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+.container {
+  height: 35rem;
+  overflow: hidden;
+  min-height: 900px;
+}
+
+.heading {
+  color: #303030;
+  font-family: "Bebas Neue", cursive;
+  padding-block: 0px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 100;
+}
+
+.content {
+  display: flex;
+  border: 10px solid white;
+  margin-block: auto;
+  height: clamp(70%, 70%, 1255px);
+  border-radius: 30px;
+  width: clamp(90%, 90%, 1726px);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.directly {
+  padding-top: 1rem;
+  height: 90%;
+  margin: 1rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contactForm {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90%;
+  width: 50%;
+  margin: 1rem;
+  position: relative;
+}
+.directly h1 {
+  color: #303030;
+  font-weight: bold;
+  align-self: center;
+  padding-bottom: 0px;
+}
+.directly h5 {
+  font-weight: bold;
+  align-self: center;
+  padding-bottom: 0px;
+}
+.contactForm h1 {
+  color: #303030;
+
+  font-weight: bold;
+  align-self: center;
+}
+.social {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  align-self: center;
+}
+.separator {
+  border-right: 3px solid white;
+  margin-block: auto;
+  height: 90%;
+  margin-inline: 0px;
+}
+
+.gridContainer {
+  display: flex;
+  height: 90%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 90%;
+  width: 100%;
+}
+.contactForm form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 90%;
+  width: 100%;
+}
+.contactForm input:focus {
+  background-color: transparent;
+  outline: none;
+}
+
+.contactForm input::placeholder {
+  color: #404040;
+}
+.inputGroup {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+textarea {
+  padding-top: 5px;
+  padding-inline: 10px;
+  height: 5rem;
+  background-color: transparent;
+  margin-top: 1rem;
+  max-height: 200px;
+  font-size: 1rem;
+  font-style: italic;
+  border-radius: 10px;
+}
+textarea::placeholder {
+  color: #404040;
+}
+.inputGroup input {
+  color: #303030;
+  font-size: 1rem;
+  font-style: italic;
+  background-color: transparent;
+  border: none;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid grey;
+  margin-top: 10px;
+}
+.inputGroup label {
+  color: #303030;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.button {
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: rgb(38, 127, 193);
+  border: none;
+  color: white;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  border-radius: 15px;
+}
+.button:disabled {
+  cursor: default;
+  background-color: grey;
+}
+
+.errorMessage {
+  position: absolute;
+  top: 1rem;
+  right: 40%;
+  color: #d9534f;
+  animation: shake 1s forwards;
+}
+.inputGroup .invalidInput {
+  border: 1.5px solid #d9534f;
+  border-radius: 5px;
+  animation: shake 1s;
+}
+
+.contactForm .success {
+  font-size: 26px;
+  position: absolute;
+  bottom: -0.5rem;
+  color: rgb(38, 127, 193);
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+@keyframes shakeMobile {
+  10%,
+  90% {
+    transform: translateX(-49%);
+  }
+
+  20%,
+  80% {
+    transform: translateX(-51);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translateX(-48%);
+  }
+
+  40%,
+  60% {
+    transform: translateX(-52%);
+  }
+}
+
+/* Devices below 576px width */
+@media (max-width: 576px) {
+  .contactForm .success {
+    font-size: var(--font-size-paragraph-m);
+    font-weight: 500;
+    bottom: -0.7rem;
+  }
+  .contact-icon {
+    height: 1rem;
+  }
+  .errorMessage {
+    left: 50%;
+    width: 200px;
+    transform: translateX(-50%);
+    animation: none;
+    animation: shakeMobile 1s forwards;
+  }
+  .heading {
+    font-size: var(--font-size-header-xs);
+    margin-block: 0px;
+    padding: 10px;
+  }
+  .container {
+    height: 150vh;
+    min-height: 1000px;
+  }
+  .content {
+    border: 3px solid white;
+    height: 85%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .separator {
+    border-right: none;
+    border-bottom: 3px solid white;
+    margin-inline: 1rem;
+    width: 90%;
+    height: 0px;
+  }
+  .directly {
+    height: 50%;
+    margin-inline: 0px;
+    margin-bottom: 1rem;
+    margin-top: 0rem;
+    width: 100%;
+  }
+  .gridContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 0rem;
+    column-gap: 0rem;
+  }
+  .social {
+    margin-inline: auto;
+    width: 90%;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .directly h1 {
+    margin-bottom: 2rem;
+    margin-top: 0px;
+    font-size: var(--font-size-paragraph-l);
+  }
+  .contactForm h1 {
+    font-size: var(--font-size-paragraph-l);
+  }
+  .inputGroup {
+    width: 90%;
+  }
+  .inputGroup label {
+    margin-bottom: 0.3rem;
+    font-size: var(--font-size-paragraph-s);
+  }
+  .contactForm {
+    margin-top: 0px;
+    padding-top: 0px;
+    height: 55%;
+    width: 80%;
+  }
+  .contactForm input {
+    width: 100%;
+    margin: 0px;
+  }
+  .contactForm input[type="text"] {
+    font-size: var(--font-size-paragraph-s);
+  }
+  textarea {
+    height: 5rem;
+    width: 100%;
+  }
+
+  .contactForm input::placeholder {
+    font-size: var(--font-size-paragraph-s);
+  }
+  .formContainer {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .button {
+    text-align: center;
+    font-size: var(--font-size-paragraph-s);
+    padding-inline: 0.7rem;
+    padding-block: 0.4rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    width: 6rem;
+  }
+}
+
+/* Small devices (tablets 576px-768px) */
+@media (min-width: 576px) and (max-width: 768px) {
+  .contact-icon {
+    height: 1rem;
+  }
+  .errorMessage {
+    left: 50%;
+    width: 200px;
+    transform: translateX(-50%);
+    animation: none;
+    animation: shakeMobile 1s forwards;
+  }
+  .heading {
+    font-size: 1.5rem;
+    margin-block: 0px;
+    padding: 10px;
+  }
+  .container {
+    height: 100vh;
+    min-height: 550px;
+  }
+  .content {
+    border: 3px solid white;
+    height: 85%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .separator {
+    border-right: none;
+    border-bottom: 3px solid white;
+    margin-inline: 1rem;
+    width: 90%;
+    height: 0px;
+  }
+  .directly {
+    margin-top: 0px;
+    height: 50%;
+    margin-inline: 0px;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  .gridContainer {
+    margin-right: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 0rem;
+    column-gap: 4rem;
+  }
+  .social {
+    margin-inline: auto;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .directly h1 {
+    padding-top: 0px;
+    margin-top: 0px;
+    font-size: var(--font-size-paragraph-m);
+  }
+  .contactForm h1 {
+    font-size: var(--font-size-paragraph-m);
+  }
+  .inputGroup {
+    width: 80%;
+  }
+  .inputGroup label {
+    font-size: var(--font-size-paragraph-s);
+  }
+  .contactForm {
+    margin-top: 0px;
+    padding-top: 0px;
+    height: 55%;
+    width: 80%;
+  }
+  .contactForm input {
+    width: 100%;
+    margin: 0px;
+  }
+  .contactForm input[type="text"] {
+    font-size: 0.8rem;
+  }
+
+  textarea {
+    height: 3rem;
+    font-size: 0.8rem;
+  }
+
+  .contactForm input::placeholder {
+    color: #303030;
+    font-size: 0.5rem;
+  }
+
+  .formContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 0rem;
+    column-gap: 0rem;
+  }
+
+  .button {
+    margin-top: 1rem;
+
+    justify-content: center;
+    font-size: var(--font-size-paragraph-s);
+    padding-inline: 0.7rem;
+    padding-block: 0.4rem;
+    border-radius: 10px;
+    width: 6rem;
+  }
+}
+/* Medium devices (desktops, 768px-1080px) */
+@media (min-width: 768px) and (max-width: 1080px) {
+  .contactForm .success {
+    font-size: 22px;
+  }
+  .container {
+    height: 35.5rem;
+  }
+  .heading {
+    margin: 2rem;
+    padding: 0px;
+    font-size: var(--font-size-header-s);
+  }
+  .directly h1 {
+    font-size: var(--font-size-paragraph-xl);
+  }
+  .contactForm h1 {
+    font-size: var(--font-size-paragraph-xl);
+  }
+
+  .content {
+    border: 5px solid white;
+    border-radius: 30px;
+    padding-bottom: 1rem;
+  }
+
+  .gridContainer {
+    display: flex;
+    height: 90%;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-block: 2rem;
+  }
+  .formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 90%;
+    width: 100%;
+    margin-block: 2rem;
+  }
+
+  textarea {
+    background-color: transparent;
+    font-size: var(--font-size-s);
+    font-style: italic;
+  }
+
+  .inputGroup input {
+    font-size: var(--font-size-s);
+    font-style: italic;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid grey;
+    margin-top: 10px;
+  }
+  .inputGroup label {
+    font-weight: bold;
+    font-size: var(--font-size-paragraph-m);
+  }
+
+  .button {
+    font-size: var(--font-size-m);
+  }
+}
+
+/* Large devices (desktops, 1080px-1336px) */
+@media (min-width: 1080px) and (max-width: 1366px) {
+  .heading {
+    margin: 2rem;
+    padding: 0px;
+    font-size: var(--font-size-header-m);
+  }
+  .directly h1 {
+    align-self: center;
+    padding-bottom: 0px;
+  }
+  .content {
+    border: 5px solid white;
+    border-radius: 30px;
+  }
+
+  .gridContainer {
+    display: flex;
+    height: 90%;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  .formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 90%;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  textarea {
+    background-color: transparent;
+    max-height: 200px;
+    font-size: var(--font-size-l);
+    font-style: italic;
+  }
+
+  .inputGroup input {
+    font-size: var(--font-size-l);
+    font-style: italic;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid grey;
+    margin-top: 10px;
+  }
+  .inputGroup label {
+    font-weight: bold;
+    font-size: var(--font-size-paragraph-xl);
+  }
+
+  .button {
+    font-size: var(--font-size-l);
+  }
+}
+
+/* Extra extra large devices (desktops, 1080px-1336px) */
+@media (min-width: 1366px) and (max-width: 1680px) {
+  .contactForm .success {
+    font-size: 24px;
+  }
+  .heading {
+    margin: 2rem;
+    padding: 0px;
+    font-size: var(--font-size-header-m);
+  }
+  .directly h1 {
+    align-self: center;
+    padding-bottom: 0px;
+  }
+  .content {
+    border: 5px solid white;
+    border-radius: 30px;
+  }
+
+  .gridContainer {
+    display: flex;
+    height: 90%;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  .formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 90%;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  textarea {
+    background-color: transparent;
+    max-height: 200px;
+    font-size: var(--font-size-l);
+    font-style: italic;
+  }
+
+  .inputGroup input {
+    font-size: var(--font-size-l);
+    font-style: italic;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid grey;
+    margin-top: 10px;
+  }
+  .inputGroup label {
+    font-weight: bold;
+    font-size: var(--font-size-paragraph-xl);
+  }
+
+  .button {
+    font-size: var(--font-size-l);
+  }
+}
+
+/* Extra extra large devices (desktops, 1080px-1336px) */
+@media (min-width: 1366px) and (max-width: 1680px) {
+  .contactForm .success {
+    font-size: 26px;
+  }
+  .heading {
+    margin: 2rem;
+    padding: 0px;
+    text-transform: uppercase;
+    font-size: var(--font-size-header-l);
+  }
+
+  .content {
+    border: 5px solid white;
+    border-radius: 30px;
+    padding-bottom: 1rem;
+  }
+
+  .gridContainer {
+    margin-block: 2rem;
+  }
+
+  .formContainer {
+    margin-block: 2rem;
+  }
+
+  h1 {
+    font-size: var(--font-size-paragraph-l);
+  }
+
+  textarea {
+    font-size: var(--font-size-l);
+  }
+
+  .inputGroup input {
+    font-size: var(--font-size-l);
+  }
+  .inputGroup label {
+    font-size: var(--font-size-paragraph-l);
+  }
+
+  .button {
+    font-size: var(--font-size-l);
+  }
+}
+
+/* Extra extra large devices (desktops, 1680px and up) */
+@media (min-width: 1680px) {
+  .heading {
+    margin: 2rem;
+    padding: 0px;
+    text-transform: uppercase;
+    font-size: var(--font-size-header-l);
+  }
+  .directly h1 {
+    font-size: var(--font-size-paragraph-l);
+  }
+  .content {
+    border: 5px solid white;
+    border-radius: 30px;
+    padding-bottom: 1rem;
+  }
+
+  .gridContainer {
+    margin-block: 2rem;
+  }
+
+  .formContainer {
+    margin-block: 2rem;
+  }
+
+  .h1 {
+    font-size: var(--font-size-paragraph-l);
+  }
+
+  textarea {
+    font-size: var(--font-size-l);
+  }
+
+  .inputGroup input {
+    font-size: var(--font-size-l);
+  }
+  .inputGroup label {
+    font-size: var(--font-size-paragraph-l);
+  }
+
+  .button {
+    font-size: var(--font-size-l);
+  }
+  .contactForm .success {
+    font-size: 28px;
+  }
+}
+
+/* Extra extra large devices (desktops, 1920px and up) */
+@media (min-width: 1920px) {
+  .heading {
+    margin: 2rem;
+    padding: 0px;
+    text-transform: uppercase;
+    font-size: var(--font-size-header-xxl);
+  }
+  .directly h1 {
+    font-size: var(--font-size-paragraph-xxl);
+  }
+  .content {
+    border: 5px solid white;
+    max-width: 1700px;
+    border-radius: 30px;
+    padding-bottom: 1rem;
+  }
+
+  .gridContainer {
+    margin-block: 2rem;
+  }
+
+  .formContainer {
+    margin-block: 2rem;
+  }
+
+  .h1 {
+    font-size: var(--font-size-paragraph-xxl);
+  }
+
+  textarea {
+    font-size: var(--font-size-xl);
+  }
+
+  .inputGroup input {
+    font-size: var(--font-size-xl);
+  }
+  .inputGroup label {
+    font-size: var(--font-size-paragraph-xxl);
+  }
+
+  .button {
+    font-size: var(--font-size-xl);
+  }
+}

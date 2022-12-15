@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+.container {
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  min-height: 300px;
+  padding-block: 4rem;
+}
+.content {
+  width: 75%;
+}
+.heading {
+  margin-top: 0px;
+  margin-bottom: 30px;
+  font-family: "Bebas Neue", cursive;
+  font-weight: 100;
+  color: rgb(46, 47, 51);
+  font-size: var(--font-size-header-l);
+  text-align: center;
+}
+.languages {
+  display: flex;
+  justify-content: space-between;
+}
+.languages > div {
+  justify-self: center;
+  background-size: cover;
+  border-radius: 100%;
+  width: 128px;
+  height: 128px;
+  position: relative;
+  font-weight: 700;
+  background-position: center;
+}
+
+.languages > div::after {
+  position: absolute;
+  bottom: -3rem;
+  left: 50%;
+  transform: translatex(-50%);
+}
+.english::after {
+  content: "English";
+}
+.deutch::after {
+  content: "German";
+}
+.spanish::after {
+  content: "Spanish";
+}
+.greek::after {
+  content: "Greek";
+}
+.portuguese::after {
+  content: "Portuguese";
+}
+.bulgarian::after {
+  content: "Bulgarian";
+}
+@media (max-width: 412px) {
+  .container {
+    height: fit-content;
+  }
+  .heading {
+    margin-block: 3rem;
+
+    font-size: var(--font-size-header-xs);
+  }
+  .languages {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 4rem;
+    grid-column-gap: 2rem;
+  }
+  .languages > div {
+    width: 4rem;
+    height: 4rem;
+    font-family: "Roboto" medium;
+    font-weight: 700;
+  }
+  .languages > div::after {
+    bottom: -2rem;
+  }
+}
+
+@media (min-width: 412px) and (max-width: 576px) {
+  .container {
+    height: fit-content;
+  }
+  .heading {
+    margin-top: 5rem;
+    font-size: var(--font-size-header-xs);
+  }
+  .languages {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 4rem;
+    grid-column-gap: 2rem;
+  }
+  .languages > div {
+    width: 5rem;
+    height: 5rem;
+    font-family: "Roboto" medium;
+    font-weight: 700;
+    margin-block: 0px;
+  }
+  .languages > div::after {
+    bottom: -2rem;
+  }
+}
+
+/* Small devices (tablets 576px-768px) */
+@media (min-width: 576px) and (max-width: 768px) {
+  .languages > div {
+    margin-block: 0px;
+  }
+  .container {
+    height: fit-content;
+  }
+  .languages > div {
+    font-size: var(--font-size-s);
+    width: var(--logo-size-xs);
+    height: var(--logo-size-xs);
+  }
+  .heading {
+    font-size: var(--font-size-header-xs);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1080px) {
+  .container {
+    height: fit-content;
+  }
+  .languages > div {
+    font-size: var(--font-size-paragraph-s);
+    width: var(--logo-size-s);
+    height: var(--logo-size-s);
+  }
+  .heading {
+    font-size: var(--font-size-header-s);
+  }
+}
+
+/* Large devices (desktops, 1080px-1336px) */
+@media (min-width: 1080px) and (max-width: 1366px) {
+  .languages > div {
+    font-size: var(--font-size-paragraph-m);
+    width: var(--logo-size-m);
+    height: var(--logo-size-m);
+    margin-block: 2rem;
+  }
+  .heading {
+    font-size: var(--font-size-header-m);
+  }
+}
+
+/* Extra extra large devices (desktops, 1680px and up) */
+@media (min-width: 1366px) and (max-width: 1680px) {
+  .languages > div {
+    font-size: var(--font-size-paragraph-l);
+    width: var(--logo-size-l);
+    height: var(--logo-size-l);
+    margin-block: 2rem;
+  }
+  .heading {
+    font-size: var(--font-size-header-l);
+  }
+}
+
+@media (min-width: 1680px) {
+  .languages > div {
+    font-size: var(--font-size-paragraph-xl);
+    width: var(--logo-size-l);
+    height: var(--logo-size-l);
+  }
+  .heading {
+    font-size: var(--font-size-header-xl);
+  }
+}
+
+@media (min-width: 1920px) {
+  .languages > div {
+    font-size: var(--font-size-paragraph-xxl);
+    width: var(--logo-size-xl);
+    height: var(--logo-size-xl);
+  }
+  .heading {
+    font-size: var(--font-size-header-xxl);
+  }
+}
