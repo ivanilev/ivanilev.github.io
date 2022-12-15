@@ -73,6 +73,12 @@ const GetInTouch = () => {
     setError("");
   };
 
+  let emailLabel = "Email";
+  if (!email && error) {
+    emailLabel = "Please fill the email field:";
+  } else if (!emailIsValid) {
+    emailLabel = "Please enter a valid email:";
+  }
   return (
     <div id="GetInTouch" className={styles.container}>
       <h1 className={styles.heading}>Get in touch!</h1>
@@ -135,13 +141,21 @@ const GetInTouch = () => {
               </div>
               <div className={styles.inputGroup}>
                 <label
-                  style={!emailIsValid ? { color: "#d9534f" } : {}}
+                  style={
+                    !emailIsValid || (!email && error)
+                      ? { color: "#d9534f" }
+                      : {}
+                  }
                   htmlFor="user_email"
                 >
-                  {!emailIsValid ? "Please enter a valid email:" : "Email:"}
+                  {emailLabel}
                 </label>
                 <input
-                  className={!emailIsValid ? styles.invalidInput : ""}
+                  className={
+                    !emailIsValid || (!email && error)
+                      ? styles.invalidInput
+                      : ""
+                  }
                   onChange={emailChangeHandler}
                   placeholder="Type your email address here..."
                   name="user_email"
