@@ -140,7 +140,7 @@
 /* Extra extra large devices (desktops, 1680px and up) */
 @media (min-width: 1366px) and (max-width: 1680px) {
   .image {
-    height: 60%;
+    height: 75%;
   }
   .frame h1 {
     font-size: var(--font-size-header-l);
