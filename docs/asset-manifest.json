@@ -1,15 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.ca57846c.css",
-    "main.js": "/static/js/main.92fd9a56.js",
-    "static/js/787.2b5dcf97.chunk.js": "/static/js/787.2b5dcf97.chunk.js",
+    "main.css": "/static/css/main.6ca7f922.css",
+    "main.js": "/static/js/main.f6cff598.js",
+    "static/media/Group 249.png": "/static/media/Group 249.ea2839cec38a4b81060f.png",
+    "static/media/newHomeBg.png": "/static/media/newHomeBg.e9369420a5284da82d9e.png",
+    "static/media/Group_230.png": "/static/media/Group_230.1f8673585965a975a4d9.png",
+    "static/media/portugal.svg": "/static/media/portugal.d262a10c78ee90614521afa7cadcb51b.svg",
+    "static/media/united-kingdom.svg": "/static/media/united-kingdom.31e597da9bc3ae77373e5000fed5af9d.svg",
+    "static/media/greece.svg": "/static/media/greece.b9f9bfc256622b08cd5dd198f4f71b75.svg",
+    "static/media/spain.svg": "/static/media/spain.c91f4cc1f1f42dd14159bfcb291310f7.svg",
+    "static/media/germany.svg": "/static/media/germany.86eba0492a81375daebcb55d52eea8dc.svg",
+    "static/media/bulgaria.png": "/static/media/bulgaria.db729dc7579c76101854.png",
     "index.html": "/index.html",
-    "main.ca57846c.css.map": "/static/css/main.ca57846c.css.map",
-    "main.92fd9a56.js.map": "/static/js/main.92fd9a56.js.map",
-    "787.2b5dcf97.chunk.js.map": "/static/js/787.2b5dcf97.chunk.js.map"
+    "main.6ca7f922.css.map": "/static/css/main.6ca7f922.css.map",
+    "main.f6cff598.js.map": "/static/js/main.f6cff598.js.map"
   },
   "entrypoints": [
-    "static/css/main.ca57846c.css",
-    "static/js/main.92fd9a56.js"
+    "static/css/main.6ca7f922.css",
+    "static/js/main.f6cff598.js"
   ]
 }
