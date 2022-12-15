@@ -4,7 +4,6 @@ import {
   faEnvelope,
   faHouse,
   faInfo,
-  faLanguage,
   faGlobe,
 } from "@fortawesome/free-solid-svg-icons";
 import {
