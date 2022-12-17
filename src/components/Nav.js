@@ -10,10 +10,11 @@ import {
   languageIcon,
   contactUsIcon,
 } from "../assets/icons";
+import { useStateContext } from "../store/StateContext";
 const Nav = (props) => {
   const navRef = useRef();
   const [isDesktop, setDesktop] = useState(window.innerWidth > 650);
-
+  const { language, setLanguage } = useStateContext();
   const closeIcon = (
     <FontAwesomeIcon
       className={styles.closeIcon}
@@ -44,6 +45,30 @@ const Nav = (props) => {
     return () => window.removeEventListener("resize", updateMedia);
   }, []);
 
+  const selectChangeHandler = (e) => {
+    setLanguage(e.target.value);
+  };
+
+  let home = "Home";
+  let aboutUs = "About us";
+  let languages = "Languages";
+  let conctactUs = "Contact us";
+
+  switch (language) {
+    case "English":
+      home = "Home";
+      aboutUs = "About us";
+      languages = "Languages";
+      conctactUs = "Contact us";
+      break;
+    case "Other":
+      home = "Lorem";
+      aboutUs = "Ipsum";
+      languages = "Dolor";
+      conctactUs = "Sit";
+      break;
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.navAndLogo}>
@@ -59,26 +84,30 @@ const Nav = (props) => {
           <div>
             {!isDesktop && homeIcon}
             <a onClick={iconClickHandler} href="#home">
-              Home
+              {home}
             </a>
           </div>
           <div>
             {!isDesktop && aboutUsIcon}
             <a onClick={iconClickHandler} href="#WhatWeDo">
-              About us
+              {aboutUs}
             </a>
           </div>
           <div>
             {!isDesktop && languageIcon}
             <a onClick={iconClickHandler} href="#Languages">
-              Languages
+              {languages}
             </a>
           </div>
           <div>
             {!isDesktop && contactUsIcon}
             <a onClick={iconClickHandler} href="#GetInTouch">
-              Contact us
+              {conctactUs}
             </a>
+            <select onChange={selectChangeHandler}>
+              <option>English</option>
+              <option>Other</option>
+            </select>
           </div>
         </nav>
         {!isDesktop && navIcon}
