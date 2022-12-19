@@ -15,6 +15,7 @@
   margin-top: 0px;
   margin-bottom: 30px;
   font-family: "Bebas Neue", cursive;
+  text-transform: uppercase;
   font-weight: 100;
   color: rgb(46, 47, 51);
   font-size: var(--font-size-header-l);
@@ -35,37 +36,19 @@
   background-position: center;
 }
 
-.languages > div::after {
+.languages > div > span {
   position: absolute;
   bottom: -3rem;
   left: 50%;
   transform: translatex(-50%);
 }
-.english::after {
-  content: "English";
-}
-.deutch::after {
-  content: "German";
-}
-.spanish::after {
-  content: "Spanish";
-}
-.greek::after {
-  content: "Greek";
-}
-.portuguese::after {
-  content: "Portuguese";
-}
-.bulgarian::after {
-  content: "Bulgarian";
-}
+
 @media (max-width: 412px) {
   .container {
     height: fit-content;
   }
   .heading {
     margin-block: 3rem;
-
     font-size: var(--font-size-header-xs);
   }
   .languages {
@@ -80,7 +63,7 @@
     font-family: "Roboto" medium;
     font-weight: 700;
   }
-  .languages > div::after {
+  .languages > div > span {
     bottom: -2rem;
   }
 }
@@ -106,7 +89,7 @@
     font-weight: 700;
     margin-block: 0px;
   }
-  .languages > div::after {
+  .languages > div > span {
     bottom: -2rem;
   }
 }
