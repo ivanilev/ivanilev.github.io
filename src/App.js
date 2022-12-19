@@ -69,7 +69,7 @@ function App() {
   //end of code
   useEffect(() => {
     const scrollHandler = (ev) => {
-      let homeDiv = document.getElementById("home");
+      let homeDiv = document.getElementById("Home");
       let distanceToTop = homeDiv.getBoundingClientRect().top;
       if (distanceToTop < 0) {
         setShowArrow(true);

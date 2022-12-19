@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import logo from "../assets/logo151.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faNavicon, faClose } from "@fortawesome/free-solid-svg-icons";
+import { withNamespaces } from "react-i18next";
 import {
   homeIcon,
   aboutUsIcon,
@@ -12,6 +13,7 @@ import {
 } from "../assets/icons";
 import { useStateContext } from "../store/StateContext";
 const Nav = (props) => {
+  const { t } = props;
   const navRef = useRef();
   const [isDesktop, setDesktop] = useState(window.innerWidth > 650);
   const { language, setLanguage } = useStateContext();
@@ -80,29 +82,28 @@ const Nav = (props) => {
           }
         >
           {!isDesktop && closeIcon}
-
           <div>
             {!isDesktop && homeIcon}
             <a onClick={iconClickHandler} href="#home">
-              {home}
+              Home
             </a>
           </div>
           <div>
             {!isDesktop && aboutUsIcon}
             <a onClick={iconClickHandler} href="#WhatWeDo">
-              {aboutUs}
+              About us
             </a>
           </div>
           <div>
             {!isDesktop && languageIcon}
             <a onClick={iconClickHandler} href="#Languages">
-              {languages}
+              Languages
             </a>
           </div>
           <div>
             {!isDesktop && contactUsIcon}
             <a onClick={iconClickHandler} href="#GetInTouch">
-              {conctactUs}
+              Contact us
             </a>
             <select onChange={selectChangeHandler}>
               <option>English</option>
@@ -116,4 +117,4 @@ const Nav = (props) => {
   );
 };
 
-export default Nav;
+export default withNamespaces()(Nav);
