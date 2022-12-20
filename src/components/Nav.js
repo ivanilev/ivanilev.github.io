@@ -11,12 +11,11 @@ import {
   languageIcon,
   contactUsIcon,
 } from "../assets/icons";
-import { useStateContext } from "../store/StateContext";
 const Nav = (props) => {
   const { t } = props;
   const navRef = useRef();
   const [isDesktop, setDesktop] = useState(window.innerWidth > 650);
-  const { language, setLanguage } = useStateContext();
+
   const closeIcon = (
     <FontAwesomeIcon
       className={styles.closeIcon}
@@ -47,29 +46,12 @@ const Nav = (props) => {
     return () => window.removeEventListener("resize", updateMedia);
   }, []);
 
-  const selectChangeHandler = (e) => {
-    setLanguage(e.target.value);
-  };
-
-  let home = "Home";
-  let aboutUs = "About us";
-  let languages = "Languages";
-  let conctactUs = "Contact us";
-
-  switch (language) {
-    case "English":
-      home = "Home";
-      aboutUs = "About us";
-      languages = "Languages";
-      conctactUs = "Contact us";
-      break;
-    case "Other":
-      home = "Lorem";
-      aboutUs = "Ipsum";
-      languages = "Dolor";
-      conctactUs = "Sit";
-      break;
-  }
+  const mobileMenuHeader = (
+    <div className={styles.mobileMenuHeader}>
+      <img className={styles.logo} src={logo} alt="logo" />
+      <h5>ACHIEVING EXCELLENCE</h5>
+    </div>
+  );
 
   return (
     <div className={styles.container}>
@@ -82,33 +64,31 @@ const Nav = (props) => {
           }
         >
           {!isDesktop && closeIcon}
-          <div>
+          {!isDesktop && mobileMenuHeader}
+
+          <div className={styles.navItem}>
             {!isDesktop && homeIcon}
-            <a onClick={iconClickHandler} href="#home">
-              Home
+            <a onClick={iconClickHandler} href="#Home">
+              {t("NavigationBarHome")}
             </a>
           </div>
-          <div>
+          <div className={styles.navItem}>
             {!isDesktop && aboutUsIcon}
             <a onClick={iconClickHandler} href="#WhatWeDo">
-              About us
+              {t("NavigationBarAboutUs")}
             </a>
           </div>
-          <div>
+          <div className={styles.navItem}>
             {!isDesktop && languageIcon}
             <a onClick={iconClickHandler} href="#Languages">
-              Languages
+              {t("NavigationBarLanguages")}
             </a>
           </div>
-          <div>
+          <div className={styles.navItem}>
             {!isDesktop && contactUsIcon}
             <a onClick={iconClickHandler} href="#GetInTouch">
-              Contact us
+              {t("NavigationBarContactUs")}
             </a>
-            <select onChange={selectChangeHandler}>
-              <option>English</option>
-              <option>Other</option>
-            </select>
           </div>
         </nav>
         {!isDesktop && navIcon}

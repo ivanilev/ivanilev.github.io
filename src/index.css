@@ -64,3 +64,13 @@ html {
 ::-webkit-scrollbar-track {
   background-color: rgb(186, 217, 237);
 }
+
+@font-face {
+  font-family: "BebasNeue";
+  src: url(./assets/BebasNeue-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(./assets/Roboto-Regular.ttf);
+}
