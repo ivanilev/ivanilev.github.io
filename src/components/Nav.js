@@ -5,6 +5,7 @@ import logo from "../assets/logo151.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faNavicon, faClose } from "@fortawesome/free-solid-svg-icons";
 import { withNamespaces } from "react-i18next";
+import i18n from "../i18n";
 import {
   homeIcon,
   aboutUsIcon,
@@ -15,6 +16,18 @@ const Nav = (props) => {
   const { t } = props;
   const navRef = useRef();
   const [isDesktop, setDesktop] = useState(window.innerWidth > 650);
+  const [selectedLanguage, setSelectedLanguage] = useState("BG");
+  const [dropDown, setDropDown] = useState(false);
+
+  const languageChangeDropHandler = () => {
+    setDropDown((prevState) => !prevState);
+  };
+
+  const languageChangeHandler = (e) => {
+    i18n.changeLanguage(e.target.id);
+    let language = document.querySelector("#" + e.target.id);
+    setSelectedLanguage(language.firstChild.innerHTML);
+  };
 
   const closeIcon = (
     <FontAwesomeIcon
@@ -89,6 +102,33 @@ const Nav = (props) => {
             <a onClick={iconClickHandler} href="#GetInTouch">
               {t("NavigationBarContactUs")}
             </a>
+          </div>
+          <div
+            onClick={languageChangeDropHandler}
+            className={styles.customSelect}
+          >
+            <span className={styles.currentlySelected}>{selectedLanguage}</span>
+            <div
+              style={dropDown ? { display: "block" } : {}}
+              className={styles.dropDown}
+            >
+              <div
+                onClick={languageChangeHandler}
+                id="bg"
+                className={styles.dropDownItem}
+              >
+                <span id="bg">BG</span>
+                <p id="bg">Bulgarian</p>
+              </div>
+              <div
+                onClick={languageChangeHandler}
+                id="en"
+                className={styles.dropDownItem}
+              >
+                <span id="en">EN</span>
+                <p id="en">English</p>
+              </div>
+            </div>
           </div>
         </nav>
         {!isDesktop && navIcon}

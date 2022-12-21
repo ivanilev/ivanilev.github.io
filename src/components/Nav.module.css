@@ -67,6 +67,39 @@ nav a {
   margin-inline: auto;
   background-color: #303030;
 }
+.customSelect {
+  position: relative;
+}
+.currentlySelected {
+  height: 20px;
+  padding: 10px;
+  margin-right: 20px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.dropDown {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+
+.dropDownItem {
+  border: 1px solid black;
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+}
+.dropDownItem span {
+  display: inline;
+  height: fit-content;
+  border: 1px solid black;
+}
+.dropDown p {
+  margin: 0px;
+  border: 1px solid black;
+}
 /*
 /* Smartphone devices (576px and down) */
 @media (max-width: 576px) {
