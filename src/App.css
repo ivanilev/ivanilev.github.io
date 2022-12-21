@@ -18,7 +18,7 @@
   width: 32px;
   height: 32px;
   bottom: 5%;
-  z-index: 2;
+  z-index: 1;
   padding-inline: calc(50% - 16px);
   display: none;
 }
@@ -46,7 +46,6 @@
 }
 
 .menu-icon {
-  margin-left: 1rem;
   width: 1.5rem;
 }
 

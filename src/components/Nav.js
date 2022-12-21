@@ -49,7 +49,7 @@ const Nav = (props) => {
   const mobileMenuHeader = (
     <div className={styles.mobileMenuHeader}>
       <img className={styles.logo} src={logo} alt="logo" />
-      <h5>ACHIEVING EXCELLENCE</h5>
+      <h3>Achieving Excellence</h3>
     </div>
   );
 
