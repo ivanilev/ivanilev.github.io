@@ -1,0 +1,162 @@
+.customSelect {
+  position: absolute;
+  right: 1.5rem;
+  cursor: pointer;
+  top: 2.5rem;
+  z-index: 1;
+}
+.currentlySelectedContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.currentlySelected {
+  height: 30px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.dropDown {
+  padding: 0rem;
+  background-color: white;
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0.8rem;
+  border-radius: 10px;
+}
+.dropDown::after {
+  background-color: white;
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 10px;
+  top: -10px;
+  right: 15px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: #bad9ed #bad9ed white #bad9ed;
+}
+
+.dropDownItem {
+  border-top: 2px solid #ededed;
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  cursor: pointer;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  /*   width is calculated 100% - 2x padding-inline*/
+  width: calc(100% - 2rem);
+  position: relative;
+  z-index: 1;
+}
+
+.dropDownItem span {
+  display: inline;
+  height: fit-content;
+}
+.dropDownItem p {
+  padding: 0px;
+  margin: 0px;
+  margin-left: 0.5rem;
+}
+
+.flagEmoji {
+  height: 30px;
+}
+
+@media (max-width: 412px) {
+  .container {
+    height: fit-content;
+  }
+  .heading {
+    margin-block: 3rem;
+    font-size: var(--font-size-header-xs);
+  }
+  .languages {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 4rem;
+    grid-column-gap: 2rem;
+  }
+  .languages > div {
+    width: 4rem;
+    height: 4rem;
+    font-family: "Roboto" medium;
+    font-weight: 700;
+  }
+  .languages > div > span {
+    bottom: -2rem;
+  }
+}
+@media (max-width: 412px) {
+  .currentlySelected {
+    height: 20px;
+  }
+  .customSelect {
+    top: 30px;
+    right: 0px;
+  }
+}
+
+@media (min-width: 412px) and (max-width: 576px) {
+  .customSelect {
+    top: 30px;
+    right: 0px;
+  }
+}
+
+/* Small devices (tablets 576px-768px) */
+@media (min-width: 576px) and (max-width: 768px) {
+  .customSelect {
+    top: 1.7rem;
+    right: 0.5rem;
+  }
+  .currentlySelected {
+    height: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1080px) {
+  .customSelect {
+    top: 1.7rem;
+    right: 1rem;
+  }
+}
+
+/* Large devices (desktops, 1080px-1336px) */
+@media (min-width: 1080px) and (max-width: 1366px) {
+}
+
+/* Extra extra large devices (desktops, 1680px and up) */
+@media (min-width: 1366px) and (max-width: 1680px) {
+  .customSelect {
+    top: 3.3rem;
+  }
+  .dropDownItem p {
+    font-size: var(--font-size-paragraph-xl);
+  }
+}
+
+@media (min-width: 1680px) {
+  .customSelect {
+    top: 4rem;
+  }
+  .dropDownItem p {
+    font-size: var(--font-size-paragraph-xl);
+  }
+}
+
+@media (min-width: 1920px) {
+  .customSelect {
+    top: 4rem;
+  }
+
+  .dropDownItem p {
+    font-size: var(--font-size-paragraph-xl);
+  }
+}
