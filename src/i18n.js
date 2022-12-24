@@ -3,8 +3,15 @@ import { reactI18nextModule } from "react-i18next";
 
 import translationEN from "./languages/en.json";
 import translationBG from "./languages/bg.json";
-
+import translationDE from "./languages/de.json";
+import translationPT from "./languages/pt.json";
 const resources = {
+  pt: {
+    translation: translationPT,
+  },
+  de: {
+    translation: translationDE,
+  },
   en: {
     translation: translationEN,
   },

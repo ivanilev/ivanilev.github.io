@@ -1,0 +1,40 @@
+{
+  "NavigationBarHome": "Domen",
+  "NavigationBarAboutUs": "About us",
+  "NavigationBarLanguages": "Languages",
+  "NavigationBarContactUs": "Contact us",
+
+  "HomePageParagraph": "NLB is here to help your business expand by translating your content into several different languages! We will help you dive right into a new market with hundreds of millions of new customers.",
+
+  "WhatWeDoHeader": "Was wie dooen?",
+
+  "LanguagesHeader": "We spezializieren inn",
+  "LanguagesEnglish": "English",
+  "LanguagesGerman": "German",
+  "LanguagesSpanish": "Spanish",
+  "LanguagesPortuguese": "Portuguese",
+  "LanguagesGreek": "Greek",
+  "LanguagesBulgarian": "Bulgarian",
+
+  "GetInTouchHeader": "Contacten unseren!",
+  "GetInTouchReachUsHeader": "Reach us directly by:",
+  "GetInTouchPhone": "Phone:",
+  "GetInTouchEmail": "Email:",
+  "GetInTouchFillForm": "Or fill in our contact form:",
+  "GetInTouchName": "Name:",
+  "GetInTouchNameContent": "Type your name here…",
+  "GetInTouchEmailContent": "Type your email address here…",
+  "GetInTouchSubject": "Subject:",
+  "GetInTouchSubjectContent": "Type your subject here…",
+  "GetInTouchMessage": "Message:",
+  "GetInTouchMessageContent": "Type your message here…",
+  "GetInTouchButton": "Submit",
+  "GetInTouchEmailSent": "Thank you for contacting us!",
+
+  "GetInTouchErrorFillAllFields": "Please fill all fields.",
+  "GetInTouchErrorEmailEmpty": "Please enter your email:",
+  "GetInTouchErrorEmailInvalid": "Please enter a valid email address:",
+  "GetInTouchErrorNameEmpty": "Please enter your name:",
+  "GetInTouchErrorSubjectEmpty": "Please write a subject:",
+  "GetInTouchErrorMessageEmpty": "Please write a message:"
+}

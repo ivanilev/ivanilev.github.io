@@ -1,0 +1,40 @@
+{
+  "NavigationBarHome": "Home",
+  "NavigationBarAboutUs": "About us",
+  "NavigationBarLanguages": "Languages",
+  "NavigationBarContactUs": "Contact us",
+
+  "HomePageParagraph": "kasdadskjkja;dsaldaskdsa kl adslk lkd lkds lk lk la lkfda lda   k k ;kl lk kl lk lklk laskdak  kk k k jkaj sdk lkaaaaaaaaaaaaa aaaa aaaaaaaa aaaaaaaaa aaaaaaaa aaaa aaa a aaa a a aaaaa aaaaaaaaaaaaaaaa ",
+
+  "WhatWeDoHeader": "Asdasdasd asdasd?",
+
+  "LanguagesHeader": "We specialize in",
+  "LanguagesEnglish": "English",
+  "LanguagesGerman": "German",
+  "LanguagesSpanish": "Spanish",
+  "LanguagesPortuguese": "Portuguese",
+  "LanguagesGreek": "Greek",
+  "LanguagesBulgarian": "Bulgarian",
+
+  "GetInTouchHeader": "Asdasdasd asdasdasd!",
+  "GetInTouchReachUsHeader": "Reach us directly by:",
+  "GetInTouchPhone": "Phone:",
+  "GetInTouchEmail": "Email:",
+  "GetInTouchFillForm": "Or fill in our contact form:",
+  "GetInTouchName": "Name:",
+  "GetInTouchNameContent": "Type your name here…",
+  "GetInTouchEmailContent": "Type your email address here…",
+  "GetInTouchSubject": "Subject:",
+  "GetInTouchSubjectContent": "Type your subject here…",
+  "GetInTouchMessage": "Message:",
+  "GetInTouchMessageContent": "Type your message here…",
+  "GetInTouchButton": "Submit",
+  "GetInTouchEmailSent": "Thank you for contacting us!",
+
+  "GetInTouchErrorFillAllFields": "Please fill all fields.",
+  "GetInTouchErrorEmailEmpty": "Please enter your email:",
+  "GetInTouchErrorEmailInvalid": "Please enter a valid email address:",
+  "GetInTouchErrorNameEmpty": "Please enter your name:",
+  "GetInTouchErrorSubjectEmpty": "Please write a subject:",
+  "GetInTouchErrorMessageEmpty": "Please write a message:"
+}

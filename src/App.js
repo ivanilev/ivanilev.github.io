@@ -9,11 +9,11 @@ import Languages from "./pages/Languages";
 import Backdrop from "./components/Backdrop";
 import { StateContext } from "./store/StateContext";
 import LanguageMenu from "./components/LanguageMenu";
+import i18n from "./i18n";
 
 function App() {
   const [showArrow, setShowArrow] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
-
   //start of code
 
   document.addEventListener("touchstart", handleTouchStart, false);

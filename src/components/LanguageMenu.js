@@ -5,6 +5,7 @@ import { languages } from "../languages/languages";
 import styles from "./LanguageMenu.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import { useEffect } from "react";
 const LanguageMenu = () => {
   const [selectedLanguage, setSelectedLanguage] = useState(languages[0].image);
   const [dropDown, setDropDown] = useState(false);
@@ -20,6 +21,10 @@ const LanguageMenu = () => {
     let language = document.getElementById(e.target.id);
     setSelectedLanguage(language.firstChild.src);
   };
+
+  useEffect(() => {
+    console.log(i18n.language);
+  }, [selectedLanguage]);
   return (
     <div onClick={languageChangeDropHandler} className={styles.customSelect}>
       <div className={styles.currentlySelectedContainer}>
@@ -38,6 +43,7 @@ const LanguageMenu = () => {
         {languages.map((elem, i) => {
           return (
             <div
+              key={elem.languageKey}
               style={i === 0 ? { borderTop: "none" } : {}}
               onClick={languageChangeHandler}
               id={elem.languageKey}
