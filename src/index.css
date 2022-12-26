@@ -42,8 +42,8 @@ html {
   --logo-size-xl: 168px;
   --logo-size-l: 124px;
   --logo-size-m: 96px;
-  --logo-size-s: 72px;
-  --logo-size-xs: 64px;
+  --logo-size-s: 84px;
+  --logo-size-xs: 72px;
 }
 ::-webkit-scrollbar {
   -webkit-appearance: none;

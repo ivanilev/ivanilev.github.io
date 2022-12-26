@@ -13,9 +13,9 @@
 
 .contentBox {
   height: 70%;
-  display: "flex";
-  align-items: "center";
-  justify-content: "center";
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .content {
@@ -44,7 +44,6 @@
   color: #303030;
   line-height: 100px;
   letter-spacing: 0px;
-  margin-top: 0px;
   text-align: center;
   text-transform: uppercase;
   position: relative;
@@ -95,15 +94,14 @@
     margin: 5%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     padding: 1rem;
     max-height: none;
   }
   .image {
-    background-position: center;
-    min-height: 250px;
-    height: 25vh;
+    background-position: top;
+    min-height: 180px;
   }
   .text h1::after {
     display: block;
@@ -118,12 +116,14 @@
   }
 
   .text h1 {
+    margin-top: 2.5rem;
     line-height: 50px;
     font-size: var(--font-size-header-xs);
   }
   .text p {
     font-size: var(--font-size-m);
     padding-inline: 0em;
+    margin-block: 2rem;
   }
 }
 

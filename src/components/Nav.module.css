@@ -1,5 +1,5 @@
 .logo {
-  padding-top: 1em;
+  padding-top: 1rem;
 }
 
 .icon {
@@ -15,7 +15,6 @@
 }
 
 nav {
-  margin-right: 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,9 +107,8 @@ nav a {
   }
   .icon {
     position: absolute;
-    top: 20px;
-    left: 10px;
-    height: 30px;
+    align-self: center;
+    padding-inline-start: 1rem;
   }
   .closeIcon {
     align-self: flex-end;
@@ -123,9 +121,8 @@ nav a {
   }
   .logo {
     margin-inline: auto;
-
-    width: var(--logo-size-xs);
-    height: var(--logo-size-xs);
+    width: var(--logo-size-s);
+    height: var(--logo-size-s);
   }
   .customSelectMobile {
     position: fixed;
@@ -146,9 +143,11 @@ nav a {
   }
   nav {
     font-size: var(--font-size-xs);
+    line-height: var(--font-size-xs);
   }
   nav a {
     font-size: var(--font-size-xs);
+    line-height: var(--font-size-xs);
   }
   .dropDown {
     right: 0.7rem;
@@ -163,9 +162,11 @@ nav a {
   }
   nav {
     font-size: var(--font-size-s);
+    line-height: var(--font-size-s);
   }
   nav a {
     font-size: var(--font-size-s);
+    line-height: var(--font-size-s);
   }
 }
 
@@ -177,9 +178,11 @@ nav a {
   }
   nav {
     font-size: var(--font-size-paragraph-m);
+    line-height: var(--font-size-paragraph-m);
   }
   nav a {
     font-size: var(--font-size-paragraph-m);
+    line-height: var(--font-size-paragraph-m);
   }
 }
 
@@ -191,9 +194,11 @@ nav a {
   }
   nav {
     font-size: var(--font-size-paragraph-l);
+    line-height: var(--font-size-paragraph-l);
   }
   nav a {
     font-size: var(--font-size-paragraph-l);
+    line-height: var(--font-size-paragraph-l);
   }
 }
 
@@ -205,8 +210,10 @@ nav a {
   }
   nav {
     font-size: var(--font-size-paragraph-xxl);
+    line-height: var(--font-size-paragraph-xxl);
   }
   nav a {
     font-size: var(--font-size-paragraph-xxl);
+    line-height: var(--font-size-paragraph-xxl);
   }
 }

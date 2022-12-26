@@ -1,22 +1,24 @@
 import React from "react";
-import { languages } from "../languages/languages";
 import styles from "./Nav.module.css";
-import { useState, useEffect, useRef } from "react";
 import logo from "../assets/logo151.png";
+
+import { useState, useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faNavicon, faClose } from "@fortawesome/free-solid-svg-icons";
 import { withNamespaces } from "react-i18next";
-import i18n from "../i18n";
+import LanguageMenu from "./LanguageMenu";
+
 import {
   homeIcon,
   aboutUsIcon,
   languageIcon,
   contactUsIcon,
 } from "../assets/icons";
+
 const Nav = (props) => {
   const { t } = props;
   const navRef = useRef();
-  const [isDesktop, setDesktop] = useState(window.innerWidth > 650);
+  const [isDesktop, setDesktop] = useState(window.innerWidth > 576);
 
   const closeIcon = (
     <FontAwesomeIcon
@@ -31,6 +33,7 @@ const Nav = (props) => {
       <FontAwesomeIcon
         onClick={iconClickHandler}
         className={styles.icon}
+        size={"2x"}
         icon={faNavicon}
       />
     </div>
@@ -58,10 +61,11 @@ const Nav = (props) => {
     <div className={styles.container}>
       <div className={styles.navAndLogo}>
         {isDesktop && <img className={styles.logo} src={logo} alt="logo" />}
+        {!isDesktop ? <LanguageMenu/> : "" }
         <nav
           ref={navRef}
           className={
-            props.showMenu ? `${styles.nav} ${styles.active}` : styles.nav
+            props.showMenu ? `${styles.nav} ${styles.active}` : styles.nav 
           }
         >
           {!isDesktop && closeIcon}
@@ -91,6 +95,7 @@ const Nav = (props) => {
               {t("NavigationBarContactUs")}
             </a>
           </div>
+          {isDesktop ? <LanguageMenu/> : "" }
         </nav>
         {!isDesktop && navIcon}
       </div>

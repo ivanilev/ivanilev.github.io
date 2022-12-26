@@ -76,7 +76,7 @@ const GetInTouch = () => {
     setError("");
   };
 
-  let emailLabel = "Email";
+  let emailLabel = t('GetInTouchEmail');
   if (!email && error) {
     emailLabel = t('GetInTouchErrorEmailEmpty');
   } else if (!emailIsValid) {

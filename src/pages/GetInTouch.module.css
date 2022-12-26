@@ -238,7 +238,7 @@ textarea::placeholder {
   }
   .heading {
     font-size: var(--font-size-header-xs);
-    margin-block: 0px;
+    margin-top: 3rem;
     padding: 10px;
   }
   .container {
@@ -282,9 +282,11 @@ textarea::placeholder {
     margin-bottom: 2rem;
     margin-top: 0px;
     font-size: var(--font-size-paragraph-l);
+    text-align: center;
   }
   .contactForm h1 {
     font-size: var(--font-size-paragraph-l);
+    text-align: center;
   }
   .inputGroup {
     width: 90%;

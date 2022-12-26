@@ -6,6 +6,6 @@ import ptFlagEmoji from "../assets/pt-flag-emoji.png";
 export const languages = [
   { language: "Български", languageKey: "bg", image: bgFlagEmoji },
   { language: "English", languageKey: "en", image: enFlagEmoji },
-  { language: "Deutsche", languageKey: "de", image: deFlagEmoji },
-  { language: "Portugiesisch", languageKey: "pt", image: ptFlagEmoji },
+  { language: "Deutsch", languageKey: "de", image: deFlagEmoji },
+  { language: "Português", languageKey: "pt", image: ptFlagEmoji },
 ];
