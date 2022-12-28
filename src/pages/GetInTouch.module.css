@@ -218,7 +218,17 @@ textarea::placeholder {
     transform: translateX(-52%);
   }
 }
-
+@media (max-width: 350px) {
+  .heading {
+    margin-bottom: 0px;
+  }
+  .container {
+    padding-bottom: 3rem;
+  }
+  .contactForm form {
+    height: 100%;
+  }
+}
 /* Devices below 576px width */
 @media (max-width: 576px) {
   .contactForm .success {
@@ -243,7 +253,7 @@ textarea::placeholder {
   }
   .container {
     height: 150vh;
-    min-height: 1000px;
+    min-height: 1200px;
   }
   .content {
     border: 3px solid white;

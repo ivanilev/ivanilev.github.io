@@ -80,7 +80,7 @@ function App() {
     };
   }, [showArrow, showMenu]);
   const upIcon = (
-    <a href="#home">
+    <a href="#Home">
       <FontAwesomeIcon className="toTheTop" icon={faUpLong}></FontAwesomeIcon>
     </a>
   );
