@@ -30,15 +30,15 @@
     gap: 1rem;
     margin-bottom: 0rem;
   }
-  .details span {
-    font-size: var(--font-size-s);
-  }
   .details h5 {
     font-weight: bold;
     font-size: var(--font-size-paragraph-s);
     align-self: center;
     padding-bottom: 0px;
     margin-bottom: 0rem;
+  }
+  .details span {
+    font-size: var(--font-size-s);
   }
 }
 
@@ -47,15 +47,15 @@
     gap: 1rem;
     margin-bottom: 0rem;
   }
-  .details span {
-    font-size: var(--font-size-s);
-  }
   .details h5 {
     font-size: var(--font-size-paragraph-m);
 
     align-self: center;
     padding-bottom: 0px;
     margin-bottom: 0rem;
+  }
+  .details span {
+    font-size: var(--font-size-paragraph-s);
   }
 }
 
@@ -65,10 +65,10 @@
     margin-bottom: 0rem;
   }
   .details h5 {
-    font-size: var(--font-size-paragraph-xl);
+    font-size: var(--font-size-paragraph-l);
   }
   .details span {
-    font-size: var(--font-size-l);
+    font-size: var(--font-size-paragraph-m);
   }
 }
 

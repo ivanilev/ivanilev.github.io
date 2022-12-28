@@ -668,7 +668,7 @@ textarea::placeholder {
   }
 
   h1 {
-    font-size: var(--font-size-paragraph-l);
+    font-size: var(--font-size-paragraph-xxl);
   }
 
   textarea {
