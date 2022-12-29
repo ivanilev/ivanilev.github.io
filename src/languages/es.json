@@ -1,0 +1,40 @@
+{
+	"NavigationBarHome": "Início",
+	"NavigationBarAboutUs": "Sobre nosotros",
+	"NavigationBarLanguages": "Lenguajes",
+	"NavigationBarContactUs": "Contáctanos",
+
+	"HlomePageParagraph": "NLB está aquí para ayudar a tus negocios a expandirse a través de la traducción de tu contenido en varios diferentes idiomas! Te ayudaremos a indagar en el mercado con miles de millones de nuevos clientes.",
+
+	"WhatWeDoHeader": "¿Qué es lo que hacemos?",
+
+	"LanguagesHeader": "Nos especializamos en:",
+	"LanguagesEnglish": "Inglés",
+	"LanguagesGerman": "Alemán",
+	"LanguagesSpanish": "Español",
+	"LanguagesPortuguese": "Portugués",
+	"LanguagesGreek": "Griego",
+	"LanguagesBulgarian": "Búlgaro",
+
+	"GetInTouchHeader": "¡Ponerse en contacto!",
+	"GetInTouchReachUsHeader": "Contáctanos directamente por:",
+	"GetInTouchPhone": "Teléfono:",
+	"GetInTouchEmail": "Correo:",
+	"GetInTouchFillForm": "O llena nuestro formulario:",
+	"GetInTouchName": "Nombre:",
+	"GetInTouchNameContent": "Coloca tu nombre aquí…",
+	"GetInTouchEmailContent": "Coloca tu correo aquí…",
+	"GetInTouchSubject": "Matería:",
+	"GetInTouchSubjectContent": "",
+	"GetInTouchMessage": "Mensaje:",
+	"GetInTouchMessageContent": "Coloca tu mensaje aquí",
+	"GetInTouchButton": "Enviar",
+	"GetInTouchEmailSent": "¡Agradecemos tu apoyo!",
+
+	"GetInTouchErrorFillAllFields": "Por favor llena los espacios.",
+	"GetInTouchErrorEmailEmpty": "Por favor, escribe tu correo:",
+	"GetInTouchErrorEmailInvalid": "Por favor, escribe una dirección de correo valida:",
+	"GetInTouchErrorNameEmpty": "Por favor, escribe tu nombre:",
+	"GetInTouchErrorSubjectEmpty": "Por favor, escribe un asunto:",
+	"GetInTouchErrorMessageEmpty": "Por favor escribe un mensaje:"
+}

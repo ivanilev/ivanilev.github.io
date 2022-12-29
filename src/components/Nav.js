@@ -29,7 +29,7 @@ const Nav = (props) => {
   );
   const navIcon = (
     <div className={styles.navAndLogoMobile}>
-      <img src={logo} alt="logo" className={styles.logo} />
+      <img src={logo} alt='logo' className={styles.logo} />
       <FontAwesomeIcon
         onClick={iconClickHandler}
         className={styles.icon}

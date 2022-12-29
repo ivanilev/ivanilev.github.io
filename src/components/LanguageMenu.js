@@ -31,7 +31,7 @@ const LanguageMenu = () => {
         <img
           className={styles.currentlySelected}
           src={selectedLanguage}
-          alt=""
+          alt=''
         />
         {downIcon}
       </div>

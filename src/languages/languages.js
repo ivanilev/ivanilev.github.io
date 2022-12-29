@@ -4,8 +4,8 @@ import deFlagEmoji from "../assets/de-flag-emoji.png";
 import ptFlagEmoji from "../assets/pt-flag-emoji.png";
 
 export const languages = [
-  { language: "Български", languageKey: "bg", image: bgFlagEmoji },
   { language: "English", languageKey: "en", image: enFlagEmoji },
+  { language: "Български", languageKey: "bg", image: bgFlagEmoji },
   { language: "Deutsch", languageKey: "de", image: deFlagEmoji },
   { language: "Português", languageKey: "pt", image: ptFlagEmoji },
 ];
