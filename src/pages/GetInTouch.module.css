@@ -47,6 +47,7 @@
   font-weight: bold;
   align-self: center;
   padding-bottom: 0px;
+  text-align: center;
 }
 .directly h5 {
   font-weight: bold;
@@ -58,6 +59,7 @@
 
   font-weight: bold;
   align-self: center;
+  text-align: center;
 }
 .social {
   width: 70%;
@@ -471,9 +473,11 @@ textarea::placeholder {
   }
   .directly h1 {
     font-size: var(--font-size-paragraph-xl);
+    width: 80%;
   }
   .contactForm h1 {
     font-size: var(--font-size-paragraph-xl);
+    width: 80%;
   }
 
   .content {
@@ -533,6 +537,7 @@ textarea::placeholder {
   .directly h1 {
     align-self: center;
     padding-bottom: 0px;
+    width: 80%;
   }
   .content {
     border: 5px solid white;

@@ -7,8 +7,8 @@ import english from "../assets/united-kingdom.svg";
 import german from "../assets/germany.svg";
 import spanish from "../assets/spain.svg";
 import portuguese from "../assets/portugal.svg";
-import greek from "../assets/greece.svg";
 import bulgarian from "../assets/bulgaria.png";
+import russian from "../assets/russia.png";
 
 
 const Languages = (props) => {
@@ -30,8 +30,8 @@ const Languages = (props) => {
           <div style={{backgroundImage: `url(${portuguese})`}}>
             <span>{t('LanguagesPortuguese')}</span>
           </div>
-          <div style={{backgroundImage: `url(${greek})`}}>
-            <span>{t('LanguagesGreek')}</span>
+          <div style={{backgroundImage: `url(${russian})`}}>
+            <span>{t('LanguagesRussian')}</span>
           </div>
           <div style={{backgroundImage: `url(${bulgarian})`}}>
             <span>{t('LanguagesBulgarian')}</span>
