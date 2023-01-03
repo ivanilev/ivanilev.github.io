@@ -32,33 +32,11 @@
   flex-direction: column;
   align-items: center;
 }
-.contactForm {
-  padding-top: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 90%;
-  width: 50%;
-  margin: 1rem;
-  position: relative;
-}
 .directly h1 {
   color: #303030;
   font-weight: bold;
   align-self: center;
   padding-bottom: 0px;
-  text-align: center;
-}
-.directly h5 {
-  font-weight: bold;
-  align-self: center;
-  padding-bottom: 0px;
-}
-.contactForm h1 {
-  color: #303030;
-
-  font-weight: bold;
-  align-self: center;
   text-align: center;
 }
 .social {
@@ -69,12 +47,6 @@
   gap: 2rem;
   align-self: center;
 }
-.separator {
-  border-right: 3px solid white;
-  margin-block: auto;
-  height: 90%;
-  margin-inline: 0px;
-}
 
 .gridContainer {
   display: flex;
@@ -82,13 +54,28 @@
   flex-direction: column;
   justify-content: space-between;
 }
-.formContainer {
+.separator {
+  border-right: 3px solid white;
+  margin-block: auto;
+  height: 90%;
+  margin-inline: 0px;
+}
+.contactForm {
+  padding-top: 1rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   height: 90%;
-  width: 100%;
+  width: 50%;
+  margin: 1rem;
+  position: relative;
+}
+.contactForm h1 {
+  color: #303030;
+
+  font-weight: bold;
+  align-self: center;
+  text-align: center;
 }
 .contactForm form {
   display: flex;
@@ -102,9 +89,17 @@
   background-color: transparent;
   outline: none;
 }
-
 .contactForm input::placeholder {
   color: #404040;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 90%;
+  width: 100%;
 }
 .inputGroup {
   width: 80%;
@@ -238,9 +233,6 @@ textarea::placeholder {
     font-weight: 500;
     bottom: -0.7rem;
   }
-  .contact-icon {
-    height: 1rem;
-  }
   .errorMessage {
     left: 50%;
     width: 200px;
@@ -347,9 +339,6 @@ textarea::placeholder {
 
 /* Small devices (tablets 576px-768px) */
 @media (min-width: 576px) and (max-width: 768px) {
-  .contact-icon {
-    height: 1rem;
-  }
   .errorMessage {
     left: 50%;
     width: 200px;
@@ -716,10 +705,6 @@ textarea::placeholder {
 
   .formContainer {
     margin-block: 2rem;
-  }
-
-  .h1 {
-    font-size: var(--font-size-paragraph-l);
   }
 
   textarea {
