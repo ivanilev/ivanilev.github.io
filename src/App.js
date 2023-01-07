@@ -7,7 +7,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import WhatWeDo from "./pages/WhatWeDo";
 import Languages from "./pages/Languages";
 import Backdrop from "./components/Backdrop";
-import { StateContext } from "./store/StateContext";
 
 function App() {
   const [showArrow, setShowArrow] = useState(false);
@@ -99,17 +98,15 @@ function App() {
   };
 
   return (
-    <StateContext>
-      <div className="App">
-        {showMenu ? <Backdrop onClick={backDropClickHandler} /> : ""}
-        {showArrow && upIcon}
-        <Home showMenu={showMenu} setShowMenu={setShowMenu} />
-        {!showArrow && downIcon}
-        <WhatWeDo />
-        <Languages />
-        <GetInTouch />
-      </div>
-    </StateContext>
+    <div className="App">
+      {showMenu ? <Backdrop onClick={backDropClickHandler} /> : ""}
+      {showArrow && upIcon}
+      <Home showMenu={showMenu} setShowMenu={setShowMenu} />
+      {!showArrow && downIcon}
+      <WhatWeDo />
+      <Languages />
+      <GetInTouch />
+    </div>
   );
 }
 

@@ -36,10 +36,8 @@
 .image {
   position: absolute;
   bottom: 0;
-  background-image: url(../assets/Group\ 249.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: bottom;
+  object-fit: contain;
+  object-position: bottom;
   height: 80%;
   width: 95%;
 }

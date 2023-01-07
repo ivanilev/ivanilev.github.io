@@ -26,19 +26,11 @@
   border-radius: 10px 5px 10px 10px;
 }
 
-.dropDown::after {
-  background-color: white;
+.upIcon {
   position: absolute;
-  content: "";
-  height: 10px;
-  width: 10px;
-  top: -11px;
-  right: 2px;
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border-width: 0 10px 10px 10px;
-  border-color: #bad9ed #bad9ed white #bad9ed;
+  top: -11.5px;
+  right: 6px;
+  color: white;
 }
 
 .dropDownItem {
@@ -105,8 +97,9 @@
     top: 75px;
     right: 10px;
   }
-  .dropDown::after {
-    right: 5px;
+  .upIcon {
+    top: -9px;
+    right: 10.5px;
   }
 }
 @media (min-width: 412px) and (max-width: 576px) {
@@ -120,7 +113,13 @@
     right: 10px;
   }
   .dropDown::after {
-    right: 5px;
+    right: 8px;
+    top: -5px;
+    border-width: 0 5px 5px 5px;
+  }
+  .upIcon {
+    top: -9px;
+    right: 10px;
   }
 }
 
@@ -137,6 +136,10 @@
     top: 60px;
     right: 8px;
   }
+  .upIcon {
+    top: -6px;
+    right: 8px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1080px) {
@@ -145,8 +148,12 @@
     right: 1rem;
   }
   .dropDown {
-    top: 65px;
+    top: 75px;
     right: 9px;
+  }
+  .upIcon {
+    top: -8px;
+    right: 7px;
   }
 }
 

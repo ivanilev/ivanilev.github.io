@@ -1,15 +1,17 @@
 import React from "react";
 import { createContext, useContext, useState } from "react";
+import { languages } from "../languages/languages";
 
-const Context = createContext();
+export const Context = createContext();
 
 export const StateContext = ({ children }) => {
-  const [language, setLanguage] = useState("english");
+  const [selectedLanguage, setSelectedLanguage] = useState(languages[0].image);
+
   return (
     <Context.Provider
       value={{
-        language,
-        setLanguage,
+        selectedLanguage,
+        setSelectedLanguage,
       }}
     >
       {children}
