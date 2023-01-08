@@ -319,7 +319,7 @@ textarea::placeholder {
   }
 
   .contactForm input::placeholder {
-    font-size: var(--font-size-paragraph-s);
+    font-size: var(--font-size-s);
   }
   .formContainer {
     display: flex;

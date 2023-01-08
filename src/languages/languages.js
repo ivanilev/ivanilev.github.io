@@ -9,6 +9,7 @@ import bgGroupImage from "../assets/Group BG.png";
 import esGroupImage from "../assets/Group ES.png";
 import ptGroupImage from "../assets/Group PT.png";
 import ruGroupImage from "../assets/Group RU.png";
+import deGroupImage from "../assets/Group 257.png";
 
 export const languages = [
   {
@@ -23,7 +24,12 @@ export const languages = [
     image: bgFlagEmoji,
     groupImage: bgGroupImage,
   },
-  { language: "Deutsch", languageKey: "de", image: deFlagEmoji },
+  { 
+    language: "Deutsch",
+    languageKey: "de",
+    image: deFlagEmoji,
+    groupImage: deGroupImage
+  },
   {
     language: "Português",
     languageKey: "pt",

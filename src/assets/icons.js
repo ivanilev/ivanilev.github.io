@@ -30,13 +30,17 @@ export const facebookIcon = (
   <FontAwesomeIcon className="social-icon" icon={faSquareFacebook} />
 );
 export const linkedInIcon = (
-  <FontAwesomeIcon className="social-icon" icon={faLinkedin} />
+  <FontAwesomeIcon className="social-icon" icon={faLinkedin} style={{cursor: 'pointer'}}/>
 );
 export const youtubeIcon = (
-  <FontAwesomeIcon className="social-icon" icon={faYoutube} />
+  <a href="https://www.youtube.com/channel/UC1FcaPQDZ2PzUu31vH4qVAg/">
+    <FontAwesomeIcon className="social-icon" icon={faYoutube} />
+  </a>
 );
 export const instaIcon = (
-  <FontAwesomeIcon className="social-icon" icon={faInstagram} />
+  <a href="https://www.instagram.com/nolangbarriers/">
+    <FontAwesomeIcon className="social-icon" icon={faInstagram} />
+  </a>
 );
 export const homeIcon = (
   <FontAwesomeIcon className="menu-icon" icon={faHouse} />
