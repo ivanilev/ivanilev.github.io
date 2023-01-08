@@ -1,5 +1,6 @@
 import React from "react";
 import { useRef, useState } from "react";
+import { withNamespaces } from "react-i18next";
 import styles from "./GetInTouch.module.css";
 import {
   phoneIcon,
@@ -13,6 +14,7 @@ import {
 } from "../assets/icons";
 import Contacts from "../components/Contacts";
 import emailjs from "@emailjs/browser";
+import { t } from "i18next";
 
 const GetInTouch = () => {
   const form = useRef();
@@ -28,6 +30,7 @@ const GetInTouch = () => {
   const formSubmitHandler = (e) => {
     e.preventDefault();
     if (name && email && subject && message) {
+
       if (/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
         emailjs
           .sendForm(
@@ -52,7 +55,7 @@ const GetInTouch = () => {
       } else {
         setemailIsValid(false);
       }
-    } else setError("Please fill all fields.");
+    } else setError(t("GetInTouchErrorFillAllFields"));
   };
 
   const nameChangeHandler = (e) => {
@@ -73,30 +76,30 @@ const GetInTouch = () => {
     setError("");
   };
 
-  let emailLabel = "Email";
+  let emailLabel = t('GetInTouchEmail');
   if (!email && error) {
-    emailLabel = "Please fill the email field:";
+    emailLabel = t('GetInTouchErrorEmailEmpty');
   } else if (!emailIsValid) {
-    emailLabel = "Please enter a valid email:";
+    emailLabel = t('GetInTouchErrorEmailInvalid');
   }
   return (
     <div id="GetInTouch" className={styles.container}>
-      <h1 className={styles.heading}>Get in touch!</h1>
+      <h1 className={styles.heading}>{t('GetInTouchHeader')}</h1>
       <div className={styles.content}>
         <div className={styles.directly}>
-          <h1>Reach us directly by:</h1>
+          <h1>{t('GetInTouchReachUsHeader')}</h1>
           <div className={styles.gridContainer}>
             <Contacts
               icon={phoneIcon}
-              type="Phone:"
+              type={t('GetInTouchPhone')}
               contact="+359 887 320 313"
               href="tel:+359887320313"
             />
             <Contacts
               icon={emailIcon}
-              type="Email:"
-              contact="management@nolangbarriers.com"
-              href="mailto:management@nolangbarriers.com?Subject=No%20Language%20Barriers"
+              type={t('GetInTouchEmail')}
+              contact="business@nolangbarriers.com"
+              href="mailto:business@nolangbarriers.com?Subject=Client%20Request"
             />
             <Contacts
               icon={whatsAppIcon}
@@ -120,7 +123,7 @@ const GetInTouch = () => {
         </div>
         <div className={styles.separator}></div>
         <div className={styles.contactForm}>
-          <h1>Or fill in our contact form:</h1>
+          <h1>{t('GetInTouchFillForm')}</h1>
           <form ref={form} onSubmit={formSubmitHandler}>
             <div className={styles.formContainer}>
               <div className={styles.inputGroup}>
@@ -128,12 +131,12 @@ const GetInTouch = () => {
                   style={!name && error ? { color: "#d9534f" } : {}}
                   htmlFor="user_name"
                 >
-                  {!name && error ? "Please fill the name field:" : "Name:"}
+                  {!name && error ? t('GetInTouchErrorNameEmpty') : t('GetInTouchName')}
                 </label>
                 <input
                   className={!name && error ? styles.invalidInput : ""}
                   onChange={nameChangeHandler}
-                  placeholder="Type your name here..."
+                  placeholder={t('GetInTouchNameContent')}
                   name="user_name"
                   type="text"
                   value={name}
@@ -157,7 +160,7 @@ const GetInTouch = () => {
                       : ""
                   }
                   onChange={emailChangeHandler}
-                  placeholder="Type your email address here..."
+                  placeholder={t('GetInTouchEmailContent')}
                   name="user_email"
                   type="text"
                   value={email}
@@ -169,13 +172,13 @@ const GetInTouch = () => {
                   htmlFor="subject"
                 >
                   {!subject && error
-                    ? "Please fill the subject field:"
-                    : "Subject:"}
+                    ? t('GetInTouchErrorSubjectEmpty')
+                    : t('GetInTouchSubject')}
                 </label>
                 <input
                   className={!subject && error ? styles.invalidInput : ""}
                   onChange={subjectChangeHandler}
-                  placeholder="Type your subject here..."
+                  placeholder={t('GetInTouchSubjectContent')}
                   name="subject"
                   type="text"
                   value={subject}
@@ -186,35 +189,30 @@ const GetInTouch = () => {
                   style={!message && error ? { color: "#d9534f" } : {}}
                   htmlFor="message"
                 >
-                  {!subject && error
-                    ? "Please fill the message field:"
-                    : "Message:"}
+                  {!message && error
+                    ? t('GetInTouchErrorMessageEmpty')
+                    : t('GetInTouchMessage')}
                 </label>
                 <textarea
                   className={!message && error ? styles.invalidInput : ""}
                   onChange={messageChangeHandler}
-                  placeholder="Type your message here..."
+                  placeholder={t('GetInTouchMessageContent')}
                   name="message"
                   value={message}
                 />
               </div>
               {submited ? (
-                <h1 className={styles.success}>Thank you for contacting us!</h1>
+                <h1 className={styles.success}>{t('GetInTouchEmailSent')}</h1>
               ) : (
                 ""
               )}
             </div>
             {!submited ? (
               <button className={styles.button} type="submit">
-                SUBMIT
+                {t('GetInTouchButton')}
               </button>
             ) : (
-              <div
-                style={{ opacity: "0", cursor: "default" }}
-                className={styles.button}
-              >
-                SUBMIT
-              </div>
+              <div style={{ display: "none" }}/>
             )}
           </form>
         </div>
@@ -223,4 +221,4 @@ const GetInTouch = () => {
   );
 };
 
-export default GetInTouch;
+export default withNamespaces()(GetInTouch);

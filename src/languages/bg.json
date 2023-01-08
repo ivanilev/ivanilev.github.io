@@ -1,0 +1,40 @@
+{
+  "NavigationBarHome": "Начало",
+  "NavigationBarAboutUs": "За нас",
+  "NavigationBarLanguages": "Езици",
+  "NavigationBarContactUs": "Връзка с нас",
+
+  "HomePageParagraph": "NLB е тук, за Ви помогне да разширите бизнеса си чрез превод на съдържанието му на различни езици! Ние ще Ви помогнем да навлезете в нови пазари със стотици милиони потенциални клиенти.",
+
+  "WhatWeDoHeader": "Какво правим?",
+
+  "LanguagesHeader": "Предлагаме следните езици:",
+  "LanguagesEnglish": "Английски",
+  "LanguagesGerman": "Немски",
+  "LanguagesSpanish": "Испански",
+  "LanguagesPortuguese": "Португалски",
+  "LanguagesRussian": "Руски",
+  "LanguagesBulgarian": "Български",
+
+  "GetInTouchHeader": "Свържете се с нас!",
+  "GetInTouchReachUsHeader": "Свържете се с нас директно по:",
+  "GetInTouchPhone": "Телефон:",
+  "GetInTouchFillForm": "Или попълнете формуляра ни:",
+  "GetInTouchName": "Име:",
+  "GetInTouchNameContent": "Напишете името си тук…",
+  "GetInTouchEmail": "Имейл:",
+  "GetInTouchEmailContent": "Напишете имейла си тук…",
+  "GetInTouchSubject": "Заглавие:",
+  "GetInTouchSubjectContent": "Нашишете заглавието тук…",
+  "GetInTouchMessage": "Съобщение:",
+  "GetInTouchMessageContent": "Напишете съобщението си тук…",
+  "GetInTouchButton": "Изпрати",
+  "GetInTouchEmailSent": "Благодарим, че се свързахте с нас!",
+
+  "GetInTouchErrorFillAllFields": "Моля, попълнете всички полета.",
+  "GetInTouchErrorEmailEmpty": "Моля, напишете вашия имейл:",
+  "GetInTouchErrorEmailInvalid": "Моля, попълнете валиден имейл адрес:",
+  "GetInTouchErrorNameEmpty": "Моля, напишете името си:",
+  "GetInTouchErrorSubjectEmpty": "Моля, напишете заглавие:",
+  "GetInTouchErrorMessageEmpty": "Моля, напишете съобщение:"
+}

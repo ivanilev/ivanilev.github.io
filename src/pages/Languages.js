@@ -1,30 +1,45 @@
 import React from "react";
 import styles from "./Languages.module.css";
 
+import { withNamespaces } from "react-i18next";
+
 import english from "../assets/united-kingdom.svg";
-import deutch from "../assets/germany.svg";
+import german from "../assets/germany.svg";
 import spanish from "../assets/spain.svg";
 import portuguese from "../assets/portugal.svg";
-import greek from "../assets/greece.svg";
 import bulgarian from "../assets/bulgaria.png";
+import russian from "../assets/russia.png";
 
 
-const Languages = () => {
+const Languages = (props) => {
+  const { t } = props; 
   return (
     <div id="Languages" className={styles.container}>
       <div className={styles.content}>
-        <h1 className={styles.heading}>We specialize in:</h1>
+        <h1 className={styles.heading}>{t('LanguagesHeader')}</h1>
         <div className={styles.languages}>
-          <div style={{backgroundImage: `url(${english})`}} className={styles.english} />
-          <div style={{backgroundImage: `url(${deutch})`}} className={styles.deutch} />
-          <div style={{backgroundImage: `url(${spanish})`}} className={styles.spanish} />
-          <div style={{backgroundImage: `url(${portuguese})`}} className={styles.portuguese} />
-          <div style={{backgroundImage: `url(${greek})`}} className={styles.greek} />
-          <div style={{backgroundImage: `url(${bulgarian})`}} className={styles.bulgarian} />
+          <div style={{backgroundImage: `url(${english})`}}>
+            <span>{t('LanguagesEnglish')}</span>
+          </div>
+          <div style={{backgroundImage: `url(${german})`}}>
+            <span>{t('LanguagesGerman')}</span>
+          </div>
+          <div style={{backgroundImage: `url(${spanish})`}}>
+            <span>{t('LanguagesSpanish')}</span>
+          </div>
+          <div style={{backgroundImage: `url(${portuguese})`}}>
+            <span>{t('LanguagesPortuguese')}</span>
+          </div>
+          <div style={{backgroundImage: `url(${russian})`}}>
+            <span>{t('LanguagesRussian')}</span>
+          </div>
+          <div style={{backgroundImage: `url(${bulgarian})`}}>
+            <span>{t('LanguagesBulgarian')}</span>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default Languages;
+export default withNamespaces()(Languages);

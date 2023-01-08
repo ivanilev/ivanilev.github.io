@@ -9,11 +9,11 @@
   margin-right: 0px;
   height: max-content;
 }
-.icon {
-  color: blue;
-}
-.details h5 {
+.details > h5 {
   color: #303030;
+  font-weight: bold;
+  align-self: center;
+  padding-bottom: 0px;
 
   margin-bottom: 0.34rem;
   margin-top: 0px;
@@ -24,21 +24,23 @@
   color: #303030;
   font-size: 1.5rem;
 }
-
 @media (max-width: 768px) {
+  .icon {
+    height: 1rem;
+  }
   .container {
     gap: 1rem;
     margin-bottom: 0rem;
   }
-  .details span {
-    font-size: var(--font-size-s);
-  }
-  .details h5 {
+  .details > h5 {
     font-weight: bold;
     font-size: var(--font-size-paragraph-s);
     align-self: center;
     padding-bottom: 0px;
     margin-bottom: 0rem;
+  }
+  .details span {
+    font-size: var(--font-size-s);
   }
 }
 
@@ -47,15 +49,15 @@
     gap: 1rem;
     margin-bottom: 0rem;
   }
-  .details span {
-    font-size: var(--font-size-s);
-  }
-  .details h5 {
+  .details > h5 {
     font-size: var(--font-size-paragraph-m);
 
     align-self: center;
     padding-bottom: 0px;
     margin-bottom: 0rem;
+  }
+  .details span {
+    font-size: var(--font-size-paragraph-s);
   }
 }
 
@@ -64,11 +66,11 @@
     gap: 1rem;
     margin-bottom: 0rem;
   }
-  .details h5 {
-    font-size: var(--font-size-paragraph-xl);
+  .details > h5 {
+    font-size: var(--font-size-paragraph-l);
   }
   .details span {
-    font-size: var(--font-size-l);
+    font-size: var(--font-size-paragraph-m);
   }
 }
 
@@ -77,11 +79,10 @@
     gap: 1rem;
     margin-bottom: 0rem;
   }
-  .details h5 {
+  .details > h5 {
     font-size: var(--font-size-paragraph-xl);
   }
   .details span {
     font-size: var(--font-size-l);
   }
 }
-/* if variant 2 */

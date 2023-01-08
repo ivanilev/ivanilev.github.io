@@ -1,7 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-
 .downArrow {
   display: none;
 }
@@ -17,9 +13,9 @@
 
 .contentBox {
   height: 70%;
-  display: "flex";
-  align-items: "center";
-  justify-content: "center";
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .content {
@@ -44,17 +40,12 @@
 }
 
 .text h1 {
+  font-family: "BebasNeue", "cursive";
   color: #303030;
-  font-family: "Bebas Neue", cursive;
   line-height: 100px;
-  font-weight: 100;
   letter-spacing: 0px;
-  margin-top: 0px;
   text-align: center;
   text-transform: uppercase;
-
-  font-family: "Bebas Neue";
-
   position: relative;
   margin-top: 0px;
 }
@@ -103,15 +94,14 @@
     margin: 5%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 1rem;
     max-height: none;
   }
   .image {
-    background-position: center;
-    min-height: 250px;
-    height: 25vh;
+    background-position: top;
+    min-height: 180px;
   }
   .text h1::after {
     display: block;
@@ -126,12 +116,14 @@
   }
 
   .text h1 {
+    margin-top: 2.5rem;
     line-height: 50px;
     font-size: var(--font-size-header-xs);
   }
   .text p {
     font-size: var(--font-size-m);
     padding-inline: 0em;
+    margin-block: 2rem;
   }
 }
 

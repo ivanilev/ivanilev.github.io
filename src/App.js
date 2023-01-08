@@ -11,7 +11,6 @@ import Backdrop from "./components/Backdrop";
 function App() {
   const [showArrow, setShowArrow] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
-
   //start of code
 
   document.addEventListener("touchstart", handleTouchStart, false);
@@ -68,7 +67,7 @@ function App() {
   //end of code
   useEffect(() => {
     const scrollHandler = (ev) => {
-      let homeDiv = document.getElementById("home");
+      let homeDiv = document.getElementById("Home");
       let distanceToTop = homeDiv.getBoundingClientRect().top;
       if (distanceToTop < 0) {
         setShowArrow(true);
@@ -80,7 +79,7 @@ function App() {
     };
   }, [showArrow, showMenu]);
   const upIcon = (
-    <a href="#home">
+    <a href="#Home">
       <FontAwesomeIcon className="toTheTop" icon={faUpLong}></FontAwesomeIcon>
     </a>
   );
