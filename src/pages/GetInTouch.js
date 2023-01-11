@@ -105,7 +105,7 @@ const GetInTouch = () => {
               icon={whatsAppIcon}
               type="WhatsApp:"
               contact="+359 886 346 633"
-              href="https://api.whatsapp.com/send?phone=+359886346633"
+              href="https://api.whatsapp.com/send?phone=359886346633"
             />
             <Contacts
               icon={viberIcon}
