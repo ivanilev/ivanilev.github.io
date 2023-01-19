@@ -9,6 +9,7 @@ import spanish from "../assets/spain.svg";
 import portuguese from "../assets/portugal.svg";
 import bulgarian from "../assets/bulgaria.png";
 import russian from "../assets/russia.png";
+import french from "../assets/france.svg";
 
 
 const Languages = (props) => {
@@ -35,6 +36,9 @@ const Languages = (props) => {
           </div>
           <div style={{backgroundImage: `url(${bulgarian})`}}>
             <span>{t('LanguagesBulgarian')}</span>
+          </div>
+          <div style={{backgroundImage: `url(${french})`, gridColumnStart: `2`}}>
+            <span>{t('LanguagesFrench')}</span>
           </div>
         </div>
       </div>
