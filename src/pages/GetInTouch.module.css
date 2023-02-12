@@ -4,14 +4,6 @@
   min-height: 900px;
 }
 
-.heading {
-  color: #303030;
-  font-family: "BebasNeue", cursive;
-  padding-block: 0px;
-  text-transform: uppercase;
-  text-align: center;
-}
-
 .content {
   display: flex;
   border: 10px solid white;
@@ -72,7 +64,6 @@
 }
 .contactForm h1 {
   color: #303030;
-
   font-weight: bold;
   align-self: center;
   text-align: center;
@@ -240,11 +231,7 @@ textarea::placeholder {
     animation: none;
     animation: shakeMobile 1s forwards;
   }
-  .heading {
-    font-size: var(--font-size-header-xs);
-    margin-top: 3rem;
-    padding: 10px;
-  }
+
   .container {
     height: 150vh;
     min-height: 1200px;
@@ -319,7 +306,7 @@ textarea::placeholder {
   }
 
   .contactForm input::placeholder {
-    font-size: var(--font-size-s);
+    font-size: var(--font-size-paragraph-s);
   }
   .formContainer {
     display: flex;
@@ -333,7 +320,7 @@ textarea::placeholder {
     padding-block: 0.4rem;
     border-radius: 10px;
     margin-top: 1rem;
-    min-width: 6rem;
+    width: 6rem;
   }
 }
 
@@ -346,11 +333,7 @@ textarea::placeholder {
     animation: none;
     animation: shakeMobile 1s forwards;
   }
-  .heading {
-    font-size: 1.5rem;
-    margin-block: 0px;
-    padding: 10px;
-  }
+
   .container {
     height: 100vh;
     min-height: 550px;
@@ -455,11 +438,7 @@ textarea::placeholder {
   .container {
     height: 35.5rem;
   }
-  .heading {
-    margin: 2rem;
-    padding: 0px;
-    font-size: var(--font-size-header-s);
-  }
+
   .directly h1 {
     font-size: var(--font-size-paragraph-xl);
     width: 80%;
@@ -518,11 +497,6 @@ textarea::placeholder {
 
 /* Large devices (desktops, 1080px-1336px) */
 @media (min-width: 1080px) and (max-width: 1366px) {
-  .heading {
-    margin: 2rem;
-    padding: 0px;
-    font-size: var(--font-size-header-m);
-  }
   .directly h1 {
     align-self: center;
     padding-bottom: 0px;
@@ -580,11 +554,7 @@ textarea::placeholder {
   .contactForm .success {
     font-size: 24px;
   }
-  .heading {
-    margin: 2rem;
-    padding: 0px;
-    font-size: var(--font-size-header-m);
-  }
+
   .directly h1 {
     align-self: center;
     padding-bottom: 0px;
@@ -641,12 +611,6 @@ textarea::placeholder {
   .contactForm .success {
     font-size: 26px;
   }
-  .heading {
-    margin: 2rem;
-    padding: 0px;
-    text-transform: uppercase;
-    font-size: var(--font-size-header-l);
-  }
 
   .content {
     border: 5px solid white;
@@ -684,12 +648,6 @@ textarea::placeholder {
 
 /* Extra extra large devices (desktops, 1680px and up) */
 @media (min-width: 1680px) {
-  .heading {
-    margin: 2rem;
-    padding: 0px;
-    text-transform: uppercase;
-    font-size: var(--font-size-header-l);
-  }
   .directly h1 {
     font-size: var(--font-size-paragraph-l);
   }
@@ -728,12 +686,6 @@ textarea::placeholder {
 
 /* Extra extra large devices (desktops, 1920px and up) */
 @media (min-width: 1920px) {
-  .heading {
-    margin: 2rem;
-    padding: 0px;
-    text-transform: uppercase;
-    font-size: var(--font-size-header-xxl);
-  }
   .directly h1 {
     font-size: var(--font-size-paragraph-xxl);
   }
