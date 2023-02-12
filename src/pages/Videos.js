@@ -8,13 +8,15 @@ const Videos = (props) => {
   const [urlList, setUrlList] = useState([]);
 
   const getVideos = async () => {
-    const response = await fetch(
-      "https://api.dailymotion.com/videos?fields=embed_url&user=Independent"
-    );
-    const data = await response.json();
-    setUrlList(data.list);
-
-    console.log(data.list);
+    try {
+      const response = await fetch(
+        "https://api.dailymotion.com/videos?fields=embed_url&user=NoLanguageBarriers"
+      );
+      const data = await response.json();
+      setUrlList(data.list);
+    } catch (e) {
+      alert(e);
+    }
   };
 
   useEffect(() => {
@@ -27,6 +29,8 @@ const Videos = (props) => {
         {urlList.map((elem) => {
           return (
             <iframe
+              style={urlList.length === 1 ? { gridColumnStart: "2" } : {}}
+              loading="lazy"
               title={elem.embed_url}
               allowFullScreen={true}
               className={styles.video}
