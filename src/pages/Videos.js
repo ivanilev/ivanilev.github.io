@@ -10,7 +10,7 @@ const Videos = (props) => {
   const getVideos = async () => {
     try {
       const response = await fetch(
-        "https://api.dailymotion.com/videos?fields=embed_url&user=NoLanguageBarriers"
+        "https://api.dailymotion.com/videos?fields=embed_url&limit=100&user=NoLanguageBarriers"
       );
       const data = await response.json();
       setUrlList(data.list);
@@ -22,14 +22,26 @@ const Videos = (props) => {
   useEffect(() => {
     getVideos();
   }, []);
+
   return (
     <div className={styles.container}>
       <h1 className="heading">{t("VideosHeader")}</h1>
       <div className={styles.videosContainer}>
-        {urlList.map((elem) => {
+        {urlList.map((elem, i) => {
+          let videoListStyleObject = {};
+
+          if (
+            (urlList.length - 1 === i && urlList.length % 3 !== 0) ||
+            urlList.length === 1
+          ) {
+            videoListStyleObject = {
+              gridColumnStart: "2",
+            };
+          }
+
           return (
             <iframe
-              style={urlList.length === 1 ? { gridColumnStart: "2" } : {}}
+              style={videoListStyleObject}
               loading="lazy"
               title={elem.embed_url}
               allowFullScreen={true}

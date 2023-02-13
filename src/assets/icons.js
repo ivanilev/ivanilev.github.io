@@ -13,6 +13,7 @@ import {
   faYoutube,
   faInstagram,
   faSquareFacebook,
+  faDailymotion,
 } from "@fortawesome/free-brands-svg-icons";
 export const phoneIcon = (
   <FontAwesomeIcon className="contact-icon" icon={faPhone} />
@@ -30,7 +31,11 @@ export const facebookIcon = (
   <FontAwesomeIcon className="social-icon" icon={faSquareFacebook} />
 );
 export const linkedInIcon = (
-  <FontAwesomeIcon className="social-icon" icon={faLinkedin} style={{cursor: 'pointer'}}/>
+  <FontAwesomeIcon
+    className="social-icon"
+    icon={faLinkedin}
+    style={{ cursor: "pointer" }}
+  />
 );
 export const youtubeIcon = (
   <a href="https://www.youtube.com/channel/UC1FcaPQDZ2PzUu31vH4qVAg/">
@@ -41,6 +46,9 @@ export const instaIcon = (
   <a href="https://www.instagram.com/nolangbarriers/">
     <FontAwesomeIcon className="social-icon" icon={faInstagram} />
   </a>
+);
+export const dailymotionIcon = (
+  <FontAwesomeIcon className="social-icon" icon={faDailymotion} />
 );
 export const homeIcon = (
   <FontAwesomeIcon className="menu-icon" icon={faHouse} />

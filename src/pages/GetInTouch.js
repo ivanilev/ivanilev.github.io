@@ -11,6 +11,7 @@ import {
   linkedInIcon,
   youtubeIcon,
   instaIcon,
+  dailymotionIcon,
 } from "../assets/icons";
 import Contacts from "../components/Contacts";
 import emailjs from "@emailjs/browser";
@@ -33,10 +34,10 @@ const GetInTouch = () => {
       if (/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
         emailjs
           .sendForm(
-            "service_zlgf46j",
-            "template_u96mfhp",
+            "service_cxdqu3w",
+            "template_r0zud97",
             form.current,
-            "utwgE-B1odSR_eFg3"
+            "K6ShSTHY95MjLRmpy"
           )
           .then(
             (result) => {
@@ -114,7 +115,7 @@ const GetInTouch = () => {
             />
           </div>
           <div className={styles.social}>
-            {facebookIcon}
+            {dailymotionIcon}
             {linkedInIcon}
             {youtubeIcon}
             {instaIcon}
