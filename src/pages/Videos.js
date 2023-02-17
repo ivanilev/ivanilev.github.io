@@ -24,7 +24,7 @@ const Videos = (props) => {
   }, []);
 
   return (
-    <div className={styles.container}>
+    <div id="Videos" className={styles.container}>
       <h1 className="heading">{t("VideosHeader")}</h1>
       <div className={styles.videosContainer}>
         {urlList.map((elem, i) => {
