@@ -20,12 +20,11 @@
 
 .video {
   border: none;
-  border-radius: 30px;
-  width: 300px;
+  border-radius: 40px;
 }
 .videosContainer {
   display: grid;
-  width: 75%;
-  grid-template-columns: 33% 33% 33%;
+  width: fit-content;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
 }

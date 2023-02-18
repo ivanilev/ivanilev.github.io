@@ -119,6 +119,7 @@
 @media (min-width: 1366px) and (max-width: 1680px) {
   .heading {
     font-size: var(--font-size-header-l);
+    margin-top: 10px;
   }
 }
 

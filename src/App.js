@@ -9,6 +9,7 @@ import Languages from "./pages/Languages";
 import Backdrop from "./components/Backdrop";
 import Videos from "./pages/Videos";
 
+
 function App() {
   const [showArrow, setShowArrow] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
@@ -106,7 +107,7 @@ function App() {
       {!showArrow && downIcon}
       <WhatWeDo />
       <Languages />
-      <Videos />
+      {/* <Videos /> */}
       <GetInTouch />
     </div>
   );
