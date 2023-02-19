@@ -1,0 +1,30 @@
+.container {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  padding-block: 2.5rem;
+}
+
+.heading {
+  margin-top: 0px;
+  margin-bottom: 30px;
+  font-family: "BebasNeue", cursive;
+  text-transform: uppercase;
+  color: rgb(46, 47, 51);
+  font-size: var(--font-size-header-l);
+  text-align: center;
+}
+
+.video {
+  border: none;
+  border-radius: 40px;
+}
+.videosContainer {
+  display: grid;
+  width: fit-content;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}

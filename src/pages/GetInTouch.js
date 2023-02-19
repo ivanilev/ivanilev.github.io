@@ -7,10 +7,10 @@ import {
   emailIcon,
   whatsAppIcon,
   viberIcon,
-  facebookIcon,
   linkedInIcon,
   youtubeIcon,
   instaIcon,
+  dailymotionIcon,
 } from "../assets/icons";
 import Contacts from "../components/Contacts";
 import emailjs from "@emailjs/browser";
@@ -30,14 +30,13 @@ const GetInTouch = () => {
   const formSubmitHandler = (e) => {
     e.preventDefault();
     if (name && email && subject && message) {
-
       if (/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
         emailjs
           .sendForm(
-            "service_zlgf46j",
-            "template_u96mfhp",
+            "service_cxdqu3w",
+            "template_r0zud97",
             form.current,
-            "utwgE-B1odSR_eFg3"
+            "K6ShSTHY95MjLRmpy"
           )
           .then(
             (result) => {
@@ -76,28 +75,28 @@ const GetInTouch = () => {
     setError("");
   };
 
-  let emailLabel = t('GetInTouchEmail');
+  let emailLabel = t("GetInTouchEmail");
   if (!email && error) {
-    emailLabel = t('GetInTouchErrorEmailEmpty');
+    emailLabel = t("GetInTouchErrorEmailEmpty");
   } else if (!emailIsValid) {
-    emailLabel = t('GetInTouchErrorEmailInvalid');
+    emailLabel = t("GetInTouchErrorEmailInvalid");
   }
   return (
     <div id="GetInTouch" className={styles.container}>
-      <h1 className={styles.heading}>{t('GetInTouchHeader')}</h1>
+      <h1 className="heading">{t("GetInTouchHeader")}</h1>
       <div className={styles.content}>
         <div className={styles.directly}>
-          <h1>{t('GetInTouchReachUsHeader')}</h1>
+          <h1>{t("GetInTouchReachUsHeader")}</h1>
           <div className={styles.gridContainer}>
             <Contacts
               icon={phoneIcon}
-              type={t('GetInTouchPhone')}
+              type={t("GetInTouchPhone")}
               contact="+359 886 346 633"
               href="tel:+359886346633"
             />
             <Contacts
               icon={emailIcon}
-              type={t('GetInTouchEmail')}
+              type={t("GetInTouchEmail")}
               contact="business@nolangbarriers.com"
               href="mailto:business@nolangbarriers.com?Subject=Client%20Request"
             />
@@ -115,7 +114,7 @@ const GetInTouch = () => {
             />
           </div>
           <div className={styles.social}>
-            {facebookIcon}
+            {dailymotionIcon}
             {linkedInIcon}
             {youtubeIcon}
             {instaIcon}
@@ -123,7 +122,7 @@ const GetInTouch = () => {
         </div>
         <div className={styles.separator}></div>
         <div className={styles.contactForm}>
-          <h1>{t('GetInTouchFillForm')}</h1>
+          <h1>{t("GetInTouchFillForm")}</h1>
           <form ref={form} onSubmit={formSubmitHandler}>
             <div className={styles.formContainer}>
               <div className={styles.inputGroup}>
@@ -131,12 +130,14 @@ const GetInTouch = () => {
                   style={!name && error ? { color: "#d9534f" } : {}}
                   htmlFor="user_name"
                 >
-                  {!name && error ? t('GetInTouchErrorNameEmpty') : t('GetInTouchName')}
+                  {!name && error
+                    ? t("GetInTouchErrorNameEmpty")
+                    : t("GetInTouchName")}
                 </label>
                 <input
                   className={!name && error ? styles.invalidInput : ""}
                   onChange={nameChangeHandler}
-                  placeholder={t('GetInTouchNameContent')}
+                  placeholder={t("GetInTouchNameContent")}
                   name="user_name"
                   type="text"
                   value={name}
@@ -160,7 +161,7 @@ const GetInTouch = () => {
                       : ""
                   }
                   onChange={emailChangeHandler}
-                  placeholder={t('GetInTouchEmailContent')}
+                  placeholder={t("GetInTouchEmailContent")}
                   name="user_email"
                   type="text"
                   value={email}
@@ -172,13 +173,13 @@ const GetInTouch = () => {
                   htmlFor="subject"
                 >
                   {!subject && error
-                    ? t('GetInTouchErrorSubjectEmpty')
-                    : t('GetInTouchSubject')}
+                    ? t("GetInTouchErrorSubjectEmpty")
+                    : t("GetInTouchSubject")}
                 </label>
                 <input
                   className={!subject && error ? styles.invalidInput : ""}
                   onChange={subjectChangeHandler}
-                  placeholder={t('GetInTouchSubjectContent')}
+                  placeholder={t("GetInTouchSubjectContent")}
                   name="subject"
                   type="text"
                   value={subject}
@@ -190,29 +191,29 @@ const GetInTouch = () => {
                   htmlFor="message"
                 >
                   {!message && error
-                    ? t('GetInTouchErrorMessageEmpty')
-                    : t('GetInTouchMessage')}
+                    ? t("GetInTouchErrorMessageEmpty")
+                    : t("GetInTouchMessage")}
                 </label>
                 <textarea
                   className={!message && error ? styles.invalidInput : ""}
                   onChange={messageChangeHandler}
-                  placeholder={t('GetInTouchMessageContent')}
+                  placeholder={t("GetInTouchMessageContent")}
                   name="message"
                   value={message}
                 />
               </div>
               {submited ? (
-                <h1 className={styles.success}>{t('GetInTouchEmailSent')}</h1>
+                <h1 className={styles.success}>{t("GetInTouchEmailSent")}</h1>
               ) : (
                 ""
               )}
             </div>
             {!submited ? (
               <button className={styles.button} type="submit">
-                {t('GetInTouchButton')}
+                {t("GetInTouchButton")}
               </button>
             ) : (
-              <div style={{ display: "none" }}/>
+              <div style={{ display: "none" }} />
             )}
           </form>
         </div>

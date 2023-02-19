@@ -71,3 +71,66 @@
     height: 2rem;
   }
 }
+
+.heading {
+  margin-top: 0px;
+  margin-bottom: 30px;
+  font-family: "BebasNeue", cursive;
+  text-transform: uppercase;
+  color: rgb(46, 47, 51);
+  font-size: var(--font-size-header-l);
+  text-align: center;
+}
+
+@media (max-width: 412px) {
+  .heading {
+    margin-block: 3rem;
+    font-size: var(--font-size-header-xs);
+  }
+}
+@media (min-width: 412px) and (max-width: 576px) {
+  .heading {
+    margin-top: 5rem;
+    font-size: var(--font-size-header-xs);
+  }
+}
+
+/* Small devices (tablets 576px-768px) */
+@media (min-width: 576px) and (max-width: 768px) {
+  .heading {
+    font-size: var(--font-size-header-xs);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1080px) {
+  .heading {
+    font-size: var(--font-size-header-s);
+  }
+}
+
+/* Large devices (desktops, 1080px-1336px) */
+@media (min-width: 1080px) and (max-width: 1366px) {
+  .heading {
+    font-size: var(--font-size-header-m);
+  }
+}
+
+/* Extra extra large devices (desktops, 1680px and up) */
+@media (min-width: 1366px) and (max-width: 1680px) {
+  .heading {
+    font-size: var(--font-size-header-l);
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 1680px) {
+  .heading {
+    font-size: var(--font-size-header-xl);
+  }
+}
+
+@media (min-width: 1920px) {
+  .heading {
+    font-size: var(--font-size-header-xxl);
+  }
+}

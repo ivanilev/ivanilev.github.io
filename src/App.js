@@ -7,6 +7,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import WhatWeDo from "./pages/WhatWeDo";
 import Languages from "./pages/Languages";
 import Backdrop from "./components/Backdrop";
+import Videos from "./pages/Videos";
+
 
 function App() {
   const [showArrow, setShowArrow] = useState(false);
@@ -105,6 +107,7 @@ function App() {
       {!showArrow && downIcon}
       <WhatWeDo />
       <Languages />
+      {/* <Videos /> */}
       <GetInTouch />
     </div>
   );

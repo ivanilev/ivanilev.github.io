@@ -13,6 +13,7 @@ import {
   aboutUsIcon,
   languageIcon,
   contactUsIcon,
+  // videosIcon,
 } from "../assets/icons";
 
 const Nav = (props) => {
@@ -29,7 +30,7 @@ const Nav = (props) => {
   );
   const navIcon = (
     <div className={styles.navAndLogoMobile}>
-      <img src={logo} alt='logo' className={styles.logo} />
+      <img src={logo} alt="logo" className={styles.logo} />
       <FontAwesomeIcon
         onClick={iconClickHandler}
         className={styles.icon}
@@ -61,11 +62,11 @@ const Nav = (props) => {
     <div className={styles.container}>
       <div className={styles.navAndLogo}>
         {isDesktop && <img className={styles.logo} src={logo} alt="logo" />}
-        {!isDesktop ? <LanguageMenu/> : "" }
+        {!isDesktop ? <LanguageMenu /> : ""}
         <nav
           ref={navRef}
           className={
-            props.showMenu ? `${styles.nav} ${styles.active}` : styles.nav 
+            props.showMenu ? `${styles.nav} ${styles.active}` : styles.nav
           }
         >
           {!isDesktop && closeIcon}
@@ -89,13 +90,19 @@ const Nav = (props) => {
               {t("NavigationBarLanguages")}
             </a>
           </div>
+          {/* <div className={styles.navItem}>
+            {!isDesktop && videosIcon}
+            <a onClick={iconClickHandler} href="#Videos">
+              {t("NavigationBarVideos")}
+            </a>
+          </div> */}
           <div className={styles.navItem}>
             {!isDesktop && contactUsIcon}
             <a onClick={iconClickHandler} href="#GetInTouch">
               {t("NavigationBarContactUs")}
             </a>
           </div>
-          {isDesktop ? <LanguageMenu/> : "" }
+          {isDesktop ? <LanguageMenu /> : ""}
         </nav>
         {!isDesktop && navIcon}
       </div>

@@ -9,15 +9,7 @@
 .content {
   width: 75%;
 }
-.heading {
-  margin-top: 0px;
-  margin-bottom: 30px;
-  font-family: "BebasNeue", cursive;
-  text-transform: uppercase;
-  color: rgb(46, 47, 51);
-  font-size: var(--font-size-header-l);
-  text-align: center;
-}
+
 .languages {
   display: flex;
   justify-content: space-between;
@@ -44,10 +36,7 @@
   .container {
     height: fit-content;
   }
-  .heading {
-    margin-block: 3rem;
-    font-size: var(--font-size-header-xs);
-  }
+
   .languages {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -69,10 +58,7 @@
   .container {
     height: fit-content;
   }
-  .heading {
-    margin-top: 5rem;
-    font-size: var(--font-size-header-xs);
-  }
+
   .languages {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -104,9 +90,6 @@
     width: var(--logo-size-xs);
     height: var(--logo-size-xs);
   }
-  .heading {
-    font-size: var(--font-size-header-xs);
-  }
 }
 
 @media (min-width: 768px) and (max-width: 1080px) {
@@ -118,9 +101,6 @@
     width: var(--logo-size-s);
     height: var(--logo-size-s);
   }
-  .heading {
-    font-size: var(--font-size-header-s);
-  }
 }
 
 /* Large devices (desktops, 1080px-1336px) */
@@ -130,9 +110,6 @@
     width: var(--logo-size-m);
     height: var(--logo-size-m);
     margin-block: 2rem;
-  }
-  .heading {
-    font-size: var(--font-size-header-m);
   }
 }
 
@@ -144,9 +121,6 @@
     height: var(--logo-size-l);
     margin-block: 2rem;
   }
-  .heading {
-    font-size: var(--font-size-header-l);
-  }
 }
 
 @media (min-width: 1680px) {
@@ -155,9 +129,6 @@
     width: var(--logo-size-l);
     height: var(--logo-size-l);
   }
-  .heading {
-    font-size: var(--font-size-header-xl);
-  }
 }
 
 @media (min-width: 1920px) {
@@ -165,8 +136,5 @@
     font-size: var(--font-size-paragraph-xxl);
     width: var(--logo-size-xl);
     height: var(--logo-size-xl);
-  }
-  .heading {
-    font-size: var(--font-size-header-xxl);
   }
 }
