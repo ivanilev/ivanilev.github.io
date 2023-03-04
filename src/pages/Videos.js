@@ -3,36 +3,52 @@ import { withNamespaces } from "react-i18next";
 import styles from "./Videos.module.css";
 import { useState, useEffect } from "react";
 
+const YOUTUBE_CHANNEL_API = "https://www.googleapis.com/youtube/v3/channelSections"
+
 const Videos = (props) => {
   const { t } = props;
-  const [urlList, setUrlList] = useState([]);
+  const [urlListDM, setUrlListDM] = useState([]);
+  const [urlListYT, setUrlListYT] = useState([]);
 
-  const getVideos = async () => {
+  const getVideosDailyMotion = async () => {
     try {
       const response = await fetch(
         "https://api.dailymotion.com/videos?fields=embed_url&limit=100&user=NoLanguageBarriers"
       );
       const data = await response.json();
-      setUrlList(data.list);
+      setUrlListDM(data.list);
     } catch (e) {
       alert(e);
     }
   };
 
+  const getVideosYouTube = async () => {
+    try {
+      const response = await fetch(
+        `${YOUTUBE_CHANNEL_API}?part=snippet,contentDetails&channelId=UCrXf6eNIO-b4UlxFNspraBw&key=${process.env.REACT_APP_YOTUBE_API_KEY}`
+      );
+      const data = await response.json();
+      setUrlListYT(data);
+      console.log(data);
+    } catch (e) {
+      alert(e);
+    }
+  };
   useEffect(() => {
-    getVideos();
+    getVideosDailyMotion();
+    getVideosYouTube();
   }, []);
 
   return (
     <div id="Videos" className={styles.container}>
       <h1 className="heading">{t("VideosHeader")}</h1>
       <div className={styles.videosContainer}>
-        {urlList.map((elem, i) => {
+        {urlListDM.map((elem, i) => {
           let videoListStyleObject = {};
 
           if (
-            (urlList.length - 1 === i && urlList.length % 3 !== 0) ||
-            urlList.length === 1
+            (urlListDM.length - 1 === i && urlListDM.length % 3 !== 0) ||
+            urlListDM.length === 1
           ) {
             videoListStyleObject = {
               gridColumnStart: "2",
