@@ -3,7 +3,8 @@ import { withNamespaces } from "react-i18next";
 import styles from "./Videos.module.css";
 import { useState, useEffect } from "react";
 
-const YOUTUBE_CHANNEL_API = "https://www.googleapis.com/youtube/v3/channelSections"
+const YOUTUBE_CHANNEL_API =
+  "https://www.googleapis.com/youtube/v3/channelSections";
 
 const Videos = (props) => {
   const { t } = props;
@@ -25,11 +26,16 @@ const Videos = (props) => {
   const getVideosYouTube = async () => {
     try {
       const response = await fetch(
-        `${YOUTUBE_CHANNEL_API}?part=snippet,contentDetails&channelId=UCrXf6eNIO-b4UlxFNspraBw&key=${process.env.REACT_APP_YOTUBE_API_KEY}`
+        `https://www.googleapis.com/youtube/v3/search?key=${process.env.REACT_APP_YOUTUBE_API_KEY}&channelId=UCrXf6eNIO-b4UlxFNspraBw&part=snippet,id&order=date&maxResults=20`
       );
       const data = await response.json();
-      setUrlListYT(data);
-      console.log(data);
+      const idList = data.items.map((elem) => {
+        return {
+          embed_url: `https://www.youtube.com/embed/${elem.id.videoId}`,
+        };
+      });
+      idList.pop();
+      setUrlListYT(idList);
     } catch (e) {
       alert(e);
     }
@@ -38,12 +44,13 @@ const Videos = (props) => {
     getVideosDailyMotion();
     getVideosYouTube();
   }, []);
+  const combinedVideosList = urlListDM.concat(urlListYT);
 
   return (
     <div id="Videos" className={styles.container}>
       <h1 className="heading">{t("VideosHeader")}</h1>
       <div className={styles.videosContainer}>
-        {urlListDM.map((elem, i) => {
+        {combinedVideosList.map((elem, i) => {
           let videoListStyleObject = {};
 
           if (
