@@ -2,6 +2,7 @@
   "NavigationBarHome": "Начало",
   "NavigationBarAboutUs": "О нас",
   "NavigationBarLanguages": "Языки",
+  "NavigationBarVideos": "kasdjkasd",
   "NavigationBarContactUs": "Связаться с нами",
 
   "HomePageParagraph": "NLB поможет вашему бизнесу расшириться благодаря переводу ваших контентов на разные языки! Мы поможем вам выйти на новые рынки с сотнями миллионов потенциальных клиентов.",
@@ -16,6 +17,8 @@
   "LanguagesRussian": "Русский",
   "LanguagesBulgarian": "Болгарский",
   "LanguagesFrench": "Французский",
+
+  "VideosHeader": "Videos",
 
   "GetInTouchHeader": "Связаться с нами!",
   "GetInTouchReachUsHeader": "Связаться с нами напрямую через:",

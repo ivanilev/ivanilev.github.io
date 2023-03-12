@@ -7,6 +7,7 @@ import {
   emailIcon,
   whatsAppIcon,
   viberIcon,
+  facebookIcon,
   linkedInIcon,
   youtubeIcon,
   instaIcon,

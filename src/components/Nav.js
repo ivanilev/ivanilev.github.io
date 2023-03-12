@@ -13,7 +13,7 @@ import {
   aboutUsIcon,
   languageIcon,
   contactUsIcon,
-  // videosIcon,
+  videosIcon,
 } from "../assets/icons";
 
 const Nav = (props) => {
@@ -90,12 +90,12 @@ const Nav = (props) => {
               {t("NavigationBarLanguages")}
             </a>
           </div>
-          {/* <div className={styles.navItem}>
+          <div className={styles.navItem}>
             {!isDesktop && videosIcon}
             <a onClick={iconClickHandler} href="#Videos">
               {t("NavigationBarVideos")}
             </a>
-          </div> */}
+          </div>
           <div className={styles.navItem}>
             {!isDesktop && contactUsIcon}
             <a onClick={iconClickHandler} href="#GetInTouch">

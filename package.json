@@ -18,7 +18,8 @@
     "react-dom": "^18.2.0",
     "react-i18next": "^9.0.10",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "react-stacked-center-carousel": "^1.0.12"
   },
   "scripts": {
     "predeploy": "npm run build",

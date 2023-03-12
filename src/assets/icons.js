@@ -5,6 +5,7 @@ import {
   faHouse,
   faInfo,
   faGlobe,
+  faVideo,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faViber,
@@ -12,6 +13,7 @@ import {
   faLinkedin,
   faYoutube,
   faInstagram,
+  faSquareFacebook,
   faDailymotion,
 } from "@fortawesome/free-brands-svg-icons";
 export const phoneIcon = (
@@ -26,17 +28,18 @@ export const whatsAppIcon = (
 export const viberIcon = (
   <FontAwesomeIcon className="contact-icon" icon={faViber} />
 );
+export const facebookIcon = (
+  <FontAwesomeIcon className="social-icon" icon={faSquareFacebook} />
+);
 export const linkedInIcon = (
-  <a href="https://www.linkedin.com/company/no-language-barriers/">
-    <FontAwesomeIcon
-      className="social-icon"
-      icon={faLinkedin}
-      style={{ cursor: "pointer" }}
-    />
-  </a>
+  <FontAwesomeIcon
+    className="social-icon"
+    icon={faLinkedin}
+    style={{ cursor: "pointer" }}
+  />
 );
 export const youtubeIcon = (
-  <a href="https://www.youtube.com/channel/UCrXf6eNIO-b4UlxFNspraBw/">
+  <a href="https://www.youtube.com/channel/UC1FcaPQDZ2PzUu31vH4qVAg/">
     <FontAwesomeIcon className="social-icon" icon={faYoutube} />
   </a>
 );
@@ -60,9 +63,9 @@ export const languageIcon = (
   <FontAwesomeIcon className="menu-icon" icon={faGlobe} />
 );
 
-// export const videosIcon = (
-//   <FontAwesomeIcon className="menu-icon" icon={faVideo} />
-// );
+export const videosIcon = (
+  <FontAwesomeIcon className="menu-icon" icon={faVideo} />
+);
 
 export const contactUsIcon = (
   <FontAwesomeIcon className="menu-icon" icon={faEnvelope} />
