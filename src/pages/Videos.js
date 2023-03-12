@@ -10,9 +10,6 @@ import { Video } from "../components/Video";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
 
-const YOUTUBE_CHANNEL_API =
-  "https://www.googleapis.com/youtube/v3/channelSections";
-
 const Videos = (props) => {
   const { t } = props;
   const [urlListDM, setUrlListDM] = useState([]);
