@@ -61,7 +61,8 @@ const Videos = (props) => {
                 return (
                   <StackedCarousel
                     ref={carouselRef}
-                    slideWidth={300}
+                    slideWidth={420}
+                    fadeDistance={0.2}
                     slideComponent={Video}
                     carouselWidth={width}
                     data={combinedVideosList}
