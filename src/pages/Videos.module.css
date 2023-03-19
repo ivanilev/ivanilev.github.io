@@ -9,9 +9,10 @@
 }
 
 .videosContainer {
+  border: 1px solid red;
   z-index: 0;
   display: flex;
-  width: 90%;
+  width: 85%;
   align-items: center;
   justify-content: center;
   border: 0px solid white;
@@ -35,4 +36,29 @@
 
 .buttonIcon {
   width: 25px;
+}
+
+@media (max-width: 650px) {
+  .videosContainer {
+    height: 0px;
+  }
+  .container {
+    min-height: 200px;
+    height: 300px;
+  }
+  .right {
+    right: -20px;
+  }
+  .left {
+    left: -20px;
+  }
+}
+
+@media (max-width: 950px) {
+  .right {
+    right: -30px;
+  }
+  .left {
+    left: -30px;
+  }
 }

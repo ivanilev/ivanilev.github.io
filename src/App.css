@@ -93,6 +93,9 @@
     margin-top: 5rem;
     font-size: var(--font-size-header-xs);
   }
+  .ourWork {
+    margin-bottom: 10px;
+  }
 }
 
 /* Small devices (tablets 576px-768px) */

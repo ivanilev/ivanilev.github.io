@@ -86,11 +86,7 @@ function App() {
   );
   const downIcon = (
     <a href="#WhatWeDo">
-      <FontAwesomeIcon
-        className="downArrow"
-        icon={faCaretDown}
-        size={"6x"}
-      ></FontAwesomeIcon>
+      <FontAwesomeIcon className="downArrow" icon={faCaretDown} size={"6x"}></FontAwesomeIcon>
     </a>
   );
 
