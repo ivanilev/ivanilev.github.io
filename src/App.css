@@ -90,11 +90,11 @@
 }
 @media (min-width: 412px) and (max-width: 576px) {
   .heading {
-    margin-top: 5rem;
+    margin-top: 1rem;
     font-size: var(--font-size-header-xs);
   }
   .ourWork {
-    margin-bottom: 10px;
+    margin-block: 3rem;
   }
 }
 

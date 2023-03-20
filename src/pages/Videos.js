@@ -20,17 +20,18 @@ const Videos = (props) => {
         const responseDM = await fetch(
           "https://api.dailymotion.com/videos?fields=embed_url&limit=100&user=NoLanguageBarriers"
         );
-        /*    const responseYT = await fetch(
+        const responseYT = await fetch(
           `https://www.googleapis.com/youtube/v3/search?key=${process.env.REACT_APP_YOUTUBE_API_KEY}&channelId=UCrXf6eNIO-b4UlxFNspraBw&part=snippet,id&order=date&maxResults=20`
-        ) */ const dataDM = await responseDM.json();
-        /*  const dataYT = await responseYT.json(); */
-        /*    const idList = dataYT.items.map((elem) => {
+        )
+        const dataDM = await responseDM.json();
+        const dataYT = await responseYT.json();
+        const idList = dataYT.items.map((elem) => {
           return {
             embed_url: `https://www.youtube.com/embed/${elem.id.videoId}`,
           };
-        }); 
+        });
         idList.pop(); 
-        setUrlListYT(idList); */
+        setUrlListYT(idList);
         setUrlListDM(dataDM.list);
       } catch (e) {
         alert(e);
