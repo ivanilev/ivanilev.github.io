@@ -32,14 +32,12 @@ export const facebookIcon = (
   <FontAwesomeIcon className="social-icon" icon={faSquareFacebook} />
 );
 export const linkedInIcon = (
-  <FontAwesomeIcon
-    className="social-icon"
-    icon={faLinkedin}
-    style={{ cursor: "pointer" }}
-  />
+  <a href="https://www.linkedin.com/company/no-language-barriers/">
+    <FontAwesomeIcon className="social-icon" icon={faLinkedin} />
+  </a>
 );
 export const youtubeIcon = (
-  <a href="https://www.youtube.com/channel/UC1FcaPQDZ2PzUu31vH4qVAg/">
+  <a href="https://www.youtube.com/channel/UCrXf6eNIO-b4UlxFNspraBw/">
     <FontAwesomeIcon className="social-icon" icon={faYoutube} />
   </a>
 );
@@ -49,7 +47,9 @@ export const instaIcon = (
   </a>
 );
 export const dailymotionIcon = (
-  <FontAwesomeIcon className="social-icon" icon={faDailymotion} />
+  <a href="https://www.dailymotion.com/NoLanguageBarriers">
+    <FontAwesomeIcon className="social-icon" icon={faDailymotion} />
+  </a>
 );
 export const homeIcon = (
   <FontAwesomeIcon className="menu-icon" icon={faHouse} />
