@@ -91,8 +91,8 @@ const GetInTouch = () => {
             <Contacts
               icon={phoneIcon}
               type={t("GetInTouchPhone")}
-              contact="+359 886 346 633"
-              href="tel:+359886346633"
+              contact="+34 613 804 208"
+              href="tel:+34613804208"
             />
             <Contacts
               icon={emailIcon}
@@ -103,14 +103,14 @@ const GetInTouch = () => {
             <Contacts
               icon={whatsAppIcon}
               type="WhatsApp:"
-              contact="+359 886 346 633"
-              href="https://api.whatsapp.com/send?phone=359886346633"
+              contact="+34 613 804 208"
+              href="https://api.whatsapp.com/send?phone=34613804208"
             />
             <Contacts
               icon={viberIcon}
               type="Viber:"
-              contact="+359 886 346 633"
-              href="viber://chat?number=359886346633"
+              contact="+34 613 804 208"
+              href="viber://chat?number=34613804208"
             />
           </div>
           <div className={styles.social}>
